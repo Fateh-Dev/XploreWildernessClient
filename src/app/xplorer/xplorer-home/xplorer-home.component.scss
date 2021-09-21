@@ -3,10 +3,19 @@ mat-list-item:hover {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  span {
+    mat-icon {
+      color: white !important;
+    }
+  }
 }
+
 mat-list-item {
-  max-height: 45px;
+  height: 40px;
+  margin: 2px;
   font-size: 14px;
+  vertical-align: baseline;
+  font-family: "Open Sans";
 }
 
 .avatarImage {
@@ -14,4 +23,17 @@ mat-list-item {
   width: "110px";
   border: "8px solid rgb(250 250 250)";
   transform: "translate3d(0,0,0)";
+}
+.menuText {
+  font-size: 14px;
+}
+.activeItem {
+  background-color: #6bad37;
+  border-radius: 5px;
+  color: white;
+  span {
+    mat-icon {
+      color: white !important;
+    }
+  }
 }

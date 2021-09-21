@@ -9,6 +9,11 @@ import { GuideScheduleTripsComponent } from './guide-schedule-trips/guide-schedu
 import { GuideHistoryTripsComponent } from './guide-history-trips/guide-history-trips.component';
 import { GuideSettingsComponent } from './guide-settings/guide-settings.component';
 import { GuideVerificationComponent } from './guide-verification/guide-verification.component';
+import { GuideExperienceComponent } from './guide-experience/guide-experience.component';
+import { GuideInsuranceComponent } from './guide-insurance/guide-insurance.component';
+import { GuideBillingComponent } from './guide-billing/guide-billing.component';
+import { GuideMessagesComponent } from './guide-messages/guide-messages.component';
+import { GuideDeactivateComponent } from './guide-deactivate/guide-deactivate.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     GuideHistoryTripsComponent,
     GuideSettingsComponent,
     GuideVerificationComponent,
+    GuideExperienceComponent,
+    GuideInsuranceComponent,
+    GuideBillingComponent,
+    GuideMessagesComponent,
+    GuideDeactivateComponent,
   ],
   imports: [CommonModule, GuideRoutingModule, MaterialModule, FlexLayoutModule],
 })

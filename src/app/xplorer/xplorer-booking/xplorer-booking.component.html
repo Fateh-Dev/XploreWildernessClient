@@ -1,0 +1,111 @@
+<div
+  fxLayout="column"
+  fxLAyoutAlign="space-between center"
+  fxLayoutGap="10px"
+  style="padding: 20px"
+>
+  <mat-card
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    *ngFor="let trip of subtrip; let i = index"
+    [ngStyle]="{
+      'background-color': i % 2 == 0 ? 'whitesmoke' : 'white',
+      padding: true ? '0px' : '0px',
+      overflow: 'hidden'
+    }"
+  >
+    <div fxLayout="row" fxLayoutAlign="start start" style="padding: 0px">
+      <div style="margin: 0px" (click)="$event.stopPropagation()"></div>
+      <div
+        fxFlex
+        fxLayout="column"
+        fxLayoutAlign="start start"
+        fxLayoutGap="10px"
+        class="padding"
+      >
+        <!-- <span fxFlex> {{ item["name"] }}</span> -->
+        <span
+          fxFlex
+          style="word-wrap: unset; font-size: 24px; font-weight: bold"
+        >
+          Title of the Activity
+        </span>
+        <span fxFlex style="font-size: 14px"> Region , Country</span>
+        <span fxFlex class="rating">
+          <mat-icon>star</mat-icon>
+          <mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+          <mat-icon>star</mat-icon>
+          <mat-icon>star</mat-icon>
+          <p>4.6/5 (203 reviews)</p></span
+        >
+        <span
+          fxFlex
+          style="
+            position: relative;
+            left: -225px;
+            bottom: -20px;
+            margin-left: 0px;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(0, 128, 0);
+            border-radius: 6px;
+            padding: 2px 10px 2px 10px;
+          "
+          >Next Trip : 10 Aug 2021
+        </span>
+      </div>
+    </div>
+    <div fxFlex>
+      If you want to see the best of New York and you're pressed for time, take
+      this 90-minute...
+    </div>
+    <div
+      fxFlex
+      fxLayout="column"
+      fxLayoutAlign="start start"
+      fxLayoutGap="15px"
+      class="padding"
+    >
+      <div fxFlex="40">
+        <span
+          fxLayout="row"
+          fxLayoutGap="10px"
+          fxLayoutAlign="center start"
+          class="activiy-icons"
+          ><mat-icon matTooltip="skiing">downhill_skiing</mat-icon
+          ><mat-icon matTooltip="cycling">directions_bike</mat-icon
+          ><mat-icon matTooltip="hiking">hiking</mat-icon
+          ><mat-icon matTooltip="fishing">sailing</mat-icon></span
+        >
+      </div>
+
+      <span fxFlex style="word-wrap: unset; font-size: 14px"
+        ><mat-icon>sell</mat-icon> 1000$/day
+      </span>
+
+      <div fxLayout="row" fxLayoutGap="5px">
+        <button
+          mat-flat-button
+          color="primary"
+          style="background-color: rgb(1, 77, 177)"
+        >
+          <mat-icon>message</mat-icon> Guide</button
+        ><button
+          mat-flat-button
+          color="primary"
+          style="background-color: green"
+        >
+          <mat-icon>edit</mat-icon>
+          Modify</button
+        ><button
+          mat-flat-button
+          color="primary"
+          style="background-color: rgb(224, 1, 1)"
+        >
+          <mat-icon>delete</mat-icon>
+          Cancel
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -8,22 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class XplorerHomeComponent implements OnInit {
   public links = [
     [
-      { name: 'Profile', href: 'profile', icon: 'badge' },
-      { name: 'Settings', href: 'settings', icon: 'settings_outline' },
-      { name: 'Verification', href: 'verification', icon: 'view_list' },
+      { name: 'Booking', href: 'booking', icon: 'bookmark_border' },
+      { name: 'History', href: 'history', icon: 'settings_outline' },
     ],
     [
-      { name: 'My Trips', href: 'profile', icon: 'badge' },
-      { name: 'Schedule Trips', href: 'profile', icon: 'badge' },
-      { name: 'Trip History', href: 'profile', icon: 'history' },
+      { name: 'Preferences', href: 'preferences', icon: 'interests' },
+      { name: 'Favorites', href: 'favorites', icon: 'favorite_border' },
     ],
     [
-      { name: 'Guiding Experience', href: 'profile', icon: 'badge' },
-      { name: 'Insurance', href: 'profile', icon: 'badge' },
-      { name: 'Payments', href: 'profile', icon: 'credit_card' },
+      { name: 'Profile', href: 'profile', icon: 'account_circle' },
+      { name: 'Settings', href: 'settings', icon: 'settings' },
+      { name: 'Billing', href: 'billing', icon: 'credit_card' },
     ],
-    [{ name: 'Messages', href: 'profile', icon: 'message' }],
-    [{ name: 'Deactivate', href: 'profile', icon: 'badge' }],
+    [
+      { name: 'Invite Friends', href: 'invites', icon: 'group_add' },
+      { name: 'Social Media', href: 'social', icon: 'travel_explore' },
+    ],
   ];
 
   constructor() {}

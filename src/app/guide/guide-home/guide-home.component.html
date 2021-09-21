@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" style="padding: 10px 0">
   <div
-    fxFlex.lg="70"
+    fxFlex.lg="75"
     fxFlex.md="100"
     fxFlex.sm="100"
     fxFlex.xs="100"
@@ -40,9 +40,7 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" style="padding-left: 8px" fxFlex="80">{{
-              link.name
-            }}</span>
+            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
           </mat-list-item>
         </mat-list></span
       ><span
@@ -66,9 +64,7 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" style="padding-left: 8px" fxFlex="80">{{
-              link.name
-            }}</span>
+            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
           </mat-list-item>
         </mat-list></span
       ><span
@@ -92,14 +88,60 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" style="padding-left: 8px" fxFlex="80">{{
-              link.name
-            }}</span>
+            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+          </mat-list-item>
+        </mat-list></span
+      ><span
+        style="height: 1px; background-color: rgba(128, 128, 128, 0.534)"
+      ></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 10px">
+          <mat-list-item
+            *ngFor="let link of links[3]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+          </mat-list-item>
+        </mat-list></span
+      ><span
+        style="height: 1px; background-color: rgba(128, 128, 128, 0.534)"
+      ></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 10px">
+          <mat-list-item
+            *ngFor="let link of links[4]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
           </mat-list-item>
         </mat-list></span
       >
     </mat-card>
-    <mat-card fxFlex style="padding: 0px; height: 85vh">
+    <mat-card fxFlex style="padding: 0px; min-height: 85vh">
       <div
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
       ></div>

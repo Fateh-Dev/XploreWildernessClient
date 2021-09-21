@@ -1,18 +1,30 @@
-<div style="background-color: whitesmoke; height: 100vh">
+<div style="background-color: whitesmoke; min-height: 100vh">
   <mat-toolbar
     [class.mat-elevation-z2]="true"
-    style="background-color: white; padding: 0px"
+    style="
+      background-color: white;
+      padding: 0px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    "
     fxLayout="row"
     fxLayoutAlign="space-around center"
   >
     <span
-      fxFlex.lg="70"
+      fxFlex.lg="75"
       fxFlex.md="100"
       fxFlex.sm="100"
       fxFlex.xs="100"
       fxLayout="row"
       fxLayoutAlign="space-around center"
-      ><span flex> <img src="../assets/logo.png" width="250" /></span>
+      ><span flex style="padding: auto; cursor: pointer">
+        <img
+          src="../assets/logo.png"
+          width="250"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+      /></span>
       <span flex class="flex-spacer"></span
       ><button
         fxHide.xs
@@ -49,22 +61,22 @@
         [matMenuTriggerFor]="menu"
         aria-label="Example icon-button with a menu"
       >
-        <mat-icon>account_circle</mat-icon>
+        <mat-icon class="material-icons-outlined">account_circle</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/guide']">
-          <mat-icon>badge</mat-icon>
+        <button mat-menu-item [routerLink]="['/guide/profile']">
+          <mat-icon class="material-icons-outlined">badge</mat-icon>
           <span>Guide Profile</span></button
         ><button
           mat-menu-item
-          [routerLink]="['/xplorer']"
+          [routerLink]="['/xplorer/booking']"
           routerLinkActive="router-link-active"
         >
-          <mat-icon>badge</mat-icon>
+          <mat-icon class="material-icons-outlined">badge</mat-icon>
           <span>Xplorer Profile</span>
         </button>
         <button mat-menu-item>
-          <mat-icon>logout </mat-icon>
+          <mat-icon class="material-icons-outlined">logout </mat-icon>
           <span>Logout</span>
         </button>
       </mat-menu>
@@ -74,22 +86,27 @@
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon>favorite</mat-icon></button
+        <mat-icon class="material-icons-outlined"
+          >favorite_border</mat-icon
+        ></button
       ><button
         fxHide.xs
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon>notifications_active</mat-icon>
+        <mat-icon class="material-icons-outlined"
+          >notifications_active</mat-icon
+        >
       </button>
       <button
         mat-flat-button
         class="example-icon"
         aria-label="Example icon-button with share icon"
         color="primary"
+        style="background-color: #6bad37; border-radius: 20px"
       >
-        <mat-icon>add</mat-icon>Add trip
+        <mat-icon>add</mat-icon><span fxHide.xs-sm>Add trip</span>
       </button></span
     >
   </mat-toolbar>
