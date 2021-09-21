@@ -10,5 +10,8 @@
   border-radius: 0px;
 }
 .toolbarButton:hover {
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   border-bottom: 5px solid rgb(3, 0, 163);
 }
