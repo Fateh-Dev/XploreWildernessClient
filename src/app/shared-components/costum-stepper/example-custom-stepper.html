@@ -11,7 +11,7 @@
       *ngFor="let step of steps; let i = index"
       (click)="selectStepByIndex(i)"
     >
-      Step {{ i + 1 }}
+      <mat-icon>circle</mat-icon>
     </button>
     <button class="example-nav-button" cdkStepperNext>&rarr;</button>
   </footer>
