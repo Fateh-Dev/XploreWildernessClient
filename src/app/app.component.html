@@ -1,7 +1,7 @@
 <div style="background-color: whitesmoke; height: 100vh">
   <mat-toolbar
     [class.mat-elevation-z2]="true"
-    style="background-color: white"
+    style="background-color: white; padding: 0px"
     fxLayout="row"
     fxLayoutAlign="space-around center"
   >
@@ -17,33 +17,57 @@
       ><button
         fxHide.xs
         mat-flat-button
-        class="example-icon favorite-icon"
+        class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
         Home</button
       ><button
         fxHide.xs
         mat-flat-button
-        class="example-icon favorite-icon"
+        class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
         Trips</button
       ><button
         fxHide.xs
         mat-flat-button
-        class="example-icon favorite-icon"
+        class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
         Activities</button
       ><button
         fxHide.xs
         mat-flat-button
-        class="example-icon favorite-icon"
+        class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
         Destinations
       </button>
-      <span flex class="flex-spacer"></span>
+      <span flex class="flex-spacer"></span
+      ><button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/guide']">
+          <mat-icon>badge</mat-icon>
+          <span>Guide Profile</span></button
+        ><button
+          mat-menu-item
+          [routerLink]="['/xplorer']"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon>badge</mat-icon>
+          <span>Xplorer Profile</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>logout </mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
       <button
         fxHide.xs
         mat-icon-button

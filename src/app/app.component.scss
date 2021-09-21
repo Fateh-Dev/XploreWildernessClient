@@ -5,3 +5,10 @@
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
 }
+.toolbarButton {
+  padding: 14px;
+  border-radius: 0px;
+}
+.toolbarButton:hover {
+  border-bottom: 5px solid rgb(3, 0, 163);
+}
