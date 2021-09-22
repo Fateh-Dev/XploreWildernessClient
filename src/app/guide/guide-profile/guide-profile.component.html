@@ -1,1 +1,167 @@
-<p>guide-profile works!</p>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <example-custom-stepper>
+    <cdk-step>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <div fxFlex>Account</div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Placeholder" />
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder" />
+            <mat-icon matSuffix>alternate_email</mat-icon>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            style="background-color: #6bad37; border-radius: 20px"
+          >
+            <span fxHide.xs-sm>Personal</span><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div></cdk-step
+    >
+    <cdk-step
+      ><div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <div fxFlex>Personal</div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder" />
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <button
+            mat-flat-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperPrevious
+            style="background-color: #6bad37; border-radius: 20px"
+          >
+            <mat-icon>chevron_left</mat-icon>
+            <span fxHide.xs-sm>Account</span>
+          </button>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            style="background-color: #6bad37; border-radius: 20px"
+          >
+            <span fxHide.xs-sm>Interests</span
+            ><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </cdk-step>
+    <cdk-step>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
+        <div fxFlex>Life in wild</div>
+
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <button
+            mat-flat-button
+            class="example-icon"
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperPrevious
+            style="background-color: #6bad37; border-radius: 20px"
+          >
+            <mat-icon>chevron_left</mat-icon>
+            <span fxHide.xs-sm>Personal</span>
+          </button>
+          <span fxFlex style="flex: 1 1 auto"></span>
+        </div>
+      </div>
+    </cdk-step>
+  </example-custom-stepper>
+</div>

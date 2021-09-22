@@ -15,6 +15,7 @@ import { GuideBillingComponent } from './guide-billing/guide-billing.component';
 import { GuideMessagesComponent } from './guide-messages/guide-messages.component';
 import { GuideDeactivateComponent } from './guide-deactivate/guide-deactivate.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 @NgModule({
   declarations: [
     GuideHomeComponent,
@@ -30,6 +31,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     GuideMessagesComponent,
     GuideDeactivateComponent,
   ],
-  imports: [CommonModule, GuideRoutingModule, MaterialModule, FlexLayoutModule],
+  imports: [
+    CommonModule,
+    GuideRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
+    SharedComponentsModule,
+  ],
 })
 export class GuideModule {}

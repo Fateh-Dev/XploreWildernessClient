@@ -36,12 +36,14 @@
       ><button
         fxHide.xs
         mat-flat-button
+        [routerLink]="['/trips']"
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
         Trips</button
       ><button
         fxHide.xs
+        [routerLink]="['/activities']"
         mat-flat-button
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
@@ -49,6 +51,7 @@
         Activities</button
       ><button
         fxHide.xs
+        [routerLink]="['/destinations']"
         mat-flat-button
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
@@ -83,6 +86,7 @@
       <button
         fxHide.xs
         mat-icon-button
+        [routerLink]="['/favorites']"
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
@@ -91,6 +95,7 @@
         ></button
       ><button
         fxHide.xs
+        [routerLink]="['/notifcations']"
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
@@ -101,6 +106,7 @@
       </button>
       <button
         mat-flat-button
+        [routerLink]="['/addTrip']"
         class="example-icon"
         aria-label="Example icon-button with share icon"
         color="primary"
