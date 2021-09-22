@@ -2,19 +2,25 @@
   <example-custom-stepper>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex>Account</div>
+        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+          Account
+        </div>
         <div fxFlex fxFlexFill>
           <mat-form-field appearance="outline" fxFlex>
             <mat-label>Username</mat-label>
-            <input matInput placeholder="Placeholder" />
-            <mat-icon matSuffix>person</mat-icon>
+            <input matInput placeholder="Tape here ..." />
+            <mat-icon matSuffix class="material-icons-outlined"
+              >person</mat-icon
+            >
           </mat-form-field>
         </div>
         <div fxFlex fxFlexFill>
           <mat-form-field appearance="outline" fxFlex>
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Placeholder" />
-            <mat-icon matSuffix>alternate_email</mat-icon>
+            <input matInput placeholder="Tape here ..." />
+            <mat-icon matSuffix class="material-icons-outlined"
+              >alternate_email</mat-icon
+            >
           </mat-form-field>
         </div>
         <div fxLayout="row" fxFlex fxFlexFill>
@@ -34,84 +40,113 @@
     >
     <cdk-step
       ><div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex>Personal</div>
-        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+          Personal
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>person</mat-icon>
+              <mat-label>Firstname</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              >
             </mat-form-field>
           </div>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>alternate_email</mat-icon>
+              <mat-label>Lastname</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              >
             </mat-form-field>
           </div>
         </div>
-        <div fxFlex fxLayout="row" fxLayoutGap="30px">
-          <div fxFlex fxFlexFill>
-            <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>person</mat-icon>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
+          <div fxFlex="50" fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Gender</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
           </div>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>alternate_email</mat-icon>
-            </mat-form-field>
-          </div>
-        </div>
-        <div fxFlex fxLayout="row" fxLayoutGap="30px">
-          <div fxFlex fxFlexFill>
-            <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>person</mat-icon>
-            </mat-form-field>
-          </div>
-          <div fxFlex fxFlexFill>
-            <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>alternate_email</mat-icon>
+              <mat-label>phone</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >phone</mat-icon
+              >
             </mat-form-field>
           </div>
         </div>
-        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>person</mat-icon>
-            </mat-form-field>
-          </div>
-          <div fxFlex fxFlexFill>
-            <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>alternate_email</mat-icon>
+              <mat-label>address</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >markunread_mailbox</mat-icon
+              >
             </mat-form-field>
           </div>
         </div>
-        <div fxFlex fxLayout="row" fxLayoutGap="30px">
+
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Username</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>person</mat-icon>
+              <mat-label>address 2</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >markunread_mailbox</mat-icon
+              >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>City</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
           </div>
           <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>State / Province</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
+          <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder" />
-              <mat-icon matSuffix>alternate_email</mat-icon>
+              <mat-label>Zip Code / Postal Code</mat-label>
+              <input matInput placeholder="Tape here ..." />
+              <!-- <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              > -->
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
             </mat-form-field>
           </div>
         </div>
@@ -145,8 +180,60 @@
     </cdk-step>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
-        <div fxFlex>Life in wild</div>
+        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+          Life in wild
+        </div>
+        <div
+          fxLayout="row"
+          fxFlex
+          fxFlexFill
+          style="position: relative; bottom: -30px; z-index: 3"
+        >
+          <span fxFlex></span>
 
+          <div
+            fxFlex="80"
+            fxFlexFill
+            style="
+              text-align: center;
+              max-height: 5px;
+              padding: 10px;
+              background-color: #3b8bd3;
+              box-shadow: 1px 1px 8px #3b8bd3;
+              color: white;
+              border-radius: 5px;
+            "
+          >
+            Tell us a bit about your life in the wild! What do you play? Where
+            do you play?
+          </div>
+          <span fxFlex></span>
+        </div>
+        <mat-card
+          fxFlex
+          fxFlexFill
+          fxLayout="row"
+          fxLayoutAlign="space-around center"
+          style="
+            min-height: 40vh;
+            position: relative;
+            top: -80px;
+            border-radius: 10px;
+          "
+        >
+          <span fxFlex></span>
+          <span fxFlex="40" style="align-items: center; min-height: 400px">
+            <br />
+            <br />
+            <br />
+            <mat-icon
+              class="add_icon"
+              style="font-size: 10vw; color: rgb(231, 231, 231)"
+              >add_circle_outline</mat-icon
+            >
+          </span>
+          <span fxFlex></span>
+        </mat-card>
         <div fxLayout="row" fxFlex fxFlexFill>
           <button
             mat-flat-button
