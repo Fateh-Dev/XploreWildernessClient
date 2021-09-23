@@ -18,7 +18,11 @@
           max-height: 10px;
         "
       >
-        <img src="../../../assets/avatar.png" alt="" width="100" /></span
+        <img
+          src="../../../assets/avatar.png"
+          alt=""
+          width="100"
+          draggable="false" /></span
       ><span
         style="height: 1px; background-color: rgba(128, 128, 128, 0.534)"
       ></span>
@@ -145,7 +149,9 @@
       <div
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
       ></div>
-      <div style="padding: 10px"><router-outlet></router-outlet></div>
+      <div style="flex: 1 1 auto; padding: 10px">
+        <router-outlet></router-outlet>
+      </div>
     </mat-card>
   </div>
 </div>

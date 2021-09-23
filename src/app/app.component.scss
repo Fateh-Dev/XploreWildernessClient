@@ -11,7 +11,15 @@
 }
 .toolbarButton:hover {
   box-sizing: border-box !important;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border-bottom: 5px solid rgb(3, 0, 163);
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  border-bottom: 5px solid #6bad37;
+  background-color: #6aad3715;
+}
+.activatedMenu {
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  border-bottom: 5px solid #6bad37;
+  background-color: #6aad3715;
 }

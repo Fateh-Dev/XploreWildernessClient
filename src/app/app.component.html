@@ -24,11 +24,14 @@
           width="250"
           [routerLink]="['/']"
           routerLinkActive="router-link-active"
+          draggable="false"
       /></span>
       <span flex class="flex-spacer"></span
       ><button
         fxHide.xs
         [routerLink]="['/']"
+        routerLinkActive="activatedMenu"
+        [routerLinkActiveOptions]="{ exact: true }"
         mat-flat-button
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
@@ -38,6 +41,8 @@
         fxHide.xs
         mat-flat-button
         [routerLink]="['/trips']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="activatedMenu"
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
@@ -45,7 +50,9 @@
       ><button
         fxHide.xs
         [routerLink]="['/activities']"
+        routerLinkActive="activatedMenu"
         mat-flat-button
+        [routerLinkActiveOptions]="{ exact: true }"
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"
       >
@@ -53,6 +60,8 @@
       ><button
         fxHide.xs
         [routerLink]="['/destinations']"
+        routerLinkActive="activatedMenu"
+        [routerLinkActiveOptions]="{ exact: true }"
         mat-flat-button
         class="toolbarButton"
         aria-label="Example icon-button with heart icon"

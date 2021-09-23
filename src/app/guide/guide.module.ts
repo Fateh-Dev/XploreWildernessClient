@@ -16,6 +16,7 @@ import { GuideMessagesComponent } from './guide-messages/guide-messages.componen
 import { GuideDeactivateComponent } from './guide-deactivate/guide-deactivate.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedComponentsModule } from '../shared-components/shared-components.module';
+import { TripItemComponent } from './guide-trips/trip-item/trip-item.component';
 @NgModule({
   declarations: [
     GuideHomeComponent,
@@ -30,6 +31,7 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
     GuideBillingComponent,
     GuideMessagesComponent,
     GuideDeactivateComponent,
+    TripItemComponent,
   ],
   imports: [
     CommonModule,

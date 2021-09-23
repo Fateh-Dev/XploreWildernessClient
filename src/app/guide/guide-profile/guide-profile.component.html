@@ -95,7 +95,6 @@
             </mat-form-field>
           </div>
         </div>
-
         <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
@@ -180,36 +179,86 @@
     </cdk-step>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 20px">
           Life in wild
         </div>
         <div
-          fxLayout="row"
           fxFlex
           fxFlexFill
-          style="position: relative; bottom: -30px; z-index: 3"
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxLayoutGap="10px"
         >
-          <span fxFlex></span>
-
           <div
-            fxFlex="80"
+            fxFlex="70"
             fxFlexFill
-            style="
-              text-align: center;
-              max-height: 5px;
-              padding: 10px;
-              background-color: #3b8bd3;
-              box-shadow: 1px 1px 8px #3b8bd3;
-              color: white;
-              border-radius: 5px;
-            "
+            fxLayout="column"
+            fxLayoutAlign="space-between center"
+            class="item"
+            fxLayoutGap="10px"
           >
-            Tell us a bit about your life in the wild! What do you play? Where
-            do you play?
+            <span fxFlex fxFlexFill fxLayout="row">
+              <div fxFlex="25">
+                <img
+                  src="../../../assets/thumbnail.png"
+                  height="120"
+                  width="120"
+                  style="border-radius: 50%"
+                />
+              </div>
+              <div
+                fxFlex="75"
+                fxLayout="column"
+                style="
+                  background-color: #f7f5ed;
+                  border-radius: 20px;
+                  padding: 20px;
+                "
+              >
+                <div fxLayout="row">
+                  <div fxFlex="80" style="font-size: 18px; font-weight: 600">
+                    Cross Country Skiing
+                  </div>
+                  <div
+                    fxFlex="20"
+                    style="
+                      background-color: rgb(25, 121, 177);
+                      color: aliceblue;
+                      padding: 5px;
+                      border-radius: 40px;
+                      text-align: center;
+                    "
+                  >
+                    23 Trips
+                  </div>
+                </div>
+                <!-- <div fxFlex style="background-color: whitesmoke">
+                Cross Country Skiing
+              </div> -->
+              </div>
+            </span>
+            <span
+              fxFlex
+              fxFlexFill
+              style="
+                background-color: #f7f5ed;
+                border-radius: 20px;
+                padding: 20px;
+                min-height: 200px !important;
+              "
+            >
+              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velitNeque porro quisquam est qui dolorem
+              ipsum quia dolor sit amet, consectetur, adipisci velitNeque porro
+              quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+              adipisci velitNeque porro quisquam est qui dolorem ipsum quia
+              dolor sit amet, consectetur, adipisci velitNeque porro quisquam
+              est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit...
+            </span>
           </div>
-          <span fxFlex></span>
         </div>
-        <mat-card
+        <!-- <mat-card
           fxFlex
           fxFlexFill
           fxLayout="row"
@@ -233,20 +282,28 @@
             >
           </span>
           <span fxFlex></span>
-        </mat-card>
-        <div fxLayout="row" fxFlex fxFlexFill>
-          <button
-            mat-flat-button
-            class="example-icon"
-            aria-label="Example icon-button with share icon"
-            color="primary"
-            matStepperPrevious
-            style="background-color: #6bad37; border-radius: 20px"
-          >
-            <mat-icon>chevron_left</mat-icon>
-            <span fxHide.xs-sm>Personal</span>
-          </button>
-          <span fxFlex style="flex: 1 1 auto"></span>
+        </mat-card> -->
+
+        <div
+          fxLayout="row"
+          fxFlex
+          fxFlexFill
+          fxLayoutAlign="space-around center"
+        >
+          <div fxFlex="70" fxLayout="row">
+            <button
+              mat-flat-button
+              class="example-icon"
+              aria-label="Example icon-button with share icon"
+              color="primary"
+              matStepperPrevious
+              style="background-color: #6bad37; border-radius: 20px"
+            >
+              <mat-icon>chevron_left</mat-icon>
+              <span fxHide.xs-sm>Personal</span>
+            </button>
+            <span fxFlex style="flex: 1 1 auto"></span>
+          </div>
         </div>
       </div>
     </cdk-step>

@@ -1,7 +1,7 @@
 <section class="example-container">
-  <header style="text-align: center">
+  <!-- <header style="text-align: center">
     <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>
-  </header>
+  </header> -->
 
   <footer
     class="example-step-navigation-bar"
@@ -15,7 +15,7 @@
         [class.example-active]="selectedIndex === i"
         (click)="selectStepByIndex(i)"
       >
-        <mat-icon style="font-size: 12px">circle</mat-icon>
+        <div [ngClass]="selectedIndex == i?'active':'inactive'"></div>
       </button>
     </span>
 
