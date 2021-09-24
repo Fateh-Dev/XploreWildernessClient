@@ -1,4 +1,3 @@
-import { GuideModule } from './guide/guide.module';
 import { LoginComponent } from './authentication/login/login.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { GuideHomeComponent } from './guide/guide-home/guide-home.component';
@@ -20,7 +19,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./guide/guide.module').then((m) => m.GuideModule),
   },
-  { path: 'home', component: XplorerHomeComponent },
+  {
+    path: 'home',
+    component: XplorerHomeComponent,
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
   { path: 'login', component: LoginComponent },
   { path: 'subscribe', component: SubscribeComponent },
   { path: '**', component: NotFound404Component },
