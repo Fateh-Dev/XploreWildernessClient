@@ -23,3 +23,19 @@
   border-bottom: 5px solid #6bad37;
   background-color: #6aad3715;
 }
+.mat-sidenav-container {
+  min-height: 93vh !important;
+}
+.activatedSideMenu {
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  border-left: 5px solid #6bad37;
+  background-color: #6aad3715;
+}
+a {
+  height: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

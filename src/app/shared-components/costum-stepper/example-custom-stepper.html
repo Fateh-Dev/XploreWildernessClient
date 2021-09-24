@@ -8,8 +8,9 @@
     fxLayout="row"
     fxLayoutAlign="center center"
   >
+    <hr style="width: 180px; position: absolute" />
     <!-- <button class="example-nav-button" cdkStepperPrevious>&larr;</button> -->
-    <span *ngFor="let step of steps; let i = index"
+    <span *ngFor="let step of steps; let i = index" style="z-index: 3"
       ><button
         class="example-step"
         [class.example-active]="selectedIndex === i"

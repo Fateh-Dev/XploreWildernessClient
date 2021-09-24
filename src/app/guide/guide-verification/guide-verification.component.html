@@ -1,1 +1,162 @@
-<p>guide-verification works!</p>
+<div fxLayout="column" fxLayoutAlign="center center">
+  <p fxFlex class="note">
+    all our guides are required to have their identity verified before being
+    able to create and lead trips. Please upload two pieces of official
+    identification for verification. Official identification can include
+    Passport,National ID, and Health Cards.
+  </p>
+
+  <div
+    fxLayout="row"
+    fxLayout.md="column"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-around center"
+    fxLayoutGap="40px"
+    style="
+      padding: 20px;
+      border-radius: 10px;
+      min-height: 500px !important;
+      min-width: 100% !important;
+    "
+  >
+    <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
+      <h3 style="font-weight: bold">Front side document</h3>
+      <div
+        fxLayout="row"
+        fxLayoutAlign="end end"
+        fxLayoutGap="10px"
+        style="position: relative; bottom: 0px; z-index: 10; padding: 0px 6px"
+      >
+        <button
+          (click)="pickFile1()"
+          color="primary"
+          [ngClass]="!doc1 ? 'buttonLayoutDisabled' : 'buttonLayout'"
+          style="padding: 6px"
+          mat-flat-button
+          [disabled]="!doc1"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-flat-button
+          color="warn"
+          style="padding: 6px"
+          [disabled]="!doc1"
+          (click)="deleteImage1()"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div
+        fxLayout="row"
+        class="imageLayout"
+        fxLayoutAlign="center center"
+        style="position: relative; top: -65px"
+      >
+        <span style="text-align: center"
+          ><button
+            *ngIf="!doc1"
+            mat-icon-button
+            class="loadIcon"
+            (click)="pickFile1()"
+          >
+            <mat-icon>add_photo_alternate</mat-icon>
+          </button>
+
+          <img
+            *ngIf="doc1"
+            [src]="doc1"
+            style="
+              margin: 4px;
+              max-width: 300px;
+              max-height: 300px;
+              object-fit: fill;
+            "
+          />
+        </span>
+        <input
+          type="file"
+          #fileLoader1
+          (change)="onSelectFile1($event)"
+          style="max-width: 0; max-height: 0; visibility: hidden"
+        />
+      </div>
+
+      <!-- <app-abpdz-import-image
+      [maxHeight]="300"
+      [maxWidth]="450"
+      textButton="Attach front document"
+    ></app-abpdz-import-image> -->
+    </div>
+    <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
+      <h3 style="font-weight: bold">Back side document</h3>
+      <div
+        fxLayout="row"
+        fxLayoutAlign="end end"
+        fxLayoutGap="10px"
+        style="position: relative; bottom: 0px; z-index: 10; padding: 0px 6px"
+      >
+        <button
+          (click)="pickFile2()"
+          color="primary"
+          [ngClass]="!doc2 ? 'buttonLayoutDisabled' : 'buttonLayout'"
+          style="padding: 6px"
+          mat-flat-button
+          [disabled]="!doc2"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-flat-button
+          color="warn"
+          style="padding: 6px"
+          (click)="deleteImage2()"
+          [disabled]="!doc2"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div
+        fxLayout="row"
+        class="imageLayout"
+        fxLayoutAlign="center center"
+        style="position: relative; top: -65px"
+      >
+        <span style="text-align: center"
+          ><button
+            *ngIf="!doc2"
+            mat-icon-button
+            class="loadIcon"
+            (click)="pickFile2()"
+          >
+            <mat-icon>add_photo_alternate</mat-icon>
+          </button>
+
+          <img
+            *ngIf="doc2"
+            [src]="doc2"
+            style="
+              margin: 4px;
+              max-width: 300px;
+              max-height: 300px;
+              object-fit: fill;
+            "
+          />
+        </span>
+        <input
+          type="file"
+          #fileLoader2
+          (change)="onSelectFile2($event)"
+          style="max-width: 0; max-height: 0; visibility: hidden"
+        />
+      </div>
+
+      <!-- <app-abpdz-import-image
+      [maxHeight]="300"
+      [maxWidth]="450"
+      textButton="Attach front document"
+    ></app-abpdz-import-image> -->
+    </div>
+  </div>
+</div>

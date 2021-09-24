@@ -1,4 +1,3 @@
-import { MaterialModule } from './../material-module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GuideRoutingModule } from './guide-routing.module';
@@ -14,9 +13,8 @@ import { GuideInsuranceComponent } from './guide-insurance/guide-insurance.compo
 import { GuideBillingComponent } from './guide-billing/guide-billing.component';
 import { GuideMessagesComponent } from './guide-messages/guide-messages.component';
 import { GuideDeactivateComponent } from './guide-deactivate/guide-deactivate.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { SharedComponentsModule } from '../shared-components/shared-components.module';
 import { TripItemComponent } from './guide-trips/trip-item/trip-item.component';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 @NgModule({
   declarations: [
     GuideHomeComponent,
@@ -33,12 +31,6 @@ import { TripItemComponent } from './guide-trips/trip-item/trip-item.component';
     GuideDeactivateComponent,
     TripItemComponent,
   ],
-  imports: [
-    CommonModule,
-    GuideRoutingModule,
-    MaterialModule,
-    FlexLayoutModule,
-    SharedComponentsModule,
-  ],
+  imports: [CommonModule, GuideRoutingModule, SharedComponentsModule],
 })
 export class GuideModule {}

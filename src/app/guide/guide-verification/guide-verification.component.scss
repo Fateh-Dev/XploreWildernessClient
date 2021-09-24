@@ -1,0 +1,50 @@
+.imageLayout {
+  min-height: 300px !important;
+  max-height: 300px !important;
+  background-color: rgb(243, 243, 243) !important;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttonLayout {
+  padding: 6px;
+  min-height: 30px !important;
+  background-color: rgb(14, 25, 126) !important;
+  border-radius: 5px;
+}
+.buttonLayoutDisabled {
+  padding: 6px;
+  min-height: 30px !important;
+  background-color: rgb(224 224 224) !important;
+  border-radius: 5px;
+  color: gray;
+}
+
+// .buttonLayout:hover {
+//   cursor: pointer;
+// }
+// .buttonLayout:active {
+//   background-color: rgb(12, 21, 99);
+// }
+.imageLayout:hover {
+  background-color: rgb(231, 231, 231);
+}
+.loadIcon {
+  transform: scale(6);
+  opacity: 0.3;
+  margin: 100px;
+}
+.loadIcon:hover {
+  opacity: 0.5;
+}
+
+.note {
+  margin: 20px;
+  padding: 20px;
+  line-height: 25px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  background-color: #3b8bd3;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #3b8bd3;
+}

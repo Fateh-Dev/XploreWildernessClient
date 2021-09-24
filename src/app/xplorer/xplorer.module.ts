@@ -1,5 +1,4 @@
 import { SharedComponentsModule } from './../shared-components/shared-components.module';
-import { MaterialModule } from './../material-module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { XplorerRoutingModule } from './xplorer-routing.module';
@@ -13,12 +12,6 @@ import { XplorerFavoriteComponent } from './xplorer-favorite/xplorer-favorite.co
 import { XplorerBillingComponent } from './xplorer-billing/xplorer-billing.component';
 import { XplorerInviteComponent } from './xplorer-invite/xplorer-invite.component';
 import { XplorerSocialComponent } from './xplorer-social/xplorer-social.component';
-import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {
-  CdkCustomStepperWithoutFormExample,
-  CustomStepper,
-} from '../shared-components/costum-stepper/costum-stepper.component';
 @NgModule({
   declarations: [
     XplorerHomeComponent,
@@ -33,12 +26,6 @@ import {
     XplorerSocialComponent,
   ],
   exports: [XplorerHomeComponent],
-  imports: [
-    CommonModule,
-    XplorerRoutingModule,
-    MaterialModule,
-    FlexLayoutModule,
-    SharedComponentsModule,
-  ],
+  imports: [CommonModule, XplorerRoutingModule, SharedComponentsModule],
 })
 export class XplorerModule {}

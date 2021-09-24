@@ -1,26 +1,24 @@
 <div
   fxLayout="row"
   style="position: relative; bottom: -15px; left: 10px; height: 2px"
+  fxHide.lt-md
 >
   <mat-icon style="font-size: 18px">location_on</mat-icon
-  ><span style="font-size: 12px">California, USA</span>
+  ><span style="font-size: 12px; font-weight: 500">California, USA</span>
 </div>
 <div
-  fxLayout="row"
+  fxLayout.lg="row"
+  fxLayout.lt-md="column"
   class="trip-item"
   fxLayoutGap="10px"
   fxLayoutAlign="space-around center"
 >
-  <div fxFlex fxFlexFill>
-    <img
-      src="../../../assets/thumbnail.png"
-      height="183"
-      style="border-radius: 4px 0px 0px 5px"
-      draggable="false"
-    />
+  <div fxFlex fxHide.lt-md fxFlexFill>
+    <img src="../../../assets/thumbnail.png" height="183" draggable="false" />
   </div>
   <div
-    fxLayout="row"
+    fxLayout.lg="row"
+    fxLayout.lt-md="column"
     class="trip-item-right"
     fxLayoutGap="10px"
     fxLayoutAlign="space-around start"
@@ -51,10 +49,11 @@
       fxFlex="20"
       fxFlexFill
       class="right"
-      fxLayout="column"
       fxLayoutGap="3px"
+      fxLayout="column"
+      fxLayout.lt-md="row"
     >
-      <div fxLayout="column" fxLayoutGap="3px">
+      <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap="3px" fxFlexFill>
         <div fxFlex fxLayout="row" fxLayoutAlign="start center">
           <mat-icon style="color: #3b8bd3">account_circle</mat-icon
           ><span style="color: #3b8bd3">X 5</span>
@@ -63,10 +62,38 @@
           <mat-icon style="color: #3b8bd3">date_range </mat-icon
           ><span style="color: #3b8bd3">X 5</span>
         </div>
-        <br />
-        <div fxFlex>
+        <div fxFlex fxLayout="row">
           <span style="font-size: 18px; font-weight: bold">1500$ </span
           ><span>/day</span>
+        </div>
+        <div fxFlex fxLayout="row">
+          <span style="flex: 1 1 auto"></span
+          ><span
+            ><button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              aria-label="Example icon-button with a menu"
+            >
+              <mat-icon style="font-size: 22px">more_horiz</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>edit</mat-icon>
+                <span>Edit Trip</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon color="primary">calendar_today</mat-icon>
+                <span>Schedule Trip</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>file_copy</mat-icon>
+                <span>Duplicate Trip</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon color="accent">delete</mat-icon>Delete Trip
+              </button>
+            </mat-menu></span
+          >
         </div>
       </div>
     </div>

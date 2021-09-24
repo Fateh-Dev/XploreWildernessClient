@@ -3,7 +3,7 @@
     [class.mat-elevation-z2]="true"
     style="
       background-color: white;
-      padding: 0px;
+
       position: sticky;
       top: 0;
       z-index: 100;
@@ -18,7 +18,22 @@
       fxFlex.xs="100"
       fxLayout="row"
       fxLayoutAlign="space-around center"
-      ><span flex style="padding: auto; cursor: pointer">
+    >
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <span
+        flex
+        style="
+          padding: auto;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
         <img
           src="../assets/logo.png"
           width="250"
@@ -28,7 +43,8 @@
       /></span>
       <span flex class="flex-spacer"></span
       ><button
-        fxHide.xs
+        fxShow
+        fxHide.lt-md
         [routerLink]="['/']"
         routerLinkActive="activatedMenu"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -38,7 +54,8 @@
       >
         Home</button
       ><button
-        fxHide.xs
+        fxShow
+        fxHide.lt-md
         mat-flat-button
         [routerLink]="['/trips']"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -48,7 +65,8 @@
       >
         Trips</button
       ><button
-        fxHide.xs
+        fxShow
+        fxHide.lt-md
         [routerLink]="['/activities']"
         routerLinkActive="activatedMenu"
         mat-flat-button
@@ -58,7 +76,8 @@
       >
         Activities</button
       ><button
-        fxHide.xs
+        fxShow
+        fxHide.lt-md
         [routerLink]="['/destinations']"
         routerLinkActive="activatedMenu"
         [routerLinkActiveOptions]="{ exact: true }"
@@ -85,10 +104,12 @@
           [routerLink]="['/xplorer/booking']"
           routerLinkActive="router-link-active"
         >
-          <mat-icon class="material-icons-outlined">badge</mat-icon>
+          <mat-icon class="material-icons-outlined" [routerLink]="['/login']"
+            >badge</mat-icon
+          >
           <span>Xplorer Profile</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item [routerLink]="['/login']">
           <mat-icon class="material-icons-outlined">logout </mat-icon>
           <span>Logout</span>
         </button>
@@ -120,11 +141,60 @@
         class="example-icon"
         aria-label="Example icon-button with share icon"
         color="primary"
+        matTooltip="Create a trip"
         style="background-color: #6bad37; border-radius: 20px"
       >
-        <mat-icon>add</mat-icon><span fxHide.xs-sm>Add trip</span>
+        <mat-icon>add</mat-icon><span fxHide.xs>Add trip</span>
       </button></span
     >
   </mat-toolbar>
-  <router-outlet></router-outlet>
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav
+      color="primary"
+      #sidenav
+      fxLayout="column"
+      mode="over"
+      opened="false"
+      fxHide.gt-sm="true"
+      fxFlexFill
+    >
+      <div fxLayout="column">
+        <a
+          mat-button
+          routerLink="/"
+          routerLinkActive="activatedSideMenu"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.toggle()"
+          >Home</a
+        >
+        <a
+          mat-button
+          routerLink="/trips"
+          routerLinkActive="activatedSideMenu"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.toggle()"
+          >Trips</a
+        >
+        <a
+          mat-button
+          routerLink="/activities"
+          routerLinkActive="activatedSideMenu"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.toggle()"
+          >Activities</a
+        >
+        <a
+          mat-button
+          routerLink="/destinations"
+          routerLinkActive="activatedSideMenu"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="sidenav.toggle()"
+          >Destinations</a
+        >
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
