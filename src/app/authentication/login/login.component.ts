@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   constructor() {}
-
+  isText = false;
+  showPass() {}
   ngOnInit(): void {}
 }

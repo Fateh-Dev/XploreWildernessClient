@@ -1,3 +1,52 @@
 <div fxLayout="row" fxLayoutAlign="center center" style="min-height: 80vh">
-  <mat-card fxFlex="30" style="min-height: 200px !important">fdf</mat-card>
+  <mat-card
+    fxFlex="30"
+    style="min-height: 200px !important"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="5px"
+    ><span
+      fxFlex
+      style="position: relative; text-align: center; max-height: 10px"
+    >
+      <img
+        src="../../../assets/avatar.png"
+        alt=""
+        width="100"
+        draggable="false" /></span
+    ><br />
+    <div fxFlex fxFlexFill>
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Tape here ..." />
+        <mat-icon matSuffix class="material-icons-outlined">person</mat-icon>
+      </mat-form-field>
+    </div>
+    <div fxFlex fxFlexFill>
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Tape here ..."
+          [type]="isText ? 'text' : 'password'"
+        />
+        <button mat-icon-button matSuffix (click)="isText = !isText">
+          <mat-icon class="material-icons-outlined">visibility</mat-icon>
+        </button>
+        <mat-hint align="start">hint</mat-hint>
+      </mat-form-field>
+    </div>
+    <button
+      mat-raised-button
+      fxFlex
+      color="primary"
+      fxFlexFill
+      style="padding: 6px"
+    >
+      login
+    </button>
+    <span fxFlex fxLayout="row"
+      ><span style="flex: 1 1 auto"></span> <a href="#">Create Account</a></span
+    >
+  </mat-card>
 </div>
