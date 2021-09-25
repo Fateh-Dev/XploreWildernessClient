@@ -1,0 +1,95 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+table {
+  width: 100%;
+}
+.mat-row:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: white;
+}
+.mat-header-cell {
+  background-color: #57b8bc;
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  mat-icon {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+.mat-header-cell-bookings {
+  text-align: center;
+}
+.mat-column-actions {
+  width: 50px !important;
+}
+
+.activities {
+  display: flex;
+  justify-content: center;
+  mat-icon {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+::ng-deep .success-snackbar {
+  display: flex;
+  justify-content: center;
+  background: #3b8bd3;
+  color: white;
+  font-size: 24px !important;
+  padding: 30px;
+}
