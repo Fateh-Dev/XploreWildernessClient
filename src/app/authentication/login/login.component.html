@@ -42,11 +42,16 @@
       color="primary"
       fxFlexFill
       style="padding: 6px"
+      [routerLink]="['/guide']"
+      routerLinkActive="router-link-active"
     >
       login
     </button>
     <span fxFlex fxLayout="row"
-      ><span style="flex: 1 1 auto"></span> <a href="#">Create Account</a></span
+      ><span style="flex: 1 1 auto"></span>
+      <a [routerLink]="['/subscribe']" routerLinkActive="router-link-active"
+        >Create Account</a
+      ></span
     >
   </mat-card>
 </div>
