@@ -1,6 +1,6 @@
 mat-list-item:hover {
-  background-color: #6bad37;
-  border-radius: 5px;
+  background-color: #c2eba3;
+  // border-radius: 5px;
   color: white;
   cursor: pointer;
   span {
@@ -11,9 +11,10 @@ mat-list-item:hover {
 }
 
 mat-list-item {
-  height: 40px;
-  margin: 2px;
+  height: 45px !important;
+  // margin: 2px;
   font-size: 14px;
+  font-weight: 500;
   vertical-align: baseline;
   font-family: "Open Sans";
 }
@@ -29,11 +30,15 @@ mat-list-item {
 }
 .activeItem {
   background-color: #6bad37;
-  border-radius: 5px;
+  // border-radius: 5px;
   color: white;
   span {
     mat-icon {
       color: white !important;
     }
   }
+}
+.divider {
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.534);
 }

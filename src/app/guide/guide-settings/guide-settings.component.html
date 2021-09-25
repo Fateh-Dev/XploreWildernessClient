@@ -2,7 +2,7 @@
   <example-custom-stepper>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+        <div fxFlex style="padding: 30px" class="head-20-semibold">
           Notifications
         </div>
         <div
@@ -46,11 +46,11 @@
           <span fxFlex style="flex: 1 1 auto"></span>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperNext
-            style="background-color: #6bad37; border-radius: 20px"
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
           >
             <span fxHide.xs-sm>Units</span><mat-icon>chevron_right</mat-icon>
           </button>
@@ -59,9 +59,7 @@
     >
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
-          Units
-        </div>
+        <div fxFlex style="padding: 30px" class="head-20-semibold">Units</div>
         <div fxFlex fxFlexFill>
           <mat-form-field appearance="outline" fxFlex style="width: 100%">
             <mat-label>Currency</mat-label>
@@ -101,11 +99,11 @@
         <div fxLayout="row" fxFlex fxFlexFill>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperPrevious
-            style="background-color: #6bad37; border-radius: 20px"
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
           >
             <mat-icon>chevron_left</mat-icon>
             <span fxHide.xs-sm>Notifications</span>
@@ -113,11 +111,11 @@
           <span fxFlex style="flex: 1 1 auto"></span>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperNext
-            style="background-color: #6bad37; border-radius: 20px"
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
           >
             <span fxHide.xs-sm>Emergency Contact</span
             ><mat-icon>chevron_right</mat-icon>
@@ -132,10 +130,7 @@
         fxLayoutGap="35px"
         fxFlexFill
       >
-        <div
-          fxFlex
-          style="font-size: 20px; font-weight: 500; padding: 20px 0 0 0"
-        >
+        <div fxFlex style="padding: 20px 0 0 0" class="head-20-semibold">
           Emergency Contacts
         </div>
 
@@ -150,11 +145,11 @@
           <div fxFlex="70" fxLayout="row">
             <button
               mat-flat-button
-              class="example-icon"
               aria-label="Example icon-button with share icon"
               color="primary"
               matStepperPrevious
-              style="background-color: #6bad37; border-radius: 20px"
+              style="background-color: #2699fb; border-radius: 20px"
+              class="head-14-semibold"
             >
               <mat-icon>chevron_left</mat-icon>
               <span fxHide.xs-sm>Personal</span>

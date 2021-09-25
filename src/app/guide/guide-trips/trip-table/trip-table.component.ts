@@ -33,13 +33,13 @@ import {
 })
 export class TripTableComponent implements OnInit, AfterViewInit {
   constructor(private snackbar: MatSnackBar) {}
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
   ngOnInit(): void {
     this.snackbar.open('snkack bar needs some style', null, {
       duration: 4000,
       panelClass: ['success-snackbar'],
-      horizontalPosition: 'end',
+      horizontalPosition: 'center',
       verticalPosition: 'top',
     });
   }

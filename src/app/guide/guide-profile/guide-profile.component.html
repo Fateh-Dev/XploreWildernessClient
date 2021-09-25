@@ -2,9 +2,7 @@
   <example-custom-stepper>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
-          Account
-        </div>
+        <div fxFlex class="head-20-semibold" style="padding: 30px">Account</div>
         <div fxFlex fxFlexFill>
           <mat-form-field appearance="outline" fxFlex>
             <mat-label>Username</mat-label>
@@ -27,11 +25,11 @@
           <span fxFlex style="flex: 1 1 auto"></span>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperNext
-            style="background-color: #6bad37; border-radius: 20px"
+            class="head-14-semibold"
+            style="background-color: #2699fb; border-radius: 20px"
           >
             <span fxHide.xs-sm>Personal</span><mat-icon>chevron_right</mat-icon>
           </button>
@@ -40,7 +38,7 @@
     >
     <cdk-step
       ><div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 30px">
+        <div fxFlex style="padding: 30px" class="head-20-semibold">
           Personal
         </div>
         <div
@@ -76,7 +74,7 @@
           fxLayoutGap="30px"
           fxFlexFill
         >
-          <div fxFlex="50" fxFlexFill>
+          <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" style="width: 100%">
               <mat-label>Gender</mat-label>
               <mat-select>
@@ -177,11 +175,11 @@
         <div fxLayout="row" fxFlex fxFlexFill>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperPrevious
-            style="background-color: #6bad37; border-radius: 20px"
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
           >
             <mat-icon>chevron_left</mat-icon>
             <span fxHide.xs-sm>Account</span>
@@ -189,11 +187,11 @@
           <span fxFlex style="flex: 1 1 auto"></span>
           <button
             mat-flat-button
-            class="example-icon"
             aria-label="Example icon-button with share icon"
             color="primary"
             matStepperNext
-            style="background-color: #6bad37; border-radius: 20px"
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
           >
             <span fxHide.xs-sm>Interests</span
             ><mat-icon>chevron_right</mat-icon>
@@ -203,7 +201,7 @@
     </cdk-step>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 20px">
+        <div fxFlex class="head-20-semibold" style="padding: 20px">
           Life in wild
         </div>
         <div
@@ -246,7 +244,7 @@
                   <div
                     fxFlex="20"
                     style="
-                      background-color: rgb(25, 121, 177);
+                      background-color: #2699fb;
                       color: aliceblue;
                       padding: 5px;
                       border-radius: 40px;
@@ -317,11 +315,11 @@
           <div fxFlex="70" fxLayout="row">
             <button
               mat-flat-button
-              class="example-icon"
               aria-label="Example icon-button with share icon"
               color="primary"
               matStepperPrevious
-              style="background-color: #6bad37; border-radius: 20px"
+              style="background-color: #2699fb; border-radius: 20px"
+              class="head-14-semibold"
             >
               <mat-icon>chevron_left</mat-icon>
               <span fxHide.xs-sm>Personal</span>
