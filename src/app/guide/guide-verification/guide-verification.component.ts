@@ -8,6 +8,11 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-guide-verification',
@@ -23,7 +28,10 @@ export class GuideVerificationComponent implements OnInit {
   fileToUpload: any;
   doc1: string = '';
   doc2: string = '';
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(private cd: ChangeDetectorRef, private snackbar: MatSnackBar) {}
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
   pickFile1() {
     (<any>this.fileLoader1.nativeElement).click();
     // this._elementRef.nativeElement.querySelector('input').click();
@@ -45,7 +53,18 @@ export class GuideVerificationComponent implements OnInit {
       this.cd.markForCheck();
     }, 300);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.snackbar.open(
+      'All our guides are required to have their identity verified before being able to create and lead trips. Please upload two pieces of official identification for verification. Official identification can include Passport,National ID, and Health Cards.',
+      'close',
+      {
+        duration: 60000,
+        panelClass: ['success-snackbar'],
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+      }
+    );
+  }
   onSelectFile1(event: any) {
     if (event.target.files && event.target.files[0]) {
       const reader = new FileReader();

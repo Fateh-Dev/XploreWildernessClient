@@ -36,12 +36,16 @@ export class TripTableComponent implements OnInit, AfterViewInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
   ngOnInit(): void {
-    this.snackbar.open('snkack bar needs some style', null, {
-      duration: 4000,
-      panelClass: ['success-snackbar'],
-      horizontalPosition: 'center',
-      verticalPosition: 'top',
-    });
+    this.snackbar.open(
+      'Two line text string. One to two lines is preferable on mobile and tablet.',
+      'close',
+      {
+        duration: 10000,
+        panelClass: ['success-snackbar'],
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+      }
+    );
   }
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   columnsToDisplay = [
@@ -57,7 +61,10 @@ export class TripTableComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
@@ -78,48 +85,48 @@ const ELEMENT_DATA: PeriodicElement[] = [
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `reviewed`,
+    status: 'reviewed',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `denied`,
+    status: 'denied',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `submitted`,
+    status: 'submitted',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `reviewed`,
+    status: 'reviewed',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `reviewed`,
+    status: 'active',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `reviewed`,
+    status: 'active',
   },
   {
     title: '1',
     id: 'Hydrogen',
     region: 'california',
     activities: 'H',
-    status: `reviewed`,
+    status: 'reviewed',
   },
 ];

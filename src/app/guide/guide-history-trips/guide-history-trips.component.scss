@@ -26,3 +26,14 @@ table {
 .mat-header-cell-bookings {
   text-align: center;
 }
+
+::ng-deep .success-snackbar {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  background: #3b8bd3;
+  color: white;
+  font-size: 24px !important;
+  padding: 30px;
+}
