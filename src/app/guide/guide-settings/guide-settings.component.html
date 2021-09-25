@@ -18,7 +18,8 @@
         >
           <section fxFlex fxFlexFill>
             <mat-slide-toggle class="example-margin">
-              Receive email notifications for new trips</mat-slide-toggle
+              Send me email updates regarding communication from
+              xplorers.</mat-slide-toggle
             >
           </section>
         </div>
@@ -35,29 +36,12 @@
         >
           <section fxFlex fxFlexFill>
             <mat-slide-toggle class="example-margin">
-              Receive sponsored content like trip guides from our
-              partners</mat-slide-toggle
+              Send me email updates regarding communication from the
+              XploreWilderness.com team.</mat-slide-toggle
             >
           </section>
         </div>
-        <div
-          fxFlex
-          fxFlexFill
-          class="example-section"
-          style="
-            max-width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            text-align: left;
-          "
-        >
-          <section fxFlex fxFlexFill>
-            <mat-slide-toggle class="example-margin">
-              Receive sponsored content like trip guides from our
-              partners</mat-slide-toggle
-            >
-          </section>
-        </div>
+
         <div fxLayout="row" fxFlex fxFlexFill>
           <span fxFlex style="flex: 1 1 auto"></span>
           <button
@@ -142,42 +126,20 @@
       </div>
     </cdk-step>
     <cdk-step>
-      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
-        <div fxFlex style="font-size: 20px; font-weight: 500; padding: 20px">
-          Emergency Contacts
-        </div>
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="35px"
+        fxFlexFill
+      >
         <div
           fxFlex
-          fxFlexFill
-          fxLayout="row"
-          fxLayoutAlign="center center"
-          fxLayoutGap="10px"
-        ></div>
-        <!-- <mat-card
-          fxFlex
-          fxFlexFill
-          fxLayout="row"
-          fxLayoutAlign="space-around center"
-          style="
-            min-height: 40vh;
-            position: relative;
-            top: -80px;
-            border-radius: 10px;
-          "
+          style="font-size: 20px; font-weight: 500; padding: 20px 0 0 0"
         >
-          <span fxFlex></span>
-          <span fxFlex="40" style="align-items: center; min-height: 400px">
-            <br />
-            <br />
-            <br />
-            <mat-icon
-              class="add_icon"
-              style="font-size: 10vw; color: rgb(231, 231, 231)"
-              >add_circle_outline</mat-icon
-            >
-          </span>
-          <span fxFlex></span>
-        </mat-card> -->
+          Emergency Contacts
+        </div>
+
+        <app-emergency-contact></app-emergency-contact>
 
         <div
           fxLayout="row"

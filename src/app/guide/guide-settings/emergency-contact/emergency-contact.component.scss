@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+}
+.mat-row:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: white;
+}
+.mat-header-cell {
+  background-color: #57b8bc;
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+.mat-column-email {
+  width: 200px !important;
+}
+.mat-column-name {
+  width: 100px !important;
+}
+.mat-column-phone {
+  width: 200px !important;
+}
+.mat-column-relationship {
+  width: 100px !important;
+}
+.activities {
+  display: flex;
+  justify-content: center;
+  mat-icon {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+.mat-header-cell-bookings {
+  text-align: center;
+}
