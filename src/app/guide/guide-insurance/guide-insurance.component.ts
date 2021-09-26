@@ -58,7 +58,7 @@ export class GuideInsuranceComponent implements OnInit {
       'All our guides are required to have their identity verified before being able to create and lead trips. Please upload two pieces of official identification for verification. Official identification can include Passport,National ID, and Health Cards.',
       'close',
       {
-        duration: 60000,
+        duration: 3000,
         panelClass: ['success-snackbar'],
         horizontalPosition: 'center',
         verticalPosition: 'top',

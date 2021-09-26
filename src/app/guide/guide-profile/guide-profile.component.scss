@@ -11,3 +11,16 @@
 .item:hover {
   box-shadow: 1px 1px 10px #86b3dda6;
 }
+
+.itemEmpty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #b4d2eea6;
+  min-height: 300px !important;
+}
+
+.itemEmpty:hover {
+  box-shadow: 1px 1px 10px #86b3dda6;
+}

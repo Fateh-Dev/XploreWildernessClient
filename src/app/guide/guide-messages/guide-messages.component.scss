@@ -1,0 +1,353 @@
+.avatarDes {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 8px 0 0;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+.contact:hover {
+  background-color: #e0e0e0 !important;
+  cursor: pointer;
+}
+.contact {
+  background-color: #eeecec !important;
+  font-size: medium !important;
+  align-content: center !important;
+  padding: 4px !important;
+}
+.current-contact {
+  background-color: #d4d4d4 !important;
+  font-size: medium !important;
+  align-content: center !important;
+  border-left: 7px solid rgb(43, 32, 102);
+  padding: 4px !important;
+}
+
+.messageLayoutLeft {
+  background-color: rgb(205, 205, 219);
+  border-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  min-height: 100px !important;
+  margin: 2px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+.messageLayoutRight {
+  background-color: rgb(205, 205, 219);
+  border-radius: 20px;
+
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  min-height: 100px !important;
+  margin: 2px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+.messageLayoutS {
+  background-color: rgb(205, 205, 219);
+  border-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  min-height: 50px !important;
+  margin: 2px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+.messageLayoutRight {
+  background-color: rgb(205, 205, 219);
+  border-radius: 20px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  min-height: 50px !important;
+  margin: 2px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+.messageLayoutLeft {
+  background-color: rgb(205, 205, 219);
+  border-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  min-height: 50px !important;
+  margin: 2px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+.container {
+  width: 400px;
+  padding: 10px;
+}
+
+.message-blue {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #a8ddfd;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  font: 400 0.9em "Open Sans", sans-serif;
+  border: 1px solid #97c6e3;
+  border-radius: 10px;
+}
+
+.message-orange {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: calc(100% - 240px);
+  padding: 10px;
+  background-color: #f8e896;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  font: 400 0.9em "Open Sans", sans-serif;
+  border: 1px solid #dfd087;
+  border-radius: 10px;
+}
+
+.message-content {
+  padding: 0;
+  margin: 0;
+  min-height: fit-content;
+}
+
+.message-timestamp-right {
+  position: absolute;
+  font-size: 0.85em;
+  font-weight: 300;
+  bottom: 5px;
+  right: 5px;
+}
+
+.message-timestamp-left {
+  position: absolute;
+  font-size: 0.85em;
+  font-weight: 300;
+  bottom: 5px;
+  left: 5px;
+}
+
+.message-blue:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #a8ddfd;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 0;
+  left: -15px;
+}
+
+.message-blue:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 17px solid #97c6e3;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  top: -1px;
+  left: -17px;
+}
+
+.message-orange:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid #f8e896;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  bottom: 0;
+  right: -15px;
+}
+
+.message-orange:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid #dfd087;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  bottom: -1px;
+  right: -17px;
+}
+
+//-----GLOBAL
+* {
+  box-sizing: border-box;
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+body {
+  background-color: #ddd;
+  padding: 40px;
+}
+
+//-----MESSAGES
+.screen {
+  background-color: #fff;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.conversation {
+  height: calc(100% - 50px);
+  overflow: auto;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.messages {
+  @extend .clearfix;
+  margin-bottom: 10px;
+  &--received {
+    .message {
+      float: left;
+      font-size: 12px;
+      background-color: #ddd;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      &:first-child {
+        border-top-left-radius: 15px;
+      }
+      &:last-child {
+        border-bottom-left-radius: 15px;
+      }
+    }
+  }
+  &--sent {
+    .message {
+      float: right;
+      font-size: 12px;
+      background-color: #1998e6;
+      color: #fff;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      &:first-child {
+        border-top-right-radius: 15px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 15px;
+      }
+    }
+  }
+}
+.message {
+  display: inline-block;
+  margin-bottom: 2px;
+  clear: both;
+  padding: 7px 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  line-height: 1.4;
+  &--thumb {
+    background-color: transparent !important;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 0px !important;
+  }
+}
+
+.text-bar {
+  height: 50px;
+  border-top: 1px solid #ccc;
+
+  &__field {
+    float: left;
+    width: calc(100% - 50px);
+    height: 100%;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      border: none;
+      position: relative;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+  }
+  &__thumb {
+    float: left;
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    &:hover {
+      opacity: 0.8;
+    }
+    .thumb {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.thumb {
+  display: block;
+}
+
+.anim-wiggle {
+  animation: wiggle 0.2s ease infinite;
+}
+.anim-wiggle-2 {
+  animation: wiggle2 0.2s ease infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
+@keyframes wiggle2 {
+  0% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
+}
+
+::ng-deep mat-button-toggle-group {
+  height: 12px;
+  align-items: center;
+}
+strong {
+  font-size: 14px;
+}

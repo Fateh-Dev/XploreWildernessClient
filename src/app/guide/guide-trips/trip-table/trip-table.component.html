@@ -121,7 +121,9 @@
     [class.row-active]="element.status === 'active'"
     [class.row-submitted]="element.status === 'submitted'"
     [class.row-reviewed]="element.status === 'reviewed'"
+    matTooltip="Other Details here"
   ></tr>
+
   <tr
     mat-row
     *matRowDef="let row; columns: ['expandedDetail']"

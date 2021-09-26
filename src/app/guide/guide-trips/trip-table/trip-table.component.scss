@@ -131,3 +131,9 @@ mat-chip:hover {
 .row-submitted {
   background-color: #fc7f031a !important;
 }
+.mat-column-title {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
