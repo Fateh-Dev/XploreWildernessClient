@@ -119,3 +119,15 @@ mat-chip:hover {
   background-color: white;
   cursor: pointer;
 }
+.row-denied {
+  background-color: #fb262e1a !important;
+}
+.row-active {
+  background-color: #6bad371a !important;
+}
+.row-reviewed {
+  background-color: #2699fb1a !important;
+}
+.row-submitted {
+  background-color: #fc7f031a !important;
+}

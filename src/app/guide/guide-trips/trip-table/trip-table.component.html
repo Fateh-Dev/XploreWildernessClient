@@ -116,8 +116,11 @@
   <tr
     mat-row
     *matRowDef="let element; columns: columnsToDisplay"
-    class="example-element-row"
     [class.example-expanded-row]="expandedElement === element"
+    [class.row-denied]="element.status === 'denied'"
+    [class.row-active]="element.status === 'active'"
+    [class.row-submitted]="element.status === 'submitted'"
+    [class.row-reviewed]="element.status === 'reviewed'"
   ></tr>
   <tr
     mat-row

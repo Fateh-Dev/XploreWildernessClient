@@ -8,13 +8,14 @@
     fxLayoutGap="40px"
     style="
       padding: 20px;
+      padding-top: 100px;
       border-radius: 10px;
-      min-height: 500px !important;
+      min-height: 300px !important;
       min-width: 100% !important;
     "
   >
     <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
-      <h3 style="font-weight: bold">Front side document</h3>
+      <!-- <h3 style="font-weight: bold">Front side document</h3> -->
       <div
         fxLayout="row"
         fxLayoutAlign="end end"
@@ -24,21 +25,18 @@
         <button
           (click)="pickFile1()"
           color="primary"
-          [ngClass]="!doc1 ? 'buttonLayoutDisabled' : 'buttonLayout'"
-          style="padding: 6px"
-          mat-flat-button
+          mat-icon-button
           [disabled]="!doc1"
         >
           <mat-icon>edit</mat-icon>
         </button>
         <button
-          mat-flat-button
+          mat-icon-button
           color="warn"
-          style="padding: 6px"
           [disabled]="!doc1"
           (click)="deleteImage1()"
         >
-          <mat-icon>delete</mat-icon>
+          <mat-icon>cancel</mat-icon>
         </button>
       </div>
       <div
@@ -50,11 +48,11 @@
         <span style="text-align: center"
           ><button
             *ngIf="!doc1"
-            mat-icon-button
+            mat-raised-button
             class="loadIcon"
             (click)="pickFile1()"
           >
-            <mat-icon>add_photo_alternate</mat-icon>
+            <mat-icon>add</mat-icon>Front
           </button>
 
           <img
@@ -62,8 +60,8 @@
             [src]="doc1"
             style="
               margin: 4px;
-              max-width: 300px;
-              max-height: 300px;
+              max-width: 250px;
+              max-height: 250px;
               object-fit: fill;
             "
           />
@@ -83,7 +81,7 @@
     ></app-abpdz-import-image> -->
     </div>
     <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
-      <h3 style="font-weight: bold">Back side document</h3>
+      <!-- <h3 style="font-weight: bold">Back side document</h3> -->
       <div
         fxLayout="row"
         fxLayoutAlign="end end"
@@ -93,21 +91,18 @@
         <button
           (click)="pickFile2()"
           color="primary"
-          [ngClass]="!doc2 ? 'buttonLayoutDisabled' : 'buttonLayout'"
-          style="padding: 6px"
-          mat-flat-button
+          mat-icon-button
           [disabled]="!doc2"
         >
           <mat-icon>edit</mat-icon>
         </button>
         <button
-          mat-flat-button
+          mat-icon-button
           color="warn"
-          style="padding: 6px"
           (click)="deleteImage2()"
           [disabled]="!doc2"
         >
-          <mat-icon>delete</mat-icon>
+          <mat-icon>cancel</mat-icon>
         </button>
       </div>
       <div
@@ -119,11 +114,11 @@
         <span style="text-align: center"
           ><button
             *ngIf="!doc2"
-            mat-icon-button
+            mat-raised-button
             class="loadIcon"
             (click)="pickFile2()"
           >
-            <mat-icon>add_photo_alternate</mat-icon>
+            <mat-icon>add</mat-icon>Back
           </button>
 
           <img
@@ -131,8 +126,8 @@
             [src]="doc2"
             style="
               margin: 4px;
-              max-width: 300px;
-              max-height: 300px;
+              max-width: 250px;
+              max-height: 250px;
               object-fit: fill;
             "
           />
@@ -151,5 +146,17 @@
       textButton="Attach front document"
     ></app-abpdz-import-image> -->
     </div>
+  </div>
+  <div fxLayout="row" fxFlex fxFlexFill style="padding: 20px">
+    <span fxFlex style="flex: 1 1 auto"></span>
+    <button
+      mat-flat-button
+      aria-label="Example icon-button with share icon"
+      color="primary"
+      class="head-14-semibold"
+      style="background-color: #2699fb; border-radius: 20px"
+    >
+      <span fxHide.xs-sm>Verify account</span><mat-icon>chevron_right</mat-icon>
+    </button>
   </div>
 </div>
