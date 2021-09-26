@@ -10,6 +10,7 @@
       fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
+      [fxHide]="service.hidden"
       fxShow
       fxHide.lt-md
       fxFlexFill
@@ -119,6 +120,7 @@
             *ngFor="let link of links[3]"
             class="menuItem"
             [routerLink]="link.href"
+            (click)="service.hidden = true"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-guide-home',
@@ -26,7 +27,7 @@ export class GuideHomeComponent implements OnInit {
     [{ name: 'Deactivate', href: 'deactivate', icon: 'lock' }],
   ];
 
-  constructor() {}
+  constructor(public service: AppService) {}
 
   ngOnInit(): void {}
 }
