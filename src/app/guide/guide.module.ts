@@ -17,6 +17,7 @@ import { TripItemComponent } from './guide-trips/trip-item/trip-item.component';
 import { SharedComponentsModule } from '../shared-components/shared-components.module';
 import { EmergencyContactComponent } from './guide-settings/emergency-contact/emergency-contact.component';
 import { TripTableComponent } from './guide-trips/trip-table/trip-table.component';
+import { PaymentHistoryTableComponent } from './guide-billing/payment-history-table/payment-history-table.component';
 @NgModule({
   declarations: [
     GuideHomeComponent,
@@ -34,6 +35,7 @@ import { TripTableComponent } from './guide-trips/trip-table/trip-table.componen
     TripItemComponent,
     EmergencyContactComponent,
     TripTableComponent,
+    PaymentHistoryTableComponent,
   ],
   imports: [CommonModule, GuideRoutingModule, SharedComponentsModule],
 })

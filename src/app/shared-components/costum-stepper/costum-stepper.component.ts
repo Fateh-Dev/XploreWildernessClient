@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CdkStepper } from '@angular/cdk/stepper';
 
 /** @title A custom CDK stepper without a form */
@@ -17,6 +17,8 @@ export class CdkCustomStepperWithoutFormExample {}
   providers: [{ provide: CdkStepper, useExisting: CustomStepper }],
 })
 export class CustomStepper extends CdkStepper {
+  @Input()
+  lineWidth = 180;
   selectStepByIndex(index: number): void {
     this.selectedIndex = index;
   }

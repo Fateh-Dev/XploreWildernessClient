@@ -1,1 +1,161 @@
-<p>guide-experience works!</p>
+<div
+  fxLayout="row"
+  fxLayoutGap="20px"
+  fxLayoutAlign="center center"
+  style="padding: 20px"
+>
+  <div fxFlex="90" fxLayout="column" fxLayoutGap="40px">
+    <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="start start">
+      <div fxLayout="row" style="position: relative">
+        <span class="roundImage"><span class="roundImageCenter">+</span></span>
+      </div>
+      <div fxLayout="row" *ngFor="let item of [1, 2]">
+        <span
+          class="roundImage"
+          style="background-color: #2699fb !important"
+        ></span>
+      </div>
+    </div>
+    <mat-card
+      fxLayout="row"
+      fxLayoutGap="20"
+      style="
+        background-color: #f7f5ed66;
+        min-height: 575px !important;
+        border: 1px solid #7070704d;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px white;
+      "
+      fxLayoutAlign="center start"
+    >
+      <example-custom-stepper [lineWidth]="350">
+        <cdk-step
+          ><div fxLayout="row" fxLayoutAlign="center center">
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+              <br />
+
+              <div
+                fxLayout="row"
+                fxLayoutAlign="center center"
+                fxFlex
+                style="padding: 20px"
+                fxFlexFill
+              >
+                <form class="example-form" fxFlex="70">
+                  <mat-form-field
+                    fxFlexFill
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Select an activity</mat-label>
+                    <input
+                      fxFlexFill
+                      type="text"
+                      placeholder="Pick one"
+                      aria-label="Number"
+                      matInput
+                      [formControl]="myControl"
+                      [matAutocomplete]="auto"
+                    />
+                    <mat-autocomplete
+                      autoActiveFirstOption
+                      #auto="matAutocomplete"
+                    >
+                      <mat-option
+                        *ngFor="let option of filteredOptions | async"
+                        [value]="option"
+                      >
+                        {{ option }}
+                      </mat-option>
+                    </mat-autocomplete>
+                  </mat-form-field>
+                </form>
+              </div>
+              <div fxFlex fxLayout="row">
+                <span
+                  class="roundImage"
+                  style="width: 120px !important; height: 120px !important"
+                ></span>
+              </div>
+              <div fxLayout="row" fxFlex fxFlexFill style="padding: 30px 0px">
+                <span fxFlex style="flex: 1 1 auto"></span>
+                <button
+                  mat-flat-button
+                  aria-label="Example icon-button with share icon"
+                  color="primary"
+                  matStepperNext
+                  class="head-14-semibold"
+                  style="background-color: #2699fb; border-radius: 20px"
+                >
+                  <span fxHide.xs-sm>Experience</span
+                  ><mat-icon>chevron_right</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div></cdk-step
+        ><cdk-step
+          ><div fxLayout="row" fxLayoutAlign="start start">
+            <div fxLayout="column" fxLayoutAlign="start start" fxFlexFill>
+              <br />
+              <div
+                fxFlex
+                fxLayout="row"
+                style="padding: 20px"
+                fxLayoutAlign="center center"
+                fxFlexFill
+              >
+                <span fxFlex="80" style="font-size: 14px"
+                  >How many ACTIVITY trips have you led in the past?</span
+                ><span fxFlex="20"
+                  ><mat-form-field appearance="outline" style="max-width: 80px">
+                    <!-- <mat-label>Input</mat-label> -->
+                    <input
+                      matInput
+                      type="number"
+                      placeholder="00"
+                    /> </mat-form-field
+                ></span>
+              </div>
+              <div fxFlex fxLayout="row" style="padding: 20px" fxFlexFill>
+                <span fxFlex="70"
+                  >How many years of guiding experience do you have?</span
+                ><span fxFlex="10">ff</span><span fxFlex="20">ff</span>
+              </div>
+              <div fxFlex fxLayout="row" style="padding: 20px" fxFlexFill>
+                <span fxFlex="70"
+                  >How many xplorers did you lead during a trip?</span
+                ><span fxFlex="20">ff</span>
+              </div>
+              <div fxLayout="row" fxFlex fxFlexFill style="padding: 30px 0px">
+                <span fxFlex style="flex: 1 1 auto"></span>
+                <button
+                  mat-flat-button
+                  aria-label="Example icon-button with share icon"
+                  color="primary"
+                  matStepperNext
+                  class="head-14-semibold"
+                  style="background-color: #2699fb; border-radius: 20px"
+                >
+                  <span fxHide.xs-sm>Experience</span
+                  ><mat-icon>chevron_right</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div></cdk-step
+        ><cdk-step
+          ><div fxLayout="row">
+            <div fxLayout="column"><div fxFlex>ff</div></div>
+          </div></cdk-step
+        ><cdk-step
+          ><div fxLayout="row">
+            <div fxLayout="column"><div fxFlex>ff</div></div>
+          </div></cdk-step
+        ><cdk-step
+          ><div fxLayout="row">
+            <div fxLayout="column"><div fxFlex>ff</div></div>
+          </div></cdk-step
+        ></example-custom-stepper
+      >
+    </mat-card>
+  </div>
+</div>
