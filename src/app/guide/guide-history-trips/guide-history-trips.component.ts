@@ -25,7 +25,15 @@ export class GuideHistoryTripsComponent implements AfterViewInit {
     'date_range',
   ];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
+  colors = [
+    '#FC7F031A',
+    '#6BAD371A',
+    '#2699FB1A',
+    '#FC7F031A',
+    '#57B8BC33',
+    '#6BAD371A',
+    'whitesmoke',
+  ];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   applyFilter(event: Event) {

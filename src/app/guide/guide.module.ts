@@ -18,6 +18,9 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
 import { EmergencyContactComponent } from './guide-settings/emergency-contact/emergency-contact.component';
 import { TripTableComponent } from './guide-trips/trip-table/trip-table.component';
 import { PaymentHistoryTableComponent } from './guide-billing/payment-history-table/payment-history-table.component';
+import { ConfirmSwitchComponent } from './guide-billing/confirm-switch/confirm-switch.component';
+import { DownloadModalComponent } from './guide-billing/download-modal/download-modal.component';
+import { ConfirmModalComponent } from './guide-billing/confirm-modal/confirm-modal.component';
 @NgModule({
   declarations: [
     GuideHomeComponent,
@@ -36,6 +39,9 @@ import { PaymentHistoryTableComponent } from './guide-billing/payment-history-ta
     EmergencyContactComponent,
     TripTableComponent,
     PaymentHistoryTableComponent,
+    ConfirmSwitchComponent,
+    DownloadModalComponent,
+    ConfirmModalComponent,
   ],
   imports: [CommonModule, GuideRoutingModule, SharedComponentsModule],
 })

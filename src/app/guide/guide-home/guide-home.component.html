@@ -7,15 +7,23 @@
     fxLayoutGap="16px"
   >
     <mat-card
+      [@openClose]="isMessage ? 'closed' : 'open'"
       fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
-      [fxHide]="service.hidden"
       fxShow
       fxHide.lt-md
       fxFlexFill
-    >
-      <div fxLayout="row" fxLayoutAlign="stretch stretch" style="padding: 8px">
+      ><div
+        [fxHide]="!isMessage"
+        style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
+      ></div>
+      <div
+        fxLayout="row"
+        fxLayoutAlign="stretch stretch"
+        style="padding: 8px"
+        [fxHide]="isMessage"
+      >
         <span fxFlex style="font-size: 12px">Edmonton, Canada</span>
         <span style="font-size: 12px">3:59 PM</span>
       </div>
@@ -29,6 +37,7 @@
           height: 80px;
         "
         fxLayout="column"
+        [fxHide]="isMessage"
         fxLayoutAlign="center center"
         fxLayoutGap="20px"
         ><span
@@ -56,6 +65,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -66,7 +76,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -78,6 +90,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -88,7 +101,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -100,6 +115,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -110,7 +126,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -123,6 +141,7 @@
             (click)="service.hidden = true"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = true"
             matLine
           >
             <span fxFlex
@@ -133,7 +152,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -145,6 +166,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -155,7 +177,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       >

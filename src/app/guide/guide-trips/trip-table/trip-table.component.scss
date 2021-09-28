@@ -137,3 +137,41 @@ mat-chip:hover {
   white-space: nowrap;
   overflow: hidden;
 }
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: whitesmoke;
+  border: 2px solid gray;
+  color: rgb(24, 23, 23);
+  text-align: center;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  min-height: 50px;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  min-height: 50px;
+  border-width: 5px;
+  border-style: solid;
+  border: 2px solid gray;
+  border-color: gray transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

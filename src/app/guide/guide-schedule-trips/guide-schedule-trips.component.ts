@@ -25,7 +25,15 @@ export class GuideScheduleTripsComponent implements AfterViewInit {
     'date_range',
   ];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
+  colors = [
+    '#FC7F031A',
+    '#6BAD371A',
+    '#2699FB1A',
+    '#FC7F031A',
+    '#57B8BC33',
+    '#6BAD371A',
+    'whitesmoke',
+  ];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   applyFilter(event: Event) {
@@ -54,7 +62,7 @@ export class GuideScheduleTripsComponent implements AfterViewInit {
 }
 
 export interface PeriodicElement {
-  id: string;
+  id: number;
   title: string;
   region: string;
   activities: string;
@@ -66,7 +74,7 @@ export interface PeriodicElement {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    id: '1',
+    id: 1,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -76,7 +84,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '2',
+    id: 2,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -86,7 +94,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '5',
+    id: 5,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -96,7 +104,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '2',
+    id: 2,
     title: 'Monterey, Ca Carmel and the Carmel and thermel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -106,7 +114,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '3',
+    id: 3,
     title:
       'Monterey, Carmel and the  Carmel and the Carmel and the Carmel and the…',
     region: 'California, USA',
@@ -117,7 +125,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '2',
+    id: 2,
     title:
       'Monterey, Carm Carmel and the Carmel and the Carmel and theel and the …',
     region: 'California, USA',
@@ -128,7 +136,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '2',
+    id: 2,
     title:
       'Monterey, Carmel  Carmel and the Carmel and the Carmel and theand the …',
     region: 'California, USA',
@@ -139,7 +147,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '3',
+    id: 3,
     title: 'Monterey, Carmel and the Carmel and the Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -149,7 +157,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '4',
+    id: 4,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -159,7 +167,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '5',
+    id: 5,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
@@ -169,7 +177,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     date_range: 'hlkh',
   },
   {
-    id: '6',
+    id: 6,
     title: 'Monterey, Carmel and the …',
     region: 'California, USA',
     activities: 'H',
