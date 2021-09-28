@@ -14,7 +14,10 @@
       fxShow
       fxHide.lt-md
       fxFlexFill
-    >
+      ><div
+        [fxHide]="!isMessage"
+        style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
+      ></div>
       <div
         fxLayout="row"
         fxLayoutAlign="stretch stretch"
