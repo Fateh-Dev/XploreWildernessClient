@@ -7,6 +7,7 @@ import { AppService } from 'src/app/app.service';
   styleUrls: ['./guide-home.component.scss'],
 })
 export class GuideHomeComponent implements OnInit {
+  isMessage = false;
   public links = [
     [
       { name: 'Profile', href: 'profile', icon: 'badge' },

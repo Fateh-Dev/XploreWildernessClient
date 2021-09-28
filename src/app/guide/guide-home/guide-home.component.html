@@ -10,16 +10,22 @@
       fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
-      [fxHide]="service.hidden"
+      [ngClass]="{ 'menu-md': isMessage }"
       fxShow
       fxHide.lt-md
       fxFlexFill
     >
-      <div fxLayout="row" fxLayoutAlign="stretch stretch" style="padding: 8px">
+      <div
+        fxLayout="row"
+        fxLayoutAlign="stretch stretch"
+        style="padding: 8px"
+        [fxHide]="isMessage"
+      >
         <span fxFlex style="font-size: 12px">Edmonton, Canada</span>
         <span style="font-size: 12px">3:59 PM</span>
       </div>
       <span
+        [fxHide]="isMessage"
         fxFlex
         style="
           position: relative;
@@ -56,6 +62,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -66,7 +73,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -78,6 +87,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -88,7 +98,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -100,6 +112,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -110,7 +123,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -123,6 +138,7 @@
             (click)="service.hidden = true"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = true"
             matLine
           >
             <span fxFlex
@@ -133,7 +149,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       ><span class="divider"></span>
@@ -145,6 +163,7 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="isMessage = false"
             matLine
           >
             <span fxFlex
@@ -155,7 +174,9 @@
                 >{{ link.icon }}</mat-icon
               ></span
             >
-            <span class="mx-2" fxFlex="80">{{ link.name }}</span>
+            <span class="mx-2" fxFlex="80" [fxHide]="isMessage">{{
+              link.name
+            }}</span>
           </mat-list-item>
         </mat-list></span
       >

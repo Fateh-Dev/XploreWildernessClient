@@ -42,3 +42,7 @@ mat-list-item {
   height: 1px;
   background-color: rgba(128, 128, 128, 0.534);
 }
+.menu-md {
+  max-width: 60px !important;
+  overflow: hidden;
+}
