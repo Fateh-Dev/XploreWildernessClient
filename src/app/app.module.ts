@@ -13,6 +13,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { GuideModule } from './guide/guide.module';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { RouterModule } from '@angular/router';
+import {
+  FacebookLoginProvider,
+  GoogleLoginProvider,
+  SocialAuthServiceConfig,
+  SocialLoginModule,
+} from 'angularx-social-login';
 @NgModule({
   declarations: [AppComponent, NotFound404Component],
   imports: [
@@ -27,6 +33,7 @@ import { RouterModule } from '@angular/router';
     XplorerModule,
     GuideModule,
     HomeModule,
+    SocialLoginModule,
   ],
   exports: [
     FormsModule,
@@ -34,7 +41,26 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '726845249489-ierpr4jmhu5oqdl4l5kp9nngaff5up31.apps.googleusercontent.com'
+            ),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('1489004154795359'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

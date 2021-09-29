@@ -1,13 +1,7 @@
 <div style="background-color: whitesmoke; min-height: 100vh">
   <mat-toolbar
     [class.mat-elevation-z2]="true"
-    style="
-      background-color: white;
-
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    "
+    style="background-color: white; position: sticky; top: 0; z-index: 100"
     fxLayout="row"
     fxLayoutAlign="space-around center"
   >
@@ -107,7 +101,7 @@
           >
           <span>Xplorer Profile</span>
         </button>
-        <button mat-menu-item [routerLink]="['/login']">
+        <button mat-menu-item (click)="signOut()" [routerLink]="['/login']">
           <mat-icon class="material-icons-outlined">logout </mat-icon>
           <span>Logout</span>
         </button>
