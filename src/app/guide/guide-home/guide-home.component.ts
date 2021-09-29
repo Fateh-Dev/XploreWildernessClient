@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
 
@@ -5,8 +12,27 @@ import { AppService } from 'src/app/app.service';
   selector: 'app-guide-home',
   templateUrl: './guide-home.component.html',
   styleUrls: ['./guide-home.component.scss'],
+  animations: [
+    trigger('openClose', [
+      state(
+        'open',
+        style({
+          maxWidth: '220px',
+        })
+      ),
+      state(
+        'closed',
+        style({
+          maxWidth: '60px',
+        })
+      ),
+      transition('open <=> closed', animate('400ms ease-in-out')),
+      transition('closed <=> open', animate('400ms ease-in-out')),
+    ]),
+  ],
 })
 export class GuideHomeComponent implements OnInit {
+  isMessage = false;
   public links = [
     [
       { name: 'Profile', href: 'profile', icon: 'badge' },
