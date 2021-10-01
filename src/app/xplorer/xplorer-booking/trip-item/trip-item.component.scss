@@ -71,3 +71,15 @@ mat-chip {
 .end {
   border-left: 2px solid rgba(128, 128, 128, 0.521);
 }
+.upHeader {
+  position: relative;
+  top: -195px;
+  text-align: center;
+  font-size: 12px;
+}
+.downHeader {
+  position: relative;
+  top: -80px;
+  text-align: center;
+  font-size: 12px;
+}

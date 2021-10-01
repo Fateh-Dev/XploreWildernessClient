@@ -35,7 +35,7 @@ export class GuideHomeComponent implements OnInit {
   isMessage = false;
   public links = [
     [
-      { name: 'Profile', href: 'profile', icon: 'badge' },
+      { name: 'Profile', href: 'profile', icon: 'account_circle' },
       { name: 'Settings', href: 'settings', icon: 'settings_outline' },
       { name: 'Verification', href: 'verification', icon: 'check_circle' },
     ],
