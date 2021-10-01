@@ -54,6 +54,7 @@
                       placeholder="Pick one"
                       aria-label="Number"
                       matInput
+                      [ngModel]="activityPicture"
                       [formControl]="myControl"
                       [matAutocomplete]="auto"
                     />
@@ -73,9 +74,11 @@
               </div>
               <div fxFlex fxLayout="row">
                 <span
-                  class="roundImage"
-                  style="width: 120px !important; height: 120px !important"
-                ></span>
+                  ><img
+                    [src]="'assets/activities/' + activityPicture + '.png'"
+                    class="roundImage"
+                    style="width: 120px !important; height: 120px !important"
+                /></span>
               </div>
               <div fxLayout="row" fxFlex fxFlexFill style="padding: 30px 0px">
                 <span fxFlex style="flex: 1 1 auto"></span>

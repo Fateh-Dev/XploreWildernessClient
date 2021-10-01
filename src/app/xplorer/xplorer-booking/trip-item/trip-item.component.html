@@ -211,7 +211,30 @@
         /></span>
       </div>
       <div fxLayout="row" fxFlexFill fxFlex fxLayoutAlign="end end">
-        <button mat-icon-button><mat-icon>more_horiz</mat-icon></button>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon style="font-size: 22px">more_horiz</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Edit Trip</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon color="primary">calendar_today</mat-icon>
+            <span>Schedule Trip</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>file_copy</mat-icon>
+            <span>Duplicate Trip</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon color="accent">delete</mat-icon>Delete Trip
+          </button>
+        </mat-menu>
       </div>
     </span>
   </div>
