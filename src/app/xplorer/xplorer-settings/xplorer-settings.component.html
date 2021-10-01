@@ -1,1 +1,173 @@
-<p>xplorer-settings works!</p>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <example-custom-stepper [linear]="true">
+    <cdk-step [stepControl]="notificationFormGroup">
+      <div
+        [formGroup]="notificationFormGroup"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+      >
+        <div fxFlex style="padding: 30px" class="head-20-semibold">
+          Notifications
+        </div>
+        <div
+          fxFlex
+          fxFlexFill
+          class="example-section"
+          style="
+            max-width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            text-align: left;
+          "
+        >
+          <section fxFlex fxFlexFill>
+            <mat-slide-toggle class="example-margin" formControlName="xplorer">
+              Send me email updates regarding communication from
+              xplorers.</mat-slide-toggle
+            >
+          </section>
+        </div>
+        <div
+          fxFlex
+          class="example-section"
+          fxFlexFill
+          style="
+            max-width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            text-align: left;
+          "
+        >
+          <section fxFlex fxFlexFill>
+            <mat-slide-toggle class="example-margin" formControlName="team">
+              Send me email updates regarding communication from the
+              XploreWilderness.com team.</mat-slide-toggle
+            >
+          </section>
+        </div>
+
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
+          >
+            <span fxHide.xs-sm>Units</span><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div></cdk-step
+    >
+    <cdk-step [stepControl]="uniteFormGroup">
+      <div
+        [formGroup]="uniteFormGroup"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+      >
+        <div fxFlex style="padding: 30px" class="head-20-semibold">Units</div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex style="width: 100%">
+            <mat-label>Currency</mat-label>
+            <mat-select formControlName="currency" required>
+              <mat-option
+                *ngFor="let food of ['USD', 'EUR', 'CA']"
+                [value]="food"
+              >
+                {{ food }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex style="width: 100%">
+            <mat-label>Distance</mat-label>
+            <mat-select formControlName="distance" required>
+              <mat-option
+                *ngFor="let food of ['Kilometres', 'Miles']"
+                [value]="food"
+              >
+                {{ food }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex style="width: 100%">
+            <mat-label>Time Zone</mat-label>
+            <mat-select formControlName="timeZone" required>
+              <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                {{ food }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperPrevious
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
+          >
+            <mat-icon>chevron_left</mat-icon>
+            <span fxHide.xs-sm>Notifications</span>
+          </button>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
+          >
+            <span fxHide.xs-sm>Emergency Contact</span
+            ><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </cdk-step>
+    <cdk-step>
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="35px"
+        fxFlexFill
+      >
+        <div fxFlex style="padding: 20px 0 0 0" class="head-20-semibold">
+          Emergency Contacts
+        </div>
+
+        <app-emergency-contact></app-emergency-contact>
+
+        <div
+          fxLayout="row"
+          fxFlex
+          fxFlexFill
+          fxLayoutAlign="space-around center"
+        >
+          <div fxFlex="70" fxLayout="row">
+            <button
+              mat-flat-button
+              aria-label="Example icon-button with share icon"
+              color="primary"
+              matStepperPrevious
+              style="background-color: #2699fb; border-radius: 20px"
+              class="head-14-semibold"
+            >
+              <mat-icon>chevron_left</mat-icon>
+              <span fxHide.xs-sm>Personal</span>
+            </button>
+            <span fxFlex style="flex: 1 1 auto"></span>
+          </div>
+        </div>
+      </div>
+    </cdk-step>
+  </example-custom-stepper>
+</div>

@@ -13,7 +13,6 @@ import { GuideInsuranceComponent } from './guide-insurance/guide-insurance.compo
 import { GuideBillingComponent } from './guide-billing/guide-billing.component';
 import { GuideMessagesComponent } from './guide-messages/guide-messages.component';
 import { GuideDeactivateComponent } from './guide-deactivate/guide-deactivate.component';
-import { TripItemComponent } from './guide-trips/trip-item/trip-item.component';
 import { SharedComponentsModule } from '../shared-components/shared-components.module';
 import { EmergencyContactComponent } from './guide-settings/emergency-contact/emergency-contact.component';
 import { TripTableComponent } from './guide-trips/trip-table/trip-table.component';
@@ -35,7 +34,6 @@ import { ConfirmModalComponent } from './guide-billing/confirm-modal/confirm-mod
     GuideBillingComponent,
     GuideMessagesComponent,
     GuideDeactivateComponent,
-    TripItemComponent,
     EmergencyContactComponent,
     TripTableComponent,
     PaymentHistoryTableComponent,

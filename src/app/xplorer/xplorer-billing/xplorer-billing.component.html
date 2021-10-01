@@ -1,1 +1,147 @@
- 
+<br />
+<br />
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div
+    fxFlex="90"
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+    fxLayoutGap="40px"
+  >
+    <mat-accordion class="example-headers-align" fxFlexFill>
+      <mat-expansion-panel
+        [expanded]="step === 0"
+        (opened)="setStep(0)"
+        hideToggle
+        [class.selected]="step === 0"
+        style="
+          background-color: #f7f5ed80;
+          box-shadow: 0px 0px 0px black;
+          border: 1px solid #7070704d;
+          margin: 5px 0px;
+        "
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Prefered Method </mat-panel-title>
+          <mat-panel-description>
+            <span style="flex: 1 1 auto; text-align: left">
+              Mastercard ending in 0000</span
+            >
+            <mat-icon *ngIf="step != 0">chevron_right</mat-icon>
+            <mat-icon *ngIf="step == 0">expand_more</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- list of prefered methods with edit delete and valide icon -->
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <mat-list role="list" fxFlex="50">
+            <mat-list-item role="listitem">
+              <img src="assets/visa.png" alt="" width="60" /><span
+                style="flex: 1 1 auto"
+                >Mastercard ending in 0000</span
+              >
+              <span style="flex: 1 1 auto"></span
+              ><button mat-icon-button>
+                <mat-icon style="color: rgb(230, 230, 230)"
+                  >check_circle</mat-icon
+                >
+              </button>
+              <button mat-icon-button>
+                <mat-icon>edit</mat-icon></button
+              ><button mat-icon-button>
+                <mat-icon color="warn">cancel</mat-icon>
+              </button>
+            </mat-list-item>
+            <mat-list-item role="listitem"
+              ><img src="assets/visa.png" alt="" width="60" /><span
+                style="flex: 1 1 auto"
+              >
+                Visa ending in 0000</span
+              >
+              <span style="flex: 1 1 auto; min-width: 30px"></span
+              ><button mat-icon-button>
+                <mat-icon style="color: rgb(230, 230, 230)"
+                  >check_circle</mat-icon
+                >
+              </button>
+              <button mat-icon-button>
+                <mat-icon>edit</mat-icon></button
+              ><button mat-icon-button>
+                <mat-icon color="warn">cancel</mat-icon>
+              </button>
+            </mat-list-item>
+            <mat-list-item role="listitem"
+              ><img src="assets/paypalLogo.jpg" salt="" width="60" /><span
+                style="flex: 1 1 auto"
+              >
+                Paypal - email@email.com</span
+              >
+              <span style="flex: 1 1 auto; min-width: 30px"></span
+              ><button mat-icon-button>
+                <mat-icon style="color: green">check_circle</mat-icon>
+              </button>
+              <button mat-icon-button>
+                <mat-icon>edit</mat-icon></button
+              ><button mat-icon-button>
+                <mat-icon color="warn">cancel</mat-icon>
+              </button>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <mat-action-row>
+          <div fxLayout="row" fxLayoutAlign="end end">
+            <button
+              fxFlex
+              mat-raised-button
+              color="primary"
+              style="background-color: #2699fb"
+            >
+              <mat-icon>add</mat-icon><span>Add </span>
+            </button>
+          </div>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel
+        [expanded]="step === 1"
+        (opened)="setStep(1)"
+        hideToggle
+        [class.selected]="step === 1"
+        style="
+          background-color: #f7f5ed80;
+          box-shadow: 0px 0px 0px black;
+          border: 1px solid #7070704d;
+          margin: 5px 0px;
+        "
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>Payment History</mat-panel-title>
+          <mat-panel-description style="text-align: left !important">
+            <span style="flex: 1 1 auto; text-align: left !important">
+              55 payments made successfully</span
+            >
+            <mat-icon *ngIf="step != 1">chevron_right</mat-icon>
+            <mat-icon *ngIf="step == 1">expand_more</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-payment-history-table></app-payment-history-table>
+        <mat-action-row>
+          <div fxLayout="row" fxLayoutAlign="end end">
+            <button
+              fxflex
+              color="primary"
+              mat-raised-button
+              style="max-height: 50px; margin: 3px"
+              style="background-color: #2699fb"
+            >
+              <mat-icon>download</mat-icon>Download
+            </button>
+          </div>
+          <!-- <button mat-raised-button color="primary" >
+              save
+            </button> -->
+          <!-- <button mat-button color="primary" (click)="nextStep()">End</button> -->
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

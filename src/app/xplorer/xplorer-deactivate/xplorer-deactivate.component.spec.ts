@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XplorerSocialComponent } from './xplorer-social.component';
+import { XplorerDeactivateComponent } from './xplorer-deactivate.component';
 
-describe('XplorerSocialComponent', () => {
-  let component: XplorerSocialComponent;
-  let fixture: ComponentFixture<XplorerSocialComponent>;
+describe('XplorerDeactivateComponent', () => {
+  let component: XplorerDeactivateComponent;
+  let fixture: ComponentFixture<XplorerDeactivateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ XplorerSocialComponent ]
+      declarations: [ XplorerDeactivateComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(XplorerSocialComponent);
+    fixture = TestBed.createComponent(XplorerDeactivateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

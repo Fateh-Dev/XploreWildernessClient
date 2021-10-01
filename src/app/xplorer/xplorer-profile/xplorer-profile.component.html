@@ -1,4 +1,352 @@
-<example-custom-stepper>
-  <cdk-step> <p>This is any content of "Step 1"</p> </cdk-step>
-  <cdk-step> <p>This is any content of "Step 2"</p> </cdk-step>
-</example-custom-stepper>
+<div fxLayout="row" fxLayoutAlign="space-around center" [formGroup]="formData">
+  <example-custom-stepper [lineWidth]="180" [linear]="false">
+    <cdk-step [stepControl]="formData.get('accountFormGroup')">
+      <form
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+        formGroupName="accountFormGroup"
+      >
+        <div fxFlex class="head-20-semibold" style="padding: 30px">Account</div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Username</mat-label>
+            <input
+              matInput
+              placeholder="Tape here ..."
+              formControlName="username"
+              required
+              autocomplete="off"
+            />
+            <mat-icon matSuffix class="material-icons-outlined"
+              >person</mat-icon
+            >
+          </mat-form-field>
+        </div>
+        <div fxFlex fxFlexFill>
+          <mat-form-field appearance="outline" fxFlex>
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="Tape here ..."
+              formControlName="email"
+              required
+              type="email"
+              autocomplete="off"
+              [email]="true"
+            />
+            <mat-icon matSuffix class="material-icons-outlined"
+              >alternate_email</mat-icon
+            >
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            class="head-14-semibold"
+            style="background-color: #2699fb; border-radius: 20px"
+          >
+            <span fxHide.xs-sm>Personal</span><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </form></cdk-step
+    >
+    <cdk-step [stepControl]="formData.get('personalFormGroup')"
+      ><div
+        fxLayout="column"
+        formGroupName="personalFormGroup"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+      >
+        <div fxFlex style="padding: 30px" class="head-20-semibold">
+          Personal
+        </div>
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayout.lt-md="column"
+          fxLayoutGap="30px"
+          fxFlexFill
+        >
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Firstname</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="firstName"
+                required
+              />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              >
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Lastname</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="lastName"
+                required
+              />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              >
+            </mat-form-field>
+          </div>
+        </div>
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayout.lt-md="column"
+          fxLayoutGap="30px"
+          fxFlexFill
+        >
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Gender</mat-label>
+              <mat-select formControlName="gender" required>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>phone</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="phone"
+                required
+              />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >phone</mat-icon
+              >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>address</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="address"
+                required
+              />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >markunread_mailbox</mat-icon
+              >
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>address 2</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="address2"
+              />
+              <mat-icon matSuffix class="material-icons-outlined"
+                >markunread_mailbox</mat-icon
+              >
+            </mat-form-field>
+          </div>
+        </div>
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayout.lt-md="column"
+          fxLayoutGap="30px"
+          fxFlexFill
+        >
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>City</mat-label>
+              <mat-select formControlName="city" required>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>State / Province</mat-label>
+              <mat-select formControlName="state" required>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayout.lt-md="column"
+          fxLayoutGap="30px"
+          fxFlexFill
+        >
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Zip Code / Postal Code</mat-label>
+              <input
+                matInput
+                autocomplete="off"
+                placeholder="Tape here ..."
+                formControlName="zipCode"
+                required
+              />
+              <!-- <mat-icon matSuffix class="material-icons-outlined"
+                >person</mat-icon
+              > -->
+            </mat-form-field>
+          </div>
+          <div fxFlex fxFlexFill>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Country</mat-label>
+              <mat-select formControlName="country" required>
+                <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
+                  {{ food }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div fxLayout="row" fxFlex fxFlexFill>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperPrevious
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
+          >
+            <mat-icon>chevron_left</mat-icon>
+            <span fxHide.xs-sm>Account</span>
+          </button>
+          <span fxFlex style="flex: 1 1 auto"></span>
+          <button
+            mat-flat-button
+            aria-label="Example icon-button with share icon"
+            color="primary"
+            matStepperNext
+            style="background-color: #2699fb; border-radius: 20px"
+            class="head-14-semibold"
+          >
+            <span fxHide.xs-sm>Social</span><mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </cdk-step>
+    <cdk-step>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
+        <div fxFlex class="head-20-semibold" style="padding: 20px">Social</div>
+        <div
+          fxLayout="row"
+          fxFlex
+          fxFlexFill
+          fxLayoutAlign="space-around center"
+        >
+          <div fxFlex="70" fxLayout="column" fxFlexFill fxLayoutGap="10px">
+            <div fxFlex fxFlexFill>
+              <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Facebook</mat-label>
+                <input
+                  matInput
+                  autocomplete="off"
+                  placeholder="Tape here ..."
+                />
+                <span matSuffix class="material-icons-outlined"
+                  ><img
+                    src="https://img.icons8.com/color/24/000000/facebook.png"
+                /></span>
+              </mat-form-field>
+            </div>
+            <div fxFlex fxFlexFill>
+              <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Twitter</mat-label>
+                <input
+                  matInput
+                  autocomplete="off"
+                  placeholder="Tape here ..."
+                />
+                <span matSuffix class="material-icons-outlined"
+                  ><img
+                    src="https://img.icons8.com/color/24/000000/twitter-squared.png"
+                /></span>
+              </mat-form-field>
+            </div>
+            <div fxFlex fxFlexFill>
+              <mat-form-field appearance="outline" fxFlex>
+                <mat-label>LinkedIn</mat-label>
+                <input
+                  matInput
+                  autocomplete="off"
+                  placeholder="Tape here ..."
+                />
+                <span matSuffix class="material-icons-outlined"
+                  ><img
+                    src="https://img.icons8.com/color/24/000000/linkedin.png"
+                /></span>
+              </mat-form-field>
+            </div>
+            <div fxFlex fxFlexFill>
+              <mat-form-field appearance="outline" fxFlex>
+                <mat-label>TikTok</mat-label>
+                <input
+                  matInput
+                  autocomplete="off"
+                  placeholder="Tape here ..."
+                />
+                <span matSuffix class="material-icons-outlined"
+                  ><img
+                    src="https://img.icons8.com/color/24/000000/tiktok--v1.png"
+                /></span>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div
+          fxLayout="row"
+          fxFlex
+          fxFlexFill
+          fxLayoutAlign="space-around center"
+        >
+          <div fxFlex="70" fxLayout="row">
+            <button
+              mat-flat-button
+              aria-label="Example icon-button with share icon"
+              color="primary"
+              matStepperPrevious
+              style="background-color: #2699fb; border-radius: 20px"
+              class="head-14-semibold"
+            >
+              <mat-icon>chevron_left</mat-icon>
+              <span fxHide.xs-sm>Personal</span>
+            </button>
+            <span fxFlex style="flex: 1 1 auto"></span>
+          </div>
+        </div>
+      </div>
+    </cdk-step>
+  </example-custom-stepper>
+</div>

@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class AppService {
   isMessage = true;
-  hidden = false;
+  // hidden = false;
   constructor() {}
 }

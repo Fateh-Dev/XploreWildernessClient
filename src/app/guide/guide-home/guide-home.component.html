@@ -51,11 +51,8 @@
           "
           >Mohammed Rauf
         </span>
-        <img
-          src="../../../assets/avatar.png"
-          alt=""
-          width="115"
-          draggable="false" /></span
+        <img src="assets/avatar.png" alt="" width="115" draggable="false" />
+        <!-- <span class="imageShadow"></span> --> </span
       ><span class="divider"></span>
       <span fxFlex style="margin-top: 55px">
         <mat-list style="padding: 5px 0px">
@@ -138,7 +135,6 @@
             *ngFor="let link of links[3]"
             class="menuItem"
             [routerLink]="link.href"
-            (click)="service.hidden = true"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             (click)="isMessage = true"

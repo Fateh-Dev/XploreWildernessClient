@@ -1,0 +1,73 @@
+// .trip-item {
+//   height: 185px !important;
+//   border: 1px solid rgb(238, 238, 238);
+//   margin: 5px;
+// }
+// .trip-item-right {
+//   height: 185px !important;
+//   border-radius: 5px;
+//   padding: 10px;
+// }
+// .middle {
+//   padding: 10px;
+//   border-radius: 5px;
+// }
+// .right {
+//   padding: 10px;
+//   background-color: #f7f5ed;
+//   border: 1px solid #57b8bc;
+//   border-radius: 8px;
+// }
+// span {
+//   mat-icon {
+//     font-size: 18px;
+//     cursor: pointer;
+//   }
+// }
+
+.trip-item {
+  border: 1px solid #7070704d;
+  background-color: #f7f5ed80;
+  min-height: 250px;
+  padding: 25px;
+}
+.trip-item:hover {
+  box-shadow: 1px 1px 10px rgb(201, 201, 201);
+  cursor: pointer;
+}
+.trip-image {
+  max-height: 150px;
+  object-fit: fill;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.activities {
+}
+.loging {
+  font-size: 14px;
+}
+.parcs span span {
+  font-size: 12px !important;
+}
+.chips {
+}
+
+mat-chip {
+  color: white !important;
+  padding: 3px 10px !important;
+}
+.b-color-green {
+  background-color: #43893f;
+}
+.b-color-bleu {
+  background-color: #2699fb;
+}
+.b-color-orange {
+  background-color: #fc7f03;
+}
+.end {
+  border-left: 2px solid rgba(128, 128, 128, 0.521);
+}

@@ -14,7 +14,18 @@ table {
   font-size: 16px;
   font-weight: 500;
 }
-
+.mat-column-email {
+  width: 200px !important;
+}
+.mat-column-name {
+  width: 100px !important;
+}
+.mat-column-phone {
+  width: 200px !important;
+}
+.mat-column-relationship {
+  width: 100px !important;
+}
 .activities {
   display: flex;
   justify-content: center;
@@ -25,22 +36,4 @@ table {
 }
 .mat-header-cell-bookings {
   text-align: center;
-}
-
-::ng-deep .success-snackbar {
-  position: relative;
-  top: 100px;
-  display: flex;
-  justify-content: center;
-  background: #3b8bd3;
-  color: white;
-  font-size: 24px !important;
-  padding: 30px;
-}
-
-.active {
-  border: 1px solid #2699fb;
-  background-color: white;
-  color: #2699fb;
-  cursor: pointer;
 }

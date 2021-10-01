@@ -94,13 +94,18 @@
         <mat-icon class="material-icons-outlined">account_circle</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/guide/profile']">
+        <button
+          mat-menu-item
+          [routerLink]="['/guide/profile']"
+          (click)="showAddTrip = true"
+        >
           <mat-icon class="material-icons-outlined">badge</mat-icon>
           <span>Guide Profile</span></button
         ><button
           mat-menu-item
-          [routerLink]="['/xplorer/booking']"
+          [routerLink]="['/xplorer/profile']"
           routerLinkActive="router-link-active"
+          (click)="showAddTrip = false"
         >
           <mat-icon class="material-icons-outlined" [routerLink]="['/login']"
             >badge</mat-icon
@@ -134,6 +139,7 @@
         >
       </button>
       <button
+        *ngIf="showAddTrip"
         mat-flat-button
         [routerLink]="['/addTrip']"
         class="example-icon"

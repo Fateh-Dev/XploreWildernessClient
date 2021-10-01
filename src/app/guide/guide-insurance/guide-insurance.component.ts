@@ -54,16 +54,16 @@ export class GuideInsuranceComponent implements OnInit {
     }, 300);
   }
   ngOnInit(): void {
-    this.snackbar.open(
-      'All our guides are required to have their identity verified before being able to create and lead trips. Please upload two pieces of official identification for verification. Official identification can include Passport,National ID, and Health Cards.',
-      'close',
-      {
-        duration: 3000,
-        panelClass: ['success-snackbar'],
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-      }
-    );
+    // this.snackbar.open(
+    //   'All our guides are required to have their identity verified before being able to create and lead trips. Please upload two pieces of official identification for verification. Official identification can include Passport,National ID, and Health Cards.',
+    //   'close',
+    //   {
+    //     duration: 3000,
+    //     panelClass: ['success-snackbar'],
+    //     horizontalPosition: 'center',
+    //     verticalPosition: 'top',
+    //   }
+    // );
   }
   onSelectFile1(event: any) {
     if (event.target.files && event.target.files[0]) {

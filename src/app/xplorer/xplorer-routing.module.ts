@@ -1,3 +1,6 @@
+import { XplorerMessagesComponent } from './xplorer-messages/xplorer-messages.component';
+import { XplorerVerificationComponent } from './xplorer-verification/xplorer-verification.component';
+import { GuideVerificationComponent } from './../guide/guide-verification/guide-verification.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { XplorerBillingComponent } from './xplorer-billing/xplorer-billing.component';
@@ -8,7 +11,7 @@ import { XplorerInviteComponent } from './xplorer-invite/xplorer-invite.componen
 import { XplorerPreferenceComponent } from './xplorer-preference/xplorer-preference.component';
 import { XplorerProfileComponent } from './xplorer-profile/xplorer-profile.component';
 import { XplorerSettingsComponent } from './xplorer-settings/xplorer-settings.component';
-import { XplorerSocialComponent } from './xplorer-social/xplorer-social.component';
+import { XplorerDeactivateComponent } from './xplorer-deactivate/xplorer-deactivate.component';
 
 const routes: Routes = [
   { path: '', component: XplorerProfileComponent },
@@ -20,7 +23,9 @@ const routes: Routes = [
   { path: 'settings', component: XplorerSettingsComponent },
   { path: 'billing', component: XplorerBillingComponent },
   { path: 'invites', component: XplorerInviteComponent },
-  { path: 'social', component: XplorerSocialComponent },
+  { path: 'message', component: XplorerMessagesComponent },
+  { path: 'verification', component: XplorerVerificationComponent },
+  { path: 'deactivate', component: XplorerDeactivateComponent },
 ];
 
 @NgModule({

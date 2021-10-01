@@ -15,11 +15,11 @@ import {
 } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-guide-verification',
-  templateUrl: './guide-verification.component.html',
-  styleUrls: ['./guide-verification.component.scss'],
+  selector: 'app-xplorer-verification',
+  templateUrl: './xplorer-verification.component.html',
+  styleUrls: ['./xplorer-verification.component.scss'],
 })
-export class GuideVerificationComponent implements OnInit {
+export class XplorerVerificationComponent implements OnInit {
   @ViewChild('fileLoader1', { static: true })
   fileLoader1: ElementRef;
   @ViewChild('fileLoader2', { static: true })

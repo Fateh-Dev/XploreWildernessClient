@@ -36,16 +36,16 @@ export class TripTableComponent implements OnInit, AfterViewInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
   ngOnInit(): void {
-    this.snackbar.open(
-      'Two line text string. One to two lines is preferable on mobile and tablet.',
-      'close',
-      {
-        duration: 10000,
-        panelClass: ['success-snackbar'],
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-      }
-    );
+    // this.snackbar.open(
+    //   'Two line text string. One to two lines is preferable on mobile and tablet.',
+    //   'close',
+    //   {
+    //     duration: 10000,
+    //     panelClass: ['success-snackbar'],
+    //     horizontalPosition: 'center',
+    //     verticalPosition: 'top',
+    //   }
+    // );
   }
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   columnsToDisplay = [

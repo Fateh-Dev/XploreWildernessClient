@@ -11,19 +11,29 @@ import { XplorerPreferenceComponent } from './xplorer-preference/xplorer-prefere
 import { XplorerFavoriteComponent } from './xplorer-favorite/xplorer-favorite.component';
 import { XplorerBillingComponent } from './xplorer-billing/xplorer-billing.component';
 import { XplorerInviteComponent } from './xplorer-invite/xplorer-invite.component';
-import { XplorerSocialComponent } from './xplorer-social/xplorer-social.component';
+import { PaymentHistoryTableComponent } from './xplorer-billing/payment-history-table/payment-history-table.component';
+import { EmergencyContactComponent } from './xplorer-settings/emergency-contact/emergency-contact.component';
+import { XplorerVerificationComponent } from './xplorer-verification/xplorer-verification.component';
+import { XplorerDeactivateComponent } from './xplorer-deactivate/xplorer-deactivate.component';
+import { XplorerMessagesComponent } from './xplorer-messages/xplorer-messages.component';
+import { TripItemComponent } from './xplorer-booking/trip-item/trip-item.component';
 @NgModule({
   declarations: [
     XplorerHomeComponent,
     XplorerProfileComponent,
     XplorerSettingsComponent,
+    TripItemComponent,
     XplorerBookingComponent,
     XplorerHistoryComponent,
     XplorerPreferenceComponent,
     XplorerFavoriteComponent,
     XplorerBillingComponent,
     XplorerInviteComponent,
-    XplorerSocialComponent,
+    PaymentHistoryTableComponent,
+    EmergencyContactComponent,
+    XplorerVerificationComponent,
+    XplorerDeactivateComponent,
+    XplorerMessagesComponent,
   ],
   exports: [XplorerHomeComponent],
   imports: [CommonModule, XplorerRoutingModule, SharedComponentsModule],

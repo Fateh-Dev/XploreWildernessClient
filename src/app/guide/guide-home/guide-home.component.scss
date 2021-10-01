@@ -46,3 +46,16 @@ mat-list-item {
   max-width: 60px !important;
   overflow: hidden;
 }
+.imageShadow {
+  min-height: 115px !important;
+  min-width: 115px;
+  background-color: rgb(128, 128, 128);
+  position: absolute;
+  top: -17px;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 100;
+}
+.imageShadow:hover {
+  visibility: visible;
+}
