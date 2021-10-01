@@ -1,5 +1,56 @@
 <div fxLayout="row" fxLayoutAlign="center center" style="min-height: 80vh">
-  <mat-card
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social"><i class="fab fa-google"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a class="social icon" (click)="signInWithFB()"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a class="social icon" (click)="signInWithGoogle()"
+            ><i class="fab fa-google-plus-g"></i
+          ></a>
+          <a href="#" class="social icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="#">Forgot your password?</a>
+        <button>Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <mat-card
     fxFlex="30"
     style="min-height: 200px !important"
     fxLayout="column"
@@ -42,10 +93,28 @@
       color="primary"
       fxFlexFill
       style="padding: 6px"
-      [routerLink]="['/guide']"
+      [routerLink]="['/']"
       routerLinkActive="router-link-active"
     >
       login
+    </button>
+    <button
+      mat-raised-button
+      fxFlex
+      fxFlexFill
+      style="padding: 6px"
+      (click)="signInWithGoogle()"
+    >
+      Sign In with Google
+    </button>
+    <button
+      mat-raised-button
+      fxFlex
+      fxFlexFill
+      style="padding: 6px"
+      (click)="signInWithFB()"
+    >
+      Sign In with Facebook
     </button>
     <span fxFlex fxLayout="row"
       ><span style="flex: 1 1 auto"></span>
@@ -53,5 +122,5 @@
         >Create Account</a
       ></span
     >
-  </mat-card>
+  </mat-card> -->
 </div>
