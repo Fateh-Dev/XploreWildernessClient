@@ -1,0 +1,92 @@
+<div
+  fxLayout="column"
+  fxFlexFill
+  fxLayoutGap="20px"
+  fxLayoutAlign="center center"
+>
+  <div
+    *ngFor="let item of items"
+    fxLayout="row"
+    fxFlex
+    fxFlexFill
+    class="trip-item"
+    fxLayoutGap="20px"
+    fxLayoutAlign="start start"
+  >
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxFlex="20"
+      fxLayoutGap="10px"
+    >
+      <span fxFlex style="font-size: 16px; font-weight: bold">
+        Cross Country Skiing</span
+      >
+      <span fxFlex style="min-height: 100px !important">
+        <img
+          src="assets/thumbnail.png"
+          width="130"
+          height="130"
+          style="border-radius: 10px" /></span
+      ><span fxFlex style="font-size: 16px; font-weight: bold">
+        <span
+          style="
+            background-color: #000000;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+          "
+          >Expert</span
+        ></span
+      >
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex fxFlexFill>
+      <div fxFlex>
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip
+            >Banff National Park
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip
+            >California, USA
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip color="primary" selected
+            >Banff National Park
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip color="primary" selected
+            >California, USA
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip
+            >California, USA
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip color="primary" selected
+            >California, USA
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+          <mat-chip color="accent" selected
+            >Banff National Park
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button></mat-chip
+          >
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+</div>

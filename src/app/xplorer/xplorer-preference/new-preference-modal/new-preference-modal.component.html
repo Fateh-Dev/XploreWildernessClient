@@ -1,0 +1,98 @@
+<mat-toolbar
+  fxLayout="row"
+  class="size-height-48 mat-elevation-z1"
+  color="primary"
+  style="
+    background-color: #6bad37;
+    height: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  "
+  fxLayoutAlign="space-around center"
+>
+  <span fxFlex> </span>
+</mat-toolbar>
+<div
+  fxLayout="row"
+  fxLayoutGap="20px"
+  style="padding: 50px 160px; padding-bottom: 10px"
+  fxLayoutAlign="space-around start"
+>
+  <div fxFlex fxFlexFill fxLayout="column" fxLayoutAlign="space-around center">
+    <mat-form-field fxFlex fxFlexFill appearance="outline"
+      ><mat-label>select your activity</mat-label>
+      <input matInput type="text" /> </mat-form-field
+    ><mat-form-field fxFlex fxFlexFill appearance="outline"
+      ><mat-label>How would you rate yourself - DD</mat-label>
+      <input matInput type="text" />
+    </mat-form-field>
+  </div>
+  <div fxFlex="25" style="padding: 5px">
+    <img
+      src="assets/thumbnail.png"
+      width="130"
+      height="125"
+      style="border-radius: 10px"
+      draggable="false"
+    />
+  </div>
+</div>
+<div
+  fxLayout="row"
+  fxLayoutGap="20px"
+  style="padding: 0px 160px"
+  fxLayoutAlign="center stretch"
+>
+  <mat-form-field fxFlex fxFlexFill appearance="outline"
+    ><mat-label>Add your favourite Parks, Regions, or Countries</mat-label>
+    <input matInput type="text" />
+  </mat-form-field>
+</div>
+<div
+  fxLayout="row"
+  fxLayoutGap="20px"
+  style="padding: 0px 100px"
+  fxLayoutAlign="center stretch"
+>
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip
+      >Banff National Park<button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button></mat-chip
+    >
+    <mat-chip
+      >California, USA<button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button></mat-chip
+    >
+    <mat-chip color="primary" selected
+      >Banff National Park
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button></mat-chip
+    >
+    <mat-chip color="accent" selected
+      >California, USA<button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button></mat-chip
+    >
+  </mat-chip-list>
+</div>
+<div
+  fxLayout="row"
+  fxLayoutGap="10px"
+  style="padding: 30px 160px"
+  fxLayoutAlign="end end"
+>
+  <button
+    mat-flat-button
+    color="warn"
+    style="border-radius: 20px"
+    mat-dialog-close
+  >
+    <mat-icon>cancel</mat-icon> cancel
+  </button>
+  <button mat-flat-button color="primary" style="border-radius: 20px">
+    <mat-icon>save</mat-icon> save
+  </button>
+</div>

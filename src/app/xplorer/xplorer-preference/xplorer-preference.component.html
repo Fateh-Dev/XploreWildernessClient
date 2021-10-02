@@ -1,1 +1,37 @@
-<p>xplorer-preference works!</p>
+<div
+  fxLayoutAlign="row"
+  fxLayoutAlign="center center"
+  style="padding-top: 100px"
+>
+  <div fxFlex="70">
+    <div
+      fxFlex
+      fxFlexFill
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+    >
+      <div
+        fxFlex="70"
+        fxLayout="column"
+        fxLayoutAlign="space-around center"
+        class="itemEmpty"
+        fxLayoutGap="10px"
+      >
+        <div fxLayout="row" style="position: relative" (click)="openModal()">
+          <span class="roundImage"
+            ><span class="roundImageCenter">+</span></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayoutAlign="row" fxLayoutAlign="center center">
+  <div fxFlex fxFlexFill style="background-color: aliceblue"></div>
+</div>
+<ng-template #addNewPreference let-data>
+  <app-new-preference-modal></app-new-preference-modal>
+</ng-template>
+
+<app-preference-item [items]="items"></app-preference-item>

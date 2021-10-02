@@ -1,6 +1,6 @@
 import { SharedComponentsModule } from './../shared-components/shared-components.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { XplorerRoutingModule } from './xplorer-routing.module';
 import { XplorerHomeComponent } from './xplorer-home/xplorer-home.component';
 import { XplorerProfileComponent } from './xplorer-profile/xplorer-profile.component';
@@ -17,6 +17,10 @@ import { XplorerVerificationComponent } from './xplorer-verification/xplorer-ver
 import { XplorerDeactivateComponent } from './xplorer-deactivate/xplorer-deactivate.component';
 import { XplorerMessagesComponent } from './xplorer-messages/xplorer-messages.component';
 import { TripItemComponent } from './xplorer-booking/trip-item/trip-item.component';
+import { FavoriteTripItemComponent } from './xplorer-favorite/favorite-trip-item/favorite-trip-item.component';
+import { NewPreferenceModalComponent } from './xplorer-preference/new-preference-modal/new-preference-modal.component';
+import { PreferenceItemComponent } from './xplorer-preference/preference-item/preference-item.component';
+
 @NgModule({
   declarations: [
     XplorerHomeComponent,
@@ -34,6 +38,9 @@ import { TripItemComponent } from './xplorer-booking/trip-item/trip-item.compone
     XplorerVerificationComponent,
     XplorerDeactivateComponent,
     XplorerMessagesComponent,
+    FavoriteTripItemComponent,
+    NewPreferenceModalComponent,
+    PreferenceItemComponent,
   ],
   exports: [XplorerHomeComponent],
   imports: [CommonModule, XplorerRoutingModule, SharedComponentsModule],
