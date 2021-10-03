@@ -10,13 +10,20 @@ export class XplorerPreferenceComponent implements OnInit {
   @ViewChild('addNewPreference', { static: true, read: TemplateRef })
   public template: TemplateRef<any>;
   SwitchDialogRef: any;
-  items = [
-    'Pace Park Loop',
-    'Howe Lake, Sugar Camp Lake, and Farquhar Lake',
-    'Paarlberg Nature Reserve',
-    'Paarl View Point Trail',
-    'North Side Trail',
-  ];
+  // items = [
+  //   'Pace Park Loop',
+  //   'Howe Lake, Sugar Camp Lake, and Farquhar Lake',
+  //   'Paarlberg Nature Reserve',
+  //   'Paarl View Point Trail',
+  //   'North Side Trail',
+  // ];
+  items = [];
+  refreshItems(event) {
+    console.log(event);
+    this.items.push(event.activity);
+    this.setItem = true;
+  }
+  setItem = false;
   constructor(public dialog: MatDialog) {}
   openModal() {
     this.SwitchDialogRef = this.dialog.open(this.template, {

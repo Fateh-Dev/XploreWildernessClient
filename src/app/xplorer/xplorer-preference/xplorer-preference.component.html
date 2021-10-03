@@ -1,4 +1,22 @@
 <div
+  *ngIf="setItem"
+  fxLayoutAlign="row"
+  fxLayoutAlign="end end"
+  style="padding: 10px"
+>
+  <span
+    ><button
+      mat-flat-button
+      color="primary"
+      style="background-color: #2699fb; border-radius: 20px"
+      (click)="openModal()"
+    >
+      <mat-icon>add</mat-icon> Add
+    </button></span
+  >
+</div>
+<div
+  *ngIf="!setItem"
   fxLayoutAlign="row"
   fxLayoutAlign="center center"
   style="padding-top: 100px"
@@ -31,7 +49,9 @@
   <div fxFlex fxFlexFill style="background-color: aliceblue"></div>
 </div>
 <ng-template #addNewPreference let-data>
-  <app-new-preference-modal></app-new-preference-modal>
+  <app-new-preference-modal
+    (changeEvent)="refreshItems($event)"
+  ></app-new-preference-modal>
 </ng-template>
 
-<app-preference-item [items]="items"></app-preference-item>
+<app-preference-item [items]="items" *ngIf="setItem"></app-preference-item>
