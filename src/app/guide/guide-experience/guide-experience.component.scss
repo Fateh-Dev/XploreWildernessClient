@@ -3,9 +3,18 @@
   height: 76px !important;
   border-radius: 50% !important;
   border: 2px solid #2699fb !important;
-  background-color: white !important;
+  cursor: pointer;
+  background-color: #2699fb;
+  vertical-align: middle;
+  // border-radius: 50% !important;
+  display: flex;
+  line-height: 75px;
+  font-size: 60px;
+  color: white;
+  justify-content: center;
   cursor: pointer;
 }
+
 .roundImage:active {
   opacity: 0.6;
 }
@@ -42,4 +51,7 @@ td {
 }
 table {
   text-align: center;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  padding-bottom: 18px;
 }

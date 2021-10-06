@@ -17,7 +17,8 @@ import { AppService } from 'src/app/app.service';
       state(
         'open',
         style({
-          maxWidth: '220px',
+          // maxWidth: '220px',
+          minWidth: '250px',
         })
       ),
       state(

@@ -8,12 +8,10 @@
   >
     <mat-card
       [@openClose]="isMessage ? 'closed' : 'open'"
-      fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
       fxShow
       fxHide.lt-md
-      fxFlexFill
       ><div
         [fxHide]="!isMessage"
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
@@ -49,13 +47,14 @@
             height: 0px !important;
             font-size: 16px;
             font-weight: 500;
+            padding: 10px;
           "
           >Mohammed Rauf
         </span>
         <img src="assets/avatar.png" alt="" width="115" draggable="false" />
         <!-- <span class="imageShadow"></span> --> </span
       ><span class="divider"></span>
-      <span fxFlex style="margin-top: 55px">
+      <span fxFlex style="margin-top: 65px">
         <mat-list style="padding: 5px 0px">
           <mat-list-item
             *ngFor="let link of links[0]"

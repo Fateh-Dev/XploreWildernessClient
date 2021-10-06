@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="space-around center">
-  <example-custom-stepper [linear]="true">
+  <example-custom-stepper>
     <cdk-step [stepControl]="notificationFormGroup">
       <div
         [formGroup]="notificationFormGroup"
@@ -140,10 +140,9 @@
         fxLayoutGap="35px"
         fxFlexFill
       >
-        <div fxFlex style="padding: 20px 0 0 0" class="head-20-semibold">
+        <div fxFlex style="padding: 30px" class="head-20-semibold">
           Emergency Contacts
         </div>
-
         <app-emergency-contact></app-emergency-contact>
 
         <div

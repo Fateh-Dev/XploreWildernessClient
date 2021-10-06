@@ -151,19 +151,16 @@ body {
 .head-20-semibold {
   font-size: 20px;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif !important;
 }
 .head-14-semibold {
   font-size: 14px;
   font-weight: 500;
+}
+
+* :not(mat-icon) {
   font-family: "Open Sans", sans-serif !important;
 }
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Open Sans", sans-serif !important;
+th {
+  font-size: 14px !important;
+  font-weight: 500 !important;
 }

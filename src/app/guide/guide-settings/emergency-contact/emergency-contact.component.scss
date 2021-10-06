@@ -9,9 +9,8 @@ table {
   background-color: white;
 }
 .mat-header-cell {
-  background-color: #57b8bc;
+  background-color: #2699fb;
   color: white !important;
-  font-size: 16px;
   font-weight: 500;
 }
 .mat-column-email {
@@ -36,4 +35,8 @@ table {
 }
 .mat-header-cell-bookings {
   text-align: center;
+}
+
+th {
+  font-size: 14px !important;
 }

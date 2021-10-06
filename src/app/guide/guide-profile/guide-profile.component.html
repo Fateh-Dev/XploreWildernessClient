@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="space-around center" [formGroup]="formData">
-  <example-custom-stepper [lineWidth]="180" [linear]="true">
+  <example-custom-stepper [lineWidth]="180">
     <cdk-step [stepControl]="formData.get('accountFormGroup')">
       <form
         fxLayout="column"
@@ -13,7 +13,6 @@
             <mat-label>Username</mat-label>
             <input
               matInput
-              placeholder="Tape here ..."
               formControlName="username"
               required
               autocomplete="off"
@@ -21,7 +20,6 @@
             <mat-icon matSuffix class="material-icons-outlined"
               >person</mat-icon
             >
-            <mat-error>please fill the username field</mat-error>
           </mat-form-field>
         </div>
         <div fxFlex fxFlexFill>
@@ -29,7 +27,6 @@
             <mat-label>Email</mat-label>
             <input
               matInput
-              placeholder="Tape here ..."
               formControlName="email"
               required
               type="email"
@@ -39,7 +36,6 @@
             <mat-icon matSuffix class="material-icons-outlined"
               >alternate_email</mat-icon
             >
-            <mat-error>please fill the email field</mat-error>
           </mat-form-field>
         </div>
         <div fxLayout="row" fxFlex fxFlexFill>
@@ -80,14 +76,12 @@
               <input
                 matInput
                 autocomplete="off"
-                placeholder="Tape here ..."
                 formControlName="firstName"
                 required
               />
               <mat-icon matSuffix class="material-icons-outlined"
                 >person</mat-icon
               >
-              <mat-error>please fill the firstname field</mat-error>
             </mat-form-field>
           </div>
           <div fxFlex fxFlexFill>
@@ -96,14 +90,12 @@
               <input
                 matInput
                 autocomplete="off"
-                placeholder="Tape here ..."
                 formControlName="lastName"
                 required
               />
               <mat-icon matSuffix class="material-icons-outlined"
                 >person</mat-icon
               >
-              <mat-error>please fill the lastname field</mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -122,54 +114,44 @@
                   {{ food }}
                 </mat-option>
               </mat-select>
-              <mat-error>please choose your genders</mat-error>
             </mat-form-field>
           </div>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>phone</mat-label>
+              <mat-label>Phone</mat-label>
               <input
                 matInput
                 autocomplete="off"
-                placeholder="Tape here ..."
                 formControlName="phone"
                 required
               />
               <mat-icon matSuffix class="material-icons-outlined"
                 >phone</mat-icon
               >
-              <mat-error>please fill the phone number field</mat-error>
             </mat-form-field>
           </div>
         </div>
         <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>address</mat-label>
+              <mat-label>Address</mat-label>
               <input
                 matInput
                 autocomplete="off"
-                placeholder="Tape here ..."
                 formControlName="address"
                 required
               />
               <mat-icon matSuffix class="material-icons-outlined"
                 >markunread_mailbox</mat-icon
               >
-              <mat-error>please fill the address field</mat-error>
             </mat-form-field>
           </div>
         </div>
         <div fxFlex fxLayout="row" fxLayoutGap="30px" fxFlexFill>
           <div fxFlex fxFlexFill>
             <mat-form-field appearance="outline" fxFlex>
-              <mat-label>address 2</mat-label>
-              <input
-                matInput
-                autocomplete="off"
-                placeholder="Tape here ..."
-                formControlName="address2"
-              />
+              <mat-label>Address 2</mat-label>
+              <input matInput autocomplete="off" formControlName="address2" />
               <mat-icon matSuffix class="material-icons-outlined"
                 >markunread_mailbox</mat-icon
               >
@@ -190,7 +172,6 @@
                 <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
                   {{ food }}
                 </mat-option>
-                <mat-error>please choose your city</mat-error>
               </mat-select>
             </mat-form-field>
           </div>
@@ -201,8 +182,6 @@
                 <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
                   {{ food }}
                 </mat-option>
-
-                <mat-error>please choose your state</mat-error>
               </mat-select>
             </mat-form-field>
           </div>
@@ -220,12 +199,10 @@
               <input
                 matInput
                 autocomplete="off"
-                placeholder="Tape here ..."
                 formControlName="zipCode"
                 required
               />
 
-              <mat-error>please fill the zip code field</mat-error>
               <!-- <mat-icon matSuffix class="material-icons-outlined"
                 >person</mat-icon
               > -->
@@ -238,8 +215,6 @@
                 <mat-option *ngFor="let food of [1, 2, 3, 4, 5]" [value]="food">
                   {{ food }}
                 </mat-option>
-
-                <mat-error>please choose your countrys</mat-error>
               </mat-select>
             </mat-form-field>
           </div>
@@ -274,8 +249,8 @@
     </cdk-step>
     <cdk-step>
       <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
-        <div fxFlex class="head-20-semibold" style="padding: 20px">
-          Life in wild
+        <div fxFlex class="head-20-semibold" style="padding: 30px">
+          Life in the wild
         </div>
         <div
           fxFlex
@@ -368,9 +343,7 @@
             fxLayoutGap="10px"
           >
             <div fxLayout="row" style="position: relative">
-              <span class="roundImage"
-                ><span class="roundImageCenter">+</span></span
-              >
+              <span class="roundImage">+</span>
             </div>
           </div>
         </div>

@@ -17,7 +17,12 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example-element-row td {
   border-bottom-width: 0;
 }
-
+.mat-header-cell {
+  background-color: #2699fb !important;
+  color: white !important;
+  font-weight: 500;
+  text-align: left;
+}
 .example-element-detail {
   overflow: hidden;
   // display: flex;
@@ -60,6 +65,7 @@ table {
   color: white !important;
   font-size: 16px;
   font-weight: 500;
+  height: 50px !important;
 }
 
 .activities {
@@ -73,7 +79,7 @@ table {
 .mat-header-cell-bookings {
   text-align: center;
 }
-.mat-column-actions {
+.mat-column-Actions {
   width: 50px !important;
 }
 
@@ -95,22 +101,22 @@ table {
   font-size: 24px !important;
   padding: 30px;
 }
-.denied {
+.Denied {
   border: 1px solid #fb262e;
   background-color: white;
   color: #fb262e;
 }
-.reviewed {
+.Reviewed {
   border: 1px solid #3b8bd3;
   background-color: white;
   color: #3b8bd3;
 }
-.submitted {
+.Submitted {
   border: 1px solid #e56717;
   background-color: white;
   color: #e56717;
 }
-.active {
+.Active {
   border: 1px solid #43893f;
   background-color: white;
   color: #43893f;
@@ -119,24 +125,52 @@ mat-chip:hover {
   background-color: white;
   cursor: pointer;
 }
-.row-denied {
+.row-Denied {
   background-color: #fb262e1a !important;
 }
-.row-active {
+.row-Active {
   background-color: #6bad371a !important;
 }
-.row-reviewed {
+.row-Reviewed {
   background-color: #2699fb1a !important;
 }
-.row-submitted {
+.row-Submitted {
   background-color: #fc7f031a !important;
 }
-.mat-column-title {
-  max-width: 200px;
+.mat-column-Title {
+  max-width: 150px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 20px 0px 0px;
+}
+.mat-column-Id {
+  max-width: 8px !important;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+.mat-column-Region {
+  max-width: 50px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mat-column-Activities {
+  max-width: 50px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+}
+.mat-column-Status {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  padding: 0px 0px 0px 20px;
+}
+
 .tooltip {
   position: relative;
 }
@@ -174,15 +208,4 @@ mat-chip:hover {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-td,
-tr,
-h6 {
-  font-family: "Open Sans", sans-serif !important;
 }

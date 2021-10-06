@@ -10,9 +10,14 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class GuideExperienceComponent implements OnInit {
   myControl = new FormControl();
-  options: string[] = ['hicking', 'cycling', 'fishing'];
+  parcs = [];
+  options: string[] = ['hiking', 'cycling', 'fishing'];
   filteredOptions: Observable<string[]>;
-  activityPicture = 'thumbnail';
+  activityPicture = '';
+  addChip(item) {
+    this.parcs.push(item);
+    console.log(this.parcs);
+  }
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -21,7 +26,9 @@ export class GuideExperienceComponent implements OnInit {
   }
 
   private _filter(value: string): string[] {
+    if (this.activityPicture == '') this.activityPicture = 'thumbnail';
     const filterValue = value.toLowerCase();
+    this.activityPicture = filterValue;
     return this.options.filter((option) =>
       option.toLowerCase().includes(filterValue)
     );

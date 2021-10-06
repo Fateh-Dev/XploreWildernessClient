@@ -37,14 +37,35 @@ table {
   font-size: 24px !important;
   padding: 30px;
 }
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-td,
-tr,
-h6 {
-  font-family: "Open Sans", sans-serif !important;
+
+.mat-header-cell {
+  background-color: #2699fb !important;
+  color: white !important;
+  font-weight: 500;
+}
+.mat-column-title {
+  max-width: 150px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px 20px 0px 0px;
+}
+.mat-column-Id {
+  max-width: 5px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mat-column-activities {
+  max-width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0px 20px;
+  overflow: hidden;
+}
+.mat-column-region {
+  max-width: 80px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

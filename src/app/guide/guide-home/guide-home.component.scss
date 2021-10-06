@@ -1,11 +1,11 @@
 mat-list-item:hover {
   background-color: #c2eba3;
   // border-radius: 5px;
-  color: white;
+  color: black;
   cursor: pointer;
   span {
     mat-icon {
-      color: white !important;
+      color: black !important;
     }
   }
 }
