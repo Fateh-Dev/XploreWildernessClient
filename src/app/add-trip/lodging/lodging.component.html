@@ -3,9 +3,12 @@
     <fieldset fxFlex>
       <legend>Lodging</legend>
       <section class="section" fxLayout="column" fxFlexFill>
-        <mat-checkbox class="example-margin" *ngFor="let item of Lodgins">{{
-          item
-        }}</mat-checkbox>
+        <mat-checkbox
+          class="example-margin"
+          color="primary"
+          *ngFor="let item of Lodgins"
+          >{{ item }}</mat-checkbox
+        >
       </section>
     </fieldset>
 

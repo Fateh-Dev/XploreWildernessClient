@@ -2,6 +2,14 @@
   height: 1px;
   background-color: rgba(128, 128, 128, 0.534);
 }
+mat-label {
+  color: #3b8bd3;
+  font-size: 12px;
+}
 .mat-input-element {
-  line-height: normal !important;
+  font-size: 14px;
+}
+@import "../addTripStyle.css";
+.section {
+  padding: 10px;
 }
