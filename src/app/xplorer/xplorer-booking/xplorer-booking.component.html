@@ -1,11 +1,14 @@
-<mat-form-field appearance="outline">
-  <mat-label>filter</mat-label>
-  <input
-    matInput
-    type="text"
-    (keyup)="applyFilter($event)"
-    placeholder="Ex. ium"
-    #input
-  />
-</mat-form-field>
+<div fxLayout="row" style="margin-top: 10px">
+  <mat-form-field appearance="outline" fxFlex="50" fxFlexFill>
+    <mat-label>Filter</mat-label>
+    <input
+      spellcheck="true"
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Ex. ium"
+      #input
+      autocomplete="false"
+    />
+  </mat-form-field>
+</div>
 <app-trip-item [items]="items"></app-trip-item>

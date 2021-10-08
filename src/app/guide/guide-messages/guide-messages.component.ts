@@ -15,23 +15,8 @@ import { AppService } from 'src/app/app.service';
 })
 export class GuideMessagesComponent implements OnInit {
   constructor(public service: AppService) {}
-  SendMSG() {
-    alert('hellos');
-  }
-  checkedToggle = 'all';
-  switchToggle(n: string) {
-    this.checkedToggle = n;
-  }
-  currentXplorer = 1;
-  ngOnInit(): void {
-    this.service.isMessage = false;
-    console.log(this.service.isMessage);
-  }
-  setXplorer(n: number) {
-    this.currentXplorer = n;
-  }
-  ngOnDestroy() {
-    this.service.isMessage = true;
-    console.log(this.service.isMessage);
-  }
+
+  ngOnInit(): void {}
+
+  ngOnDestroy() {}
 }

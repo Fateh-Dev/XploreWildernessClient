@@ -1,11 +1,11 @@
 mat-list-item:hover {
   background-color: #c2eba3;
   // border-radius: 5px;
-  color: white;
+  color: black;
   cursor: pointer;
   span {
     mat-icon {
-      color: white !important;
+      color: black !important;
     }
   }
 }
@@ -41,4 +41,36 @@ mat-list-item {
 .divider {
   height: 1px;
   background-color: rgba(128, 128, 128, 0.534);
+}
+.menu-md {
+  max-width: 60px !important;
+  overflow: hidden;
+}
+.imageShadow {
+  min-height: 115px !important;
+  min-width: 115px;
+  background-color: rgb(128, 128, 128);
+  position: absolute;
+  top: -17px;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 100;
+}
+.imageShadow:hover {
+  visibility: visible;
+}
+.profileName {
+  position: relative !important;
+  flex: 1 1 auto !important;
+  text-align: center !important;
+  height: 0px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+.upHeader {
+  position: relative !important;
+  bottom: -30px !important;
+  text-align: center !important;
+  max-height: 10px !important;
+  height: 80px !important;
 }

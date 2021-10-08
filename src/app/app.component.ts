@@ -1,6 +1,5 @@
 import { AppService } from 'src/app/app.service';
 import { Component } from '@angular/core';
-import { SocialAuthService } from 'angularx-social-login';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +9,7 @@ import { SocialAuthService } from 'angularx-social-login';
 export class AppComponent {
   title = 'XploreWildernessClient';
   showAddTrip = true;
-  constructor(
-    public service: AppService,
-    private authService: SocialAuthService
-  ) {}
+  constructor(public service: AppService) {}
 
-  signOut(): void {
-    this.authService.signOut();
-  }
+  signOut(): void {}
 }

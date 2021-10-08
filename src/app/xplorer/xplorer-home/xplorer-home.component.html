@@ -7,7 +7,6 @@
     fxLayoutGap="16px"
   >
     <mat-card
-      [@openClose]="isMessage ? 'closed' : 'open'"
       fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
@@ -48,6 +47,7 @@
             height: 0px !important;
             font-size: 16px;
             font-weight: 500;
+            padding: 10px;
           "
           >Mohammed Rauf
         </span>
@@ -58,7 +58,7 @@
           width="115"
           draggable="false" /></span
       ><span class="divider"></span>
-      <span fxFlex style="margin-top: 55px">
+      <span fxFlex style="margin-top: 65px">
         <mat-list style="padding: 5px 0px">
           <mat-list-item
             *ngFor="let link of links[0]"
@@ -183,7 +183,6 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = true"
           >
             <span fxFlex
               ><mat-icon

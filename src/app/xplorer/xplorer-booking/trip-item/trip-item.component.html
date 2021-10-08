@@ -135,15 +135,21 @@
         ><mat-chip-list aria-label="Fish selection">
           <mat-chip class="b-color-green"
             ><mat-icon>favorite</mat-icon
-            ><span style="padding: 0px 5px">Easy</span></mat-chip
+            ><span style="padding: 0px 5px; font-size: 12px"
+              >Easy</span
+            ></mat-chip
           >
           <mat-chip class="b-color-bleu"
             ><mat-icon>history</mat-icon
-            ><span style="padding: 0px 5px">5 days</span></mat-chip
+            ><span style="padding: 0px 5px; font-size: 12px"
+              >5 days</span
+            ></mat-chip
           >
           <mat-chip class="b-color-orange"
             ><mat-icon>person</mat-icon
-            ><span style="padding: 0px 5px">2 - 8</span></mat-chip
+            ><span style="padding: 0px 5px; font-size: 12px"
+              >2 - 8</span
+            ></mat-chip
           >
         </mat-chip-list>
       </span>
@@ -165,7 +171,7 @@
           fxLayout="row"
           fxLayoutGap="13px"
           fxLayoutAlign="start end"
-          style="padding: 5px"
+          style="padding: 20px 0px 5px 5px"
           ><mat-icon>hotel</mat-icon
           ><span>Monterey, Carmel and the Full title</span>
         </span>
@@ -176,7 +182,7 @@
           fxLayout="row"
           fxLayoutGap="13px"
           fxLayoutAlign="start center"
-          style="padding: 5px"
+          style="padding: 0px 5px"
           ><mat-icon>room</mat-icon
           ><span
             >Banff National Park, Jasper National Park, Yoho National Park,
@@ -216,7 +222,7 @@
           [matMenuTriggerFor]="menu"
           aria-label="Example icon-button with a menu"
         >
-          <mat-icon style="font-size: 22px">more_horiz</mat-icon>
+          <mat-icon style="transform: scale(2)">arrow_drop_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item>

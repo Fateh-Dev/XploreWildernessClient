@@ -7,11 +7,12 @@
     fxLayoutGap="16px"
   >
     <mat-card
-      [@openClose]="isMessage ? 'closed' : 'open'"
+      fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
       fxShow
       fxHide.lt-md
+      fxFlexFill
       ><div
         [fxHide]="!isMessage"
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
@@ -149,7 +150,6 @@
             [routerLink]="link.href"
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
-            (click)="isMessage = true"
             matLine
           >
             <span fxFlex
@@ -200,7 +200,10 @@
         </mat-list></span
       >
     </mat-card>
-    <mat-card fxFlex style="padding: 0px; border-radius: 0px">
+    <mat-card
+      fxFlex
+      style="padding: 0px; border-radius: 0px; min-height: 730px !important"
+    >
       <div
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
       ></div>

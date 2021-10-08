@@ -1,3 +1,4 @@
+import { AddTripHomeComponent } from './add-trip/add-trip-home/add-trip-home.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { GuideHomeComponent } from './guide/guide-home/guide-home.component';
@@ -18,6 +19,12 @@ const routes: Routes = [
     component: GuideHomeComponent,
     loadChildren: () =>
       import('./guide/guide.module').then((m) => m.GuideModule),
+  },
+  {
+    path: 'add-trip',
+    component: AddTripHomeComponent,
+    loadChildren: () =>
+      import('./add-trip/add-trip.module').then((m) => m.AddTripModule),
   },
   {
     path: 'home',

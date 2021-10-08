@@ -1,4 +1,8 @@
-<div fxLayout="row" fxLayoutAlign="space-around center">
+<div
+  fxLayout="row"
+  fxLayoutAlign="space-around center"
+  style="margin-top: 30px"
+>
   <div
     fxFlex="90"
     fxLayout="row"
@@ -26,8 +30,8 @@
             font-weight: 500;
             padding: 10px;
           "
-          >1000,00 $</span
-        ></span
+          >$ 1000,00
+        </span></span
       >
       <span fxFlex fxLayout="column">
         <span
@@ -49,7 +53,8 @@
             font-weight: 500;
             padding: 10px;
           "
-          >1000,00 $</span
+        >
+          $ 1000,00</span
         ></span
       >
     </div>
@@ -126,80 +131,78 @@
         "
       >
         <mat-expansion-panel-header>
-          <mat-panel-title>Prefered Method </mat-panel-title>
           <mat-panel-description>
-            <span style="flex: 1 1 auto; text-align: left">
-              Mastercard ending in 0000</span
+            <span
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              style="text-align: left; display: flex; vertical-align: middle"
             >
+              <mat-panel-title style="min-width: 200px"
+                >Prefered Method
+              </mat-panel-title>
+
+              <span>
+                <mat-icon style="font-size: 24px">credit_card</mat-icon></span
+              >
+
+              <span style="padding-left: 10px"> Mastercard ending in 0000</span>
+            </span>
+            <span style="flex: 1 1 auto"></span>
             <mat-icon *ngIf="step != 0">chevron_right</mat-icon>
             <mat-icon *ngIf="step == 0">expand_more</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
 
         <!-- list of prefered methods with edit delete and valide icon -->
-        <div fxLayout="column" fxLayoutAlign="space-around center">
-          <mat-list role="list" fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="space-around left" fxFlexFill>
+          <mat-list role="list" style="padding-left: 200px">
             <mat-list-item role="listitem">
-              <img src="assets/images/others/visa.png" alt="" width="60" /><span
-                style="flex: 1 1 auto"
+              <mat-icon>credit_card</mat-icon
+              ><span style="flex: 1 1 auto; padding: 5px"
                 >Mastercard ending in 0000</span
               >
               <span style="flex: 1 1 auto"></span
               ><button mat-icon-button>
-                <mat-icon
-                  style="color: rgb(230, 230, 230)"
-                  (click)="openSwitchMethod()"
+                <mat-icon style="color: rgb(230, 230, 230)"
                   >check_circle</mat-icon
                 >
               </button>
               <button mat-icon-button>
                 <mat-icon>edit</mat-icon></button
               ><button mat-icon-button>
-                <mat-icon color="warn" (click)="openConfirmDelete()"
-                  >cancel</mat-icon
-                >
+                <mat-icon color="warn">cancel</mat-icon>
               </button>
             </mat-list-item>
-            <mat-list-item role="listitem"
-              ><img
-                src="assets/images/others/paypalLogo.jpg"
-                alt=""
-                width="60"
-              /><span style="flex: 1 1 auto"> Visa ending in 0000</span>
+            <mat-list-item role="listitem">
+              <mat-icon>credit_card</mat-icon
+              ><span style="flex: 1 1 auto; padding: 5px">
+                Visa ending in 0000</span
+              >
               <span style="flex: 1 1 auto; min-width: 30px"></span
               ><button mat-icon-button>
-                <mat-icon
-                  style="color: rgb(230, 230, 230)"
-                  (click)="openSwitchMethod()"
+                <mat-icon style="color: rgb(230, 230, 230)"
                   >check_circle</mat-icon
                 >
               </button>
               <button mat-icon-button>
                 <mat-icon>edit</mat-icon></button
               ><button mat-icon-button>
-                <mat-icon color="warn" (click)="openConfirmDelete()"
-                  >cancel</mat-icon
-                >
+                <mat-icon color="warn">cancel</mat-icon>
               </button>
             </mat-list-item>
-            <mat-list-item role="listitem"
-              ><img
-                src="assets/images/others/visa.png"
-                alt=""
-                width="60"
-              /><span style="flex: 1 1 auto"> Paypal - email@email.com</span>
+            <mat-list-item role="listitem">
+              <mat-icon>credit_card</mat-icon
+              ><span style="flex: 1 1 auto; padding: 5px">
+                Paypal - email@email.com</span
+              >
               <span style="flex: 1 1 auto; min-width: 30px"></span
               ><button mat-icon-button>
-                <mat-icon style="color: green" (click)="openSwitchMethod()"
-                  >check_circle</mat-icon
-                >
+                <mat-icon style="color: green">check_circle</mat-icon>
               </button>
               <button mat-icon-button>
                 <mat-icon>edit</mat-icon></button
               ><button mat-icon-button>
-                <mat-icon color="warn" (click)="openConfirmDelete()"
-                  >cancel</mat-icon
-                >
+                <mat-icon color="warn">cancel</mat-icon>
               </button>
             </mat-list-item>
           </mat-list>
@@ -210,7 +213,12 @@
               fxFlex
               mat-raised-button
               color="primary"
-              style="background-color: #2699fb"
+              style="
+                max-height: 50px;
+                margin: 3px;
+                background-color: #2699fb;
+                border-radius: 20px;
+              "
             >
               <mat-icon>add</mat-icon><span>Add </span>
             </button>
@@ -222,20 +230,28 @@
         [expanded]="step === 1"
         (opened)="setStep(1)"
         hideToggle
-        [class.selected]="step === 1"
         style="
           background-color: #f7f5ed80;
           box-shadow: 0px 0px 0px black;
           border: 1px solid #7070704d;
           margin: 5px 0px;
         "
+        [class.selected]="step === 1"
       >
         <mat-expansion-panel-header>
-          <mat-panel-title> Current Schedule </mat-panel-title>
           <mat-panel-description>
-            <span style="flex: 1 1 auto">
-              Payment made every 2 weeks to the preferred method.</span
+            <mat-panel-title style="max-width: 200px">
+              Current Schedule
+            </mat-panel-title>
+            <span
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              fxLayoutGap="20px"
+              style="text-align: left; display: flex; vertical-align: middle"
             >
+              <span> Payment made every 2 weeks to the preferred method</span>
+            </span>
+            <span style="flex: 1 1 auto"></span>
             <mat-icon *ngIf="step != 1">chevron_right</mat-icon>
             <mat-icon *ngIf="step == 1">expand_more</mat-icon>
           </mat-panel-description>
@@ -290,7 +306,12 @@
           <button
             mat-raised-button
             color="primary"
-            style="background-color: #2699fb"
+            style="
+              max-height: 50px;
+              margin: 3px;
+              background-color: #2699fb;
+              border-radius: 20px;
+            "
             (click)="openSnackBar('Success', '')"
           >
             save
@@ -311,25 +332,40 @@
         "
       >
         <mat-expansion-panel-header>
-          <mat-panel-title>Payment History</mat-panel-title>
-          <mat-panel-description style="text-align: left !important">
-            <span style="flex: 1 1 auto; text-align: left !important">
-              55 payments made successfully</span
+          <mat-panel-description>
+            <mat-panel-title style="max-width: 200px">
+              Payment History
+            </mat-panel-title>
+            <span
+              fxLayout="row"
+              fxLayoutAlign="start center"
+              fxLayoutGap="20px"
+              style="text-align: left; display: flex; vertical-align: middle"
             >
+              <span> 55 payments made successfully</span>
+            </span>
+            <span style="flex: 1 1 auto"></span>
             <mat-icon *ngIf="step != 2">chevron_right</mat-icon>
             <mat-icon *ngIf="step == 2">expand_more</mat-icon>
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <!-- <app-payment-history></app-payment-history> -->
-        <app-payment-history-table></app-payment-history-table>
+
+        <div style="margin-top: 30px">
+          <!-- <app-payment-history></app-payment-history> -->
+          <app-payment-history-table></app-payment-history-table>
+        </div>
         <mat-action-row>
           <div fxLayout="row" fxLayoutAlign="end end">
             <button
               fxflex
               color="primary"
               mat-raised-button
-              style="max-height: 50px; margin: 3px"
-              style="background-color: #2699fb"
+              style="
+                max-height: 50px;
+                margin: 3px;
+                background-color: #2699fb;
+                border-radius: 20px;
+              "
               (click)="openDownload()"
             >
               <mat-icon>download</mat-icon>Download

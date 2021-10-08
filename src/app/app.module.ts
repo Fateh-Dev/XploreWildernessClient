@@ -13,12 +13,12 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  FacebookLoginProvider,
-  GoogleLoginProvider,
-  SocialAuthServiceConfig,
-  SocialLoginModule,
-} from 'angularx-social-login';
+// import {
+//   FacebookLoginProvider,
+//   GoogleLoginProvider,
+//   SocialAuthServiceConfig,
+//   SocialLoginModule,
+// } from 'angularx-social-login';
 @NgModule({
   declarations: [AppComponent, NotFound404Component],
   imports: [
@@ -33,7 +33,7 @@ import {
     XplorerModule,
     GuideModule,
     HomeModule,
-    SocialLoginModule,
+    // SocialLoginModule,
   ],
   exports: [
     FormsModule,
@@ -42,24 +42,24 @@ import {
     BrowserAnimationsModule,
   ],
   providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '726845249489-ierpr4jmhu5oqdl4l5kp9nngaff5up31.apps.googleusercontent.com'
-            ),
-          },
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('1489004154795359'),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
+    // {
+    //   provide: 'SocialAuthServiceConfig',
+    //   useValue: {
+    //     autoLogin: false,
+    //     providers: [
+    //       {
+    //         id: GoogleLoginProvider.PROVIDER_ID,
+    //         provider: new GoogleLoginProvider(
+    //           '726845249489-ierpr4jmhu5oqdl4l5kp9nngaff5up31.apps.googleusercontent.com'
+    //         ),
+    //       },
+    //       {
+    //         id: FacebookLoginProvider.PROVIDER_ID,
+    //         provider: new FacebookLoginProvider('1489004154795359'),
+    //       },
+    //     ],
+    //   } as SocialAuthServiceConfig,
+    // },
   ],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,94 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <mat-form-field fxFlex fxFlexFill appearance="outline">
+    <mat-label>Activity</mat-label>
+    <mat-select [formControl]="activityControl" multiple>
+      <mat-select-trigger>
+        <mat-chip-list>
+          <mat-chip
+            *ngFor="let item of activityControl.value"
+            [removable]="true"
+            (removed)="onLodgingRemoved(item)"
+          >
+            {{ item }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-select-trigger>
+
+      <mat-option *ngFor="let item of activityList" [value]="item">{{
+        item
+      }}</mat-option>
+    </mat-select> </mat-form-field
+  ><mat-form-field fxFlex fxFlexFill appearance="outline">
+    <mat-label>Regions</mat-label>
+    <mat-select [formControl]="activityControl" multiple>
+      <mat-select-trigger>
+        <mat-chip-list>
+          <mat-chip
+            *ngFor="let item of activityControl.value"
+            [removable]="true"
+            (removed)="onLodgingRemoved(item)"
+          >
+            {{ item }}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-select-trigger>
+
+      <mat-option *ngFor="let item of activityList" [value]="item">{{
+        item
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span class="divider"></span>
+  <span style="padding-top: 10px"></span>
+  <mat-form-field fxFlex fxFlexFill appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" />
+  </mat-form-field>
+  <mat-form-field fxFlex fxFlexFill appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea matInput rows="6"></textarea>
+  </mat-form-field>
+  <span class="divider"></span>
+  <span style="padding-top: 10px"></span>
+  <span fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <span
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field fxFlex appearance="outline">
+        <mat-label>Spaces</mat-label>
+        <input matInput type="number" /> </mat-form-field
+      ><mat-form-field fxFlex appearance="outline">
+        <mat-label>Duration (days)</mat-label>
+        <input matInput type="number" /> </mat-form-field
+    ></span>
+    <span
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="20px"
+    >
+      <span fxFlex>
+        <mat-form-field appearance="outline" style="max-width: 150px">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" placeholder="$.." /><mat-icon
+            matSuffix
+            class="material-icons-outlined"
+            >attach_money</mat-icon
+          >
+          <mat-hint>per person</mat-hint></mat-form-field
+        ></span
+      >
+      <span fxFlex>
+        <mat-form-field appearance="outline" style="max-width: 70px">
+          <!-- <mat-label>Currency</mat-label> -->
+          <mat-select value="USD">
+            <mat-option value="USD">USD</mat-option>
+          </mat-select>
+        </mat-form-field></span
+      >
+    </span>
+  </span>
+</div>
