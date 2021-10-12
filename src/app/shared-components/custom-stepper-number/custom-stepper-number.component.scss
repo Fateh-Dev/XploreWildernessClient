@@ -1,0 +1,54 @@
+.example-container {
+  min-width: 35vw;
+}
+
+.example-step-navigation-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.example-step {
+  background: transparent;
+  border: 0;
+  margin: 0 10px;
+  padding: 30px;
+  color: inherit;
+  color: rgb(58, 61, 68);
+  cursor: pointer;
+}
+
+.example-step.example-active {
+  color: rgb(127, 155, 218);
+  font-weight: 600;
+}
+
+.example-nav-button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+}
+.inactive {
+  // font-size: 12px;
+  background-color: #3b8bd3;
+  box-shadow: 0px 0px 0px 10px white;
+  // display: flex;
+  vertical-align: middle;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  color: white;
+  border-radius: 10px;
+}
+.active {
+  // font-size: 12px;
+  background-color: #3b8bd3;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0px 0px 0px 10px #e4f2fd;
+}
+hr {
+  position: absolute;
+}

@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs/internal/Observable';
@@ -47,7 +47,7 @@ export class ActivitiesComponent implements OnInit {
   @ViewChild('activityInput') activityInput: ElementRef<HTMLInputElement>;
   @ViewChild('regionInput') regionInput: ElementRef<HTMLInputElement>;
 
-  constructor(public cd: ChangeDetectorRef) {
+  constructor(public cd: ChangeDetectorRef, private fb: FormBuilder) {
     this.filteredActivities = this.activityCtrl.valueChanges.pipe(
       startWith(null),
       map((item: string | null) =>

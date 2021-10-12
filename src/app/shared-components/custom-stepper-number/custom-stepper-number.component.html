@@ -1,0 +1,32 @@
+<section class="example-container">
+  <!-- <header style="text-align: center">
+    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>
+  </header> -->
+
+  <footer
+    class="example-step-navigation-bar"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+    <hr [width]="lineWidth" />
+    <!-- <button class="example-nav-button" cdkStepperPrevious>&larr;</button> -->
+    <span *ngFor="let step of steps; let i = index" style="z-index: 3"
+      ><button
+        class="example-step"
+        [class.example-active]="selectedIndex === i"
+        (click)="selectStepByIndex(i)"
+      >
+        <div [ngClass]="selectedIndex == i ? 'active' : 'inactive'">
+          {{ i + 1 }}
+        </div>
+      </button>
+    </span>
+
+    <!-- <button class="example-nav-button" cdkStepperNext>&rarr;</button> -->
+  </footer>
+  <div
+    [ngTemplateOutlet]="selected ? selected.content : null"
+    fxLayout="row"
+    fxFlexFill
+  ></div>
+</section>

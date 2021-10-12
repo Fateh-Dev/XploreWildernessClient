@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutGap="50px">
+<div fxLayout="column" fxLayoutGap="50px" style="padding-top: 100px">
   <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="stretch stretch">
     <fieldset fxFlex>
       <legend>Included Gear</legend>
@@ -40,4 +40,30 @@
       placeholder="Inform your xplorers about safety and risks during the trip. What can they expect during the trip?"
     ></textarea>
   </mat-form-field>
+  <div fxLayout="row" fxFlex fxFlexFill>
+    <button
+      mat-flat-button
+      [routerLink]="['../difficulty']"
+      routerLinkActive="router-link-active"
+      aria-label="Example icon-button with share icon"
+      color="primary"
+      style="background-color: #2699fb; border-radius: 20px"
+      class="head-14-semibold"
+    >
+      <mat-icon>chevron_left</mat-icon>
+      <span fxHide.xs-sm>Difficulties </span>
+    </button>
+    <span fxFlex style="flex: 1 1 auto"></span>
+    <button
+      mat-flat-button
+      [routerLink]="['../pickup']"
+      routerLinkActive="router-link-active"
+      aria-label="Example icon-button with share icon"
+      color="primary"
+      style="background-color: #2699fb; border-radius: 20px"
+      class="head-14-semibold"
+    >
+      <span fxHide.xs-sm> Pick-up </span><mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
 </div>

@@ -7,9 +7,20 @@ import {
   CdkCustomStepperWithoutFormExample,
   CustomStepper,
 } from './costum-stepper/costum-stepper.component';
+import { CustomStepperNumberComponent } from './custom-stepper-number/custom-stepper-number.component';
 @NgModule({
-  declarations: [CustomStepper, CdkCustomStepperWithoutFormExample],
+  declarations: [
+    CustomStepper,
+    CdkCustomStepperWithoutFormExample,
+    CustomStepperNumberComponent,
+  ],
   imports: [CommonModule, MaterialModule, FlexLayoutModule, FormsModule],
-  exports: [CustomStepper, MaterialModule, FlexLayoutModule, FormsModule],
+  exports: [
+    CustomStepper,
+    CustomStepperNumberComponent,
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+  ],
 })
 export class SharedComponentsModule {}

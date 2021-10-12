@@ -248,11 +248,17 @@
       </div>
     </cdk-step>
     <cdk-step>
-      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="35px">
+      <div
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="35px"
+        fxFlexFill
+      >
         <div fxFlex class="head-20-semibold" style="padding: 30px">
           Life in the wild
         </div>
         <div
+          *ngIf="notNull"
           fxFlex
           fxFlexFill
           fxLayout="row"
@@ -329,6 +335,8 @@
           </div>
         </div>
         <div
+          *ngIf="!notNull"
+          (click)="notNull = true"
           fxFlex
           fxFlexFill
           fxLayout="row"
@@ -336,6 +344,7 @@
           fxLayoutGap="10px"
         >
           <div
+            fxFlexFill
             fxFlex="70"
             fxLayout="column"
             fxLayoutAlign="space-around center"

@@ -1,1 +1,36 @@
-<p>xplorer-messages works!</p>
+<div fxLayout="row">
+  <div
+    fxLayout="column"
+    fxFlex="25"
+    style="border-right: 1px solid gray; height: 100%"
+  >
+    <div
+      fxFlex
+      *ngFor="let item of [1, 2, 3, 4, 5]"
+      fxLayout="column"
+      style="margin: 5px"
+    >
+      <div fxFlex fxLayout="row" style="padding: 5px">
+        <img
+          src="assets/thumbnail.png"
+          width="80"
+          height="80"
+          style="border-radius: 40px"
+        />
+        <div fxFlex fxLayout="column">
+          <div
+            fxFlex
+            style="align-items: center; vertical-align: middle; display: flex"
+          >
+            <mat-icon>circle</mat-icon>Samantha George
+          </div>
+          <div fxFlex>Tokyo, Japan</div>
+          <div fxFlex>10:00 PM</div>
+        </div>
+      </div>
+      <div fxFlex class="desc">I see what you mean and this is</div>
+      <span class="divider"></span>
+    </div>
+  </div>
+  <div fxLayout="column">lkl</div>
+</div>

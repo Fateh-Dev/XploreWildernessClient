@@ -1,4 +1,4 @@
-<div fxLayout="row">
+<div fxLayout="row" style="padding-top: 100px">
   <div fxLayout="column" fxLayoutGap="50px" fxFlexFill>
     <div fxLayout="row" fxLayoutGap="60px">
       <div fxFlex="50" fxLayout="column">
@@ -15,8 +15,12 @@
             ><mat-label>Drop-off time</mat-label> <input matInput type="time"
           /></mat-form-field>
           <mat-form-field appearance="outline" fxFlex
-            ><mat-label>Time zone</mat-label> <input matInput type="text"
-          /></mat-form-field>
+            ><mat-label>Time zone</mat-label>
+            <mat-select>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select></mat-form-field
+          >
         </div>
         <div fxFlex>
           <img src="assets/thumbnail.png" height="200" width="100%" />
@@ -33,6 +37,32 @@
           placeholder="Add further details about the pickup logistics."
         ></textarea>
       </mat-form-field>
+    </div>
+    <div fxLayout="row" fxFlex fxFlexFill>
+      <button
+        mat-flat-button
+        [routerLink]="['../pickup']"
+        routerLinkActive="router-link-active"
+        aria-label="Example icon-button with share icon"
+        color="primary"
+        style="background-color: #2699fb; border-radius: 20px"
+        class="head-14-semibold"
+      >
+        <mat-icon>chevron_left</mat-icon>
+        <span fxHide.xs-sm>Pick-up </span>
+      </button>
+      <span fxFlex style="flex: 1 1 auto"></span>
+      <button
+        mat-flat-button
+        [routerLink]="['../images']"
+        routerLinkActive="router-link-active"
+        aria-label="Example icon-button with share icon"
+        color="primary"
+        style="background-color: #2699fb; border-radius: 20px"
+        class="head-14-semibold"
+      >
+        <span fxHide.xs-sm> Images </span><mat-icon>chevron_right</mat-icon>
+      </button>
     </div>
   </div>
 </div>

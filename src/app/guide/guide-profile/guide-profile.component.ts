@@ -11,7 +11,7 @@ export class GuideProfileComponent implements OnInit {
   // personalFormGroup: FormGroup;
   formData: FormGroup;
   constructor(private _formBuilder: FormBuilder) {}
-
+  notNull = false;
   ngOnInit(): void {
     this.formData = this._formBuilder.group({
       accountFormGroup: this._formBuilder.group({

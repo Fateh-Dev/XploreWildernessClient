@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutGap="10px">
+<div fxLayout="column" fxLayoutGap="10px" style="padding-top: 100px">
   <mat-form-field class="example-chip-list" appearance="outline">
     <mat-label>Activities</mat-label>
     <mat-chip-list #chipListActivity aria-label="Fruit selection">
@@ -143,4 +143,19 @@
       >
     </span>
   </span>
+
+  <div fxLayout="row" fxFlex fxFlexFill>
+    <span fxFlex style="flex: 1 1 auto"></span>
+    <button
+      [routerLink]="['../lodging']"
+      routerLinkActive="router-link-active"
+      mat-flat-button
+      aria-label="Example icon-button with share icon"
+      color="primary"
+      style="background-color: #2699fb; border-radius: 20px"
+      class="head-14-semibold"
+    >
+      <span fxHide.xs-sm> Lodging </span><mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
 </div>

@@ -1,0 +1,11 @@
+.divider {
+  background-color: rgb(231, 231, 231);
+  height: 1px !important;
+}
+.desc {
+  display: block;
+  max-width: 60px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  //   overflow: hidden;
+}

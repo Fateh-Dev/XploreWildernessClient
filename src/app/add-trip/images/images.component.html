@@ -1,1 +1,27 @@
 <p>images works!</p>
+<div fxLayout="row" fxFlex fxFlexFill>
+  <button
+    mat-flat-button
+    [routerLink]="['../dropoff']"
+    routerLinkActive="router-link-active"
+    aria-label="Example icon-button with share icon"
+    color="primary"
+    style="background-color: #2699fb; border-radius: 20px"
+    class="head-14-semibold"
+  >
+    <mat-icon>chevron_left</mat-icon>
+    <span fxHide.xs-sm>Drop-off </span>
+  </button>
+  <span fxFlex style="flex: 1 1 auto"></span>
+  <button
+    mat-flat-button
+    [routerLink]="['../itinerary']"
+    routerLinkActive="router-link-active"
+    aria-label="Example icon-button with share icon"
+    color="primary"
+    style="background-color: #2699fb; border-radius: 20px"
+    class="head-14-semibold"
+  >
+    <span fxHide.xs-sm> Itinerary </span><mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
