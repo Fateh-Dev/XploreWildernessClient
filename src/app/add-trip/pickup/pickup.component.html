@@ -1,12 +1,12 @@
 <div fxLayout="row" style="padding-top: 100px">
-  <div fxLayout="column" fxLayoutGap="50px" fxFlexFill>
+  <div fxLayout="column" fxLayoutGap="0px" fxFlexFill>
     <div fxLayout="row" fxLayoutGap="60px">
       <div fxFlex="50" fxLayout="column">
         <mat-form-field appearance="outline"
           ><mat-label>Pick up Location</mat-label> <input matInput type="text"
         /></mat-form-field>
-        <div fxFlex>
-          <img src="assets/thumbnail.png" height="200" width="100%" />
+        <div fxFlex style="padding-top: 30px">
+          <img src="assets/thumbnail.png" height="250" width="100%" />
         </div>
       </div>
       <div fxFlex="50" fxLayout="column" fxLayoutGap="20px">
@@ -23,7 +23,7 @@
             ></mat-form-field
           >
         </div>
-        <div fxFlex>
+        <div fxFlex style="padding-top: 30px">
           <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
             <!-- <h3 style="font-weight: bold">Front side document</h3> -->
             <div
@@ -98,7 +98,7 @@
         ></textarea>
       </mat-form-field>
     </div>
-    <div fxLayout="row" fxFlex fxFlexFill>
+    <div fxLayout="row" fxFlex fxFlexFill style="padding-top: 50px">
       <button
         mat-flat-button
         [routerLink]="['../safety']"
@@ -109,7 +109,7 @@
         class="head-14-semibold"
       >
         <mat-icon>chevron_left</mat-icon>
-        <span fxHide.xs-sm>Safety </span>
+        <span fxHide.xs-sm style="margin: 10px">Safety </span>
       </button>
       <span fxFlex style="flex: 1 1 auto"></span>
       <button
@@ -121,7 +121,8 @@
         style="background-color: #2699fb; border-radius: 20px"
         class="head-14-semibold"
       >
-        <span fxHide.xs-sm> Drop-off </span><mat-icon>chevron_right</mat-icon>
+        <span fxHide.xs-sm style="margin: 10px"> Drop-off </span
+        ><mat-icon>chevron_right</mat-icon>
       </button>
     </div>
   </div>

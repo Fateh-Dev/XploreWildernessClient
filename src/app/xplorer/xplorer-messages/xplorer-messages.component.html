@@ -1,36 +1,51 @@
 <div fxLayout="row">
   <div
     fxLayout="column"
-    fxFlex="25"
-    style="border-right: 1px solid gray; height: 100%"
+    fxFlex="30"
+    style="border-right: 1px solid rgb(231, 231, 231); height: 100%"
   >
-    <div
-      fxFlex
-      *ngFor="let item of [1, 2, 3, 4, 5]"
-      fxLayout="column"
-      style="margin: 5px"
-    >
-      <div fxFlex fxLayout="row" style="padding: 5px">
-        <img
-          src="assets/thumbnail.png"
-          width="80"
-          height="80"
-          style="border-radius: 40px"
-        />
-        <div fxFlex fxLayout="column">
-          <div
-            fxFlex
-            style="align-items: center; vertical-align: middle; display: flex"
-          >
-            <mat-icon>circle</mat-icon>Samantha George
+    <div style="margin-top: 100px">
+      <div *ngFor="let item of [1, 2, 3, 4, 5]" fxLayout="column">
+        <span class="divider"></span>
+        <div class="contact" fxFlex fxLayout="column">
+          <div fxFlex fxLayout="row" style="padding: 5px">
+            <img
+              src="assets/thumbnail.png"
+              width="80"
+              height="80"
+              style="border-radius: 40px; border: 1px solid gray"
+            />
+            <div fxFlex fxLayout="column">
+              <div
+                fxFlex
+                style="
+                  align-items: center;
+                  text-align: center;
+                  vertical-align: middle;
+                  display: flex;
+                  font-weight: bold;
+                "
+              >
+                <mat-icon
+                  style="font-size: 12px; padding-top: 11px; color: green"
+                  >circle</mat-icon
+                >Samantha George
+              </div>
+              <div fxFlex style="padding-left: 8px"><i>Tokyo, Japan</i></div>
+              <div fxFlex style="padding-left: 8px"><i>10:00 PM</i></div>
+            </div>
           </div>
-          <div fxFlex>Tokyo, Japan</div>
-          <div fxFlex>10:00 PM</div>
+          <div fxFlex class="desc">I see what you mean and this is</div>
         </div>
       </div>
-      <div fxFlex class="desc">I see what you mean and this is</div>
-      <span class="divider"></span>
     </div>
   </div>
-  <div fxLayout="column">lkl</div>
+  <div fxLayout="column" fxFlex="70" fxFlexFill>
+    <div
+      style="height: 106px; border-bottom: 1px solid rgb(231, 231, 231)"
+      fxLayout="row"
+    >
+      <div fxFlex fxFlexFill>d</div>
+    </div>
+  </div>
 </div>

@@ -1,11 +1,20 @@
 .divider {
   background-color: rgb(231, 231, 231);
   height: 1px !important;
+  margin: 5px;
 }
 .desc {
   display: block;
   max-width: 60px !important;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-bottom: 10px;
   //   overflow: hidden;
+}
+.contact {
+  padding: 5px;
+}
+.contact:hover {
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
 }

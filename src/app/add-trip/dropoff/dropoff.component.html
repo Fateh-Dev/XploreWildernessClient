@@ -1,44 +1,104 @@
 <div fxLayout="row" style="padding-top: 100px">
-  <div fxLayout="column" fxLayoutGap="50px" fxFlexFill>
+  <div fxLayout="column" fxLayoutGap="0px" fxFlexFill>
     <div fxLayout="row" fxLayoutGap="60px">
       <div fxFlex="50" fxLayout="column">
         <mat-form-field appearance="outline"
-          ><mat-label>Drop-off Location</mat-label> <input matInput type="text"
+          ><mat-label>Drop off Location</mat-label> <input matInput type="text"
         /></mat-form-field>
-        <div fxFlex>
-          <img src="assets/thumbnail.png" height="200" width="100%" />
+        <div fxFlex style="padding-top: 30px">
+          <img src="assets/thumbnail.png" height="250" width="100%" />
         </div>
       </div>
-      <div fxFlex="50" fxLayout="column">
+      <div fxFlex="50" fxLayout="column" fxLayoutGap="20px">
         <div fxLayout="row" fxLayoutGap="20px">
           <mat-form-field appearance="outline" fxFlex style="width: 100px"
-            ><mat-label>Drop-off time</mat-label> <input matInput type="time"
+            ><mat-label>Drop off time</mat-label> <input matInput type="time"
           /></mat-form-field>
           <mat-form-field appearance="outline" fxFlex
             ><mat-label>Time zone</mat-label>
-            <mat-select>
-              <mat-option value="option1">Option 1</mat-option>
-              <mat-option value="option3">Option 3</mat-option>
-            </mat-select></mat-form-field
+            <mat-select
+              ><mat-option value="e">time zone 1</mat-option
+              ><mat-option value="e">time zone 2</mat-option
+              ><mat-option value="e">time zone 3</mat-option></mat-select
+            ></mat-form-field
           >
         </div>
-        <div fxFlex>
-          <img src="assets/thumbnail.png" height="200" width="100%" />
+        <div fxFlex style="padding-top: 30px">
+          <div fxFlex fxFlexFill fxLayout="column" fxLayoutGap="10px">
+            <!-- <h3 style="font-weight: bold">Front side document</h3> -->
+            <div
+              fxLayout="row"
+              fxLayoutAlign="end end"
+              fxLayoutGap="10px"
+              style="
+                position: relative;
+                bottom: 0px;
+                z-index: 10;
+                padding: 0px 6px;
+              "
+            >
+              <button
+                (click)="pickFile1()"
+                color="primary"
+                mat-icon-button
+                [disabled]="!doc1"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button
+                mat-icon-button
+                color="warn"
+                [disabled]="!doc1"
+                (click)="deleteImage1()"
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </div>
+            <div
+              fxLayout="row"
+              class="imageLayout"
+              fxLayoutAlign="center center"
+              style="position: relative; top: -65px"
+            >
+              <span style="text-align: center"
+                ><button
+                  *ngIf="!doc1"
+                  mat-raised-button
+                  class="loadIcon"
+                  (click)="pickFile1()"
+                >
+                  <mat-icon>add</mat-icon>Front
+                </button>
+
+                <img
+                  *ngIf="doc1"
+                  [src]="doc1"
+                  style="margin: 4px; max-height: 198px; object-fit: fill"
+                />
+              </span>
+              <input
+                type="file"
+                #fileLoader1
+                (change)="onSelectFile1($event)"
+                style="max-width: 0; max-height: 0; visibility: hidden"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div fxLayout="row">
       <mat-form-field appearance="outline" fxFlexFill>
-        <mat-label>Drop-off Details</mat-label>
+        <mat-label>Drop off Details</mat-label>
         <textarea
           matInput
           type="text"
           rows="6"
-          placeholder="Add further details about the pickup logistics."
+          placeholder="Add further details about the Drop off logistics."
         ></textarea>
       </mat-form-field>
     </div>
-    <div fxLayout="row" fxFlex fxFlexFill>
+    <div fxLayout="row" fxFlex fxFlexFill style="padding-top: 50px">
       <button
         mat-flat-button
         [routerLink]="['../pickup']"
@@ -49,7 +109,7 @@
         class="head-14-semibold"
       >
         <mat-icon>chevron_left</mat-icon>
-        <span fxHide.xs-sm>Pick-up </span>
+        <span fxHide.xs-sm style="margin: 10px">Pick-up </span>
       </button>
       <span fxFlex style="flex: 1 1 auto"></span>
       <button
@@ -61,7 +121,8 @@
         style="background-color: #2699fb; border-radius: 20px"
         class="head-14-semibold"
       >
-        <span fxHide.xs-sm> Images </span><mat-icon>chevron_right</mat-icon>
+        <span fxHide.xs-sm style="margin: 10px"> Images </span
+        ><mat-icon>chevron_right</mat-icon>
       </button>
     </div>
   </div>
