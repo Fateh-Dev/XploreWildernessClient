@@ -3,7 +3,7 @@
     <mat-label>Activities</mat-label>
     <mat-chip-list #chipListActivity aria-label="Fruit selection">
       <mat-chip
-        *ngFor="let item of activities"
+        *ngFor="let item of service.activities"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="removeActivity(item)"
@@ -16,7 +16,7 @@
       <input
         placeholder="Type more..."
         #activityInput
-        [formControl]="activityCtrl"
+        [formControl]="service.activityCtrl"
         [matAutocomplete]="auto"
         [matChipInputFor]="chipListActivity"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
@@ -28,7 +28,7 @@
       (optionSelected)="selectedActivity($event)"
     >
       <mat-option
-        *ngFor="let item of filteredActivities | async"
+        *ngFor="let item of service.filteredActivities | async"
         [value]="item"
       >
         {{ item }}
@@ -40,7 +40,7 @@
     <mat-label>Regions</mat-label>
     <mat-chip-list #chipListRegion aria-label="Fruit selection">
       <mat-chip
-        *ngFor="let item of regions"
+        *ngFor="let item of service.regions"
         [selectable]="selectable"
         [removable]="removable"
         (removed)="removeRegion(item)"
@@ -53,7 +53,7 @@
       <input
         placeholder="Type more..."
         #regionInput
-        [formControl]="regionCtrl"
+        [formControl]="service.regionCtrl"
         [matAutocomplete]="autoR"
         [matChipInputFor]="chipListRegion"
         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
@@ -64,37 +64,19 @@
       #autoR="matAutocomplete"
       (optionSelected)="selectedRegion($event)"
     >
-      <mat-option *ngFor="let item of filteredRegions | async" [value]="item">
+      <mat-option
+        *ngFor="let item of service.filteredRegions | async"
+        [value]="item"
+      >
         {{ item }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-  <!-- <mat-form-field fxFlex fxFlexFill appearance="outline">
-    <mat-label>Regions</mat-label>
-    <mat-select [formControl]="activityControl" multiple>
-      <mat-select-trigger>
-        <mat-chip-list>
-          <mat-chip
-            *ngFor="let item of activityControl.value"
-            [removable]="true"
-            (removed)="onLodgingRemoved(item)"
-          >
-            {{ item }}
-            <mat-icon matChipRemove>cancel</mat-icon>
-          </mat-chip>
-        </mat-chip-list>
-      </mat-select-trigger>
-
-      <mat-option *ngFor="let item of activityList" [value]="item">{{
-        item
-      }}</mat-option>
-    </mat-select>
-  </mat-form-field> -->
   <span class="divider"></span>
   <span style="padding-top: 10px"></span>
   <mat-form-field fxFlex fxFlexFill appearance="outline">
     <mat-label>Title</mat-label>
-    <input matInput type="text" />
+    <input matInput type="text" [(ngModel)]="service.tripTitle" />
   </mat-form-field>
   <mat-form-field fxFlex fxFlexFill appearance="outline">
     <mat-label>Description</mat-label>
@@ -113,7 +95,11 @@
         <input matInput type="number" /> </mat-form-field
       ><mat-form-field fxFlex appearance="outline">
         <mat-label>Duration (days)</mat-label>
-        <input matInput type="number" /> </mat-form-field
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="service.daysNumber"
+        /> </mat-form-field
     ></span>
     <span
       fxLayout="row"

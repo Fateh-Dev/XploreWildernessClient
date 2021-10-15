@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddTripService } from '../addTrip.service';
 
 @Component({
   selector: 'app-itinerary',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./itinerary.component.scss'],
 })
 export class ItineraryComponent implements OnInit {
-  steps = [1, 2, 3, 4, 5];
+  steps = [];
 
   breakfast = [
     'Continental Buffet',
@@ -26,7 +27,13 @@ export class ItineraryComponent implements OnInit {
     'Fresh packed by guides',
     'Xplorer packed',
   ];
-  constructor() {}
+  constructor(public service: AddTripService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let i = 1;
+    while (i <= this.service.daysNumber) {
+      this.steps.push(i);
+      i++;
+    }
+  }
 }

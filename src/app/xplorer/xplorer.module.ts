@@ -20,6 +20,10 @@ import { TripItemComponent } from './xplorer-booking/trip-item/trip-item.compone
 import { FavoriteTripItemComponent } from './xplorer-favorite/favorite-trip-item/favorite-trip-item.component';
 import { NewPreferenceModalComponent } from './xplorer-preference/new-preference-modal/new-preference-modal.component';
 import { PreferenceItemComponent } from './xplorer-preference/preference-item/preference-item.component';
+import { ReviewTripComponent } from './xplorer-history/review-trip/review-trip.component';
+import { CancelTripComponent } from './xplorer-booking/cancel-trip/cancel-trip.component';
+import { RescheduleTripComponent } from './xplorer-booking/reschedule-trip/reschedule-trip.component';
+import { BookNowComponent } from './xplorer-favorite/book-now/book-now.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { PreferenceItemComponent } from './xplorer-preference/preference-item/pr
     FavoriteTripItemComponent,
     NewPreferenceModalComponent,
     PreferenceItemComponent,
+    ReviewTripComponent,
+    CancelTripComponent,
+    RescheduleTripComponent,
+    BookNowComponent,
   ],
   exports: [XplorerHomeComponent],
   imports: [CommonModule, XplorerRoutingModule, SharedComponentsModule],

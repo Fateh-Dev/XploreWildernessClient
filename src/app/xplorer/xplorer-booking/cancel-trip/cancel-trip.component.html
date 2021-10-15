@@ -1,0 +1,58 @@
+<mat-toolbar
+  fxLayout="row"
+  class="size-height-48 mat-elevation-z1"
+  color="primary"
+  style="background-color: #43893f; height: 40px !important"
+  fxLayoutAlign="space-around center"
+>
+  <span fxFlex style="font-size: 16px">Cancel Trip</span>
+  <span fxFlex> </span>
+</mat-toolbar>
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <div
+    fxFlex="60"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+    style="padding-top: 15px"
+  >
+    <label id="example-radio-group-label" style="font-size: 18px"
+      >Are you sure you want to cancel this trip?</label
+    >
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+      [(ngModel)]="choice"
+    >
+      <mat-radio-button class="example-radio-button" value="a">
+        <span style="padding-left: 10px">
+          Refund to the original form of payment</span
+        >
+      </mat-radio-button>
+      <mat-radio-button class="example-radio-button" value="b">
+        <span style="padding-left: 10px"> Deposit funds in my account</span>
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around center" style="padding: 15px">
+  <!-- <span fxFlex fxFlexFill></span> -->
+
+  <button
+    fxFlex="25"
+    mat-flat-button
+    color="primary"
+    style="background-color: #2699fb; margin: 5px; border-radius: 20px"
+    mat-dialog-close
+  >
+    Cancel and Refund</button
+  ><button
+    fxFlex="25"
+    mat-flat-button
+    color="warn"
+    style="margin: 5px; border-radius: 20px"
+    mat-dialog-close
+  >
+    Ignore
+  </button>
+</div>

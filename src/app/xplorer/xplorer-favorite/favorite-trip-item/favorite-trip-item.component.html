@@ -1,104 +1,3 @@
-<!-- <div
-  fxLayout="row"
-  style="position: relative; bottom: -15px; left: 10px; height: 2px"
-  fxHide.lt-md
->
-  <mat-icon style="font-size: 18px">location_on</mat-icon
-  ><span style="font-size: 12px; font-weight: 500">California, USA</span>
-</div>
-<div
-  fxLayout.lg="row"
-  fxLayout.lt-md="column"
-  class="trip-item"
-  fxLayoutGap="10px"
-  fxLayoutAlign="space-around center"
->
-  <div fxFlex fxHide.lt-md fxFlexFill>
-    <img src="../../../assets/thumbnail.png" height="183" draggable="false" />
-  </div>
-  <div
-    fxLayout.lg="row"
-    fxLayout.lt-md="column"
-    class="trip-item-right"
-    fxLayoutGap="10px"
-    fxLayoutAlign="space-around start"
-  >
-    <div fxFlex fxLayout="column" fxLayoutAlign="start start" class="middle">
-      <div fxFlex style="font-size: 20px">
-        Monterey, Carmel and the 17-Mile Drive Day Tour
-      </div>
-      <div fxFlex>
-        <span
-          fxLayout="row"
-          fxLayoutGap="3px"
-          fxLayoutAlign="start start"
-          style="padding: 5px"
-          ><mat-icon matTooltip="skiing">downhill_skiing</mat-icon
-          ><mat-icon matTooltip="cycling">directions_bike</mat-icon
-          ><mat-icon matTooltip="hiking">hiking</mat-icon
-          ><mat-icon matTooltip="fishing">sailing</mat-icon></span
-        >
-      </div>
-      <div fxFlex style="padding: 5px; font-size: 12px">
-        If you want to see the best of New York and you're pressed for time,
-        take this 90-minute.want to see the best of New York and you're pressed
-        for time, take this 90-minut me, take this 90-minute...
-      </div>
-    </div>
-    <div
-      fxFlex="20"
-      fxFlexFill
-      class="right"
-      fxLayoutGap="3px"
-      fxLayout="column"
-      fxLayout.lt-md="row"
-    >
-      <div fxLayout="column" fxLayout.lt-md="row" fxLayoutGap="3px" fxFlexFill>
-        <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon style="color: #3b8bd3">account_circle</mat-icon
-          ><span style="color: #3b8bd3">X 5</span>
-        </div>
-        <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon style="color: #3b8bd3">date_range </mat-icon
-          ><span style="color: #3b8bd3">X 5</span>
-        </div>
-        <div fxFlex fxLayout="row">
-          <span style="font-size: 18px; font-weight: bold">1500$ </span
-          ><span>/day</span>
-        </div>
-        <div fxFlex fxLayout="row">
-          <span style="flex: 1 1 auto"></span>
-          <span
-            ><button
-              mat-icon-button
-              [matMenuTriggerFor]="menu"
-              aria-label="Example icon-button with a menu"
-            >
-              <mat-icon style="font-size: 22px">more_horiz</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item>
-                <mat-icon>edit</mat-icon>
-                <span>Edit Trip</span>
-              </button>
-              <button mat-menu-item>
-                <mat-icon color="primary">calendar_today</mat-icon>
-                <span>Schedule Trip</span>
-              </button>
-              <button mat-menu-item>
-                <mat-icon>file_copy</mat-icon>
-                <span>Duplicate Trip</span>
-              </button>
-              <button mat-menu-item>
-                <mat-icon color="accent">delete</mat-icon>Delete Trip
-              </button>
-            </mat-menu></span
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div
   fxLayout="column"
   fxFlexFill
@@ -223,6 +122,7 @@
           color="primary"
           style="border-radius: 20px; background-color: #2699fb"
           aria-label="Example icon-button with a menu"
+          (click)="openBook()"
         >
           Book now
         </button>
@@ -230,3 +130,7 @@
     </span>
   </div>
 </div>
+
+<ng-template #bookNow let-data>
+  <app-book-now></app-book-now>
+</ng-template>

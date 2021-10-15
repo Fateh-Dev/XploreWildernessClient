@@ -4,7 +4,9 @@
   fxLayoutAlign="center center"
   style="padding-top: 20px"
 >
-  <span class="head-20-semibold" style="padding: 0px">Trip Title</span></span
+  <span class="head-20-semibold" style="padding: 0px">{{
+    service.tripTitle
+  }}</span></span
 >
 <app-custom-stepper-number [lineWidth]="(steps.length - 1) * 100">
   <cdk-step *ngFor="let item of steps">
@@ -31,9 +33,11 @@
         <mat-form-field appearance="outline" fxFlex>
           <mat-label>Activity</mat-label>
           <mat-select>
-            <mat-option value="option1">activity 1</mat-option>
-            <mat-option value="option1">activity 2</mat-option>
-            <mat-option value="option1">activity 3</mat-option>
+            <mat-option
+              *ngFor="let activity of service.activities"
+              value="option1"
+              >{{ activity }}</mat-option
+            >
           </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline" fxFlex>

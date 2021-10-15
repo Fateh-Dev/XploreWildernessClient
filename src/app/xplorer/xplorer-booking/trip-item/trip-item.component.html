@@ -225,23 +225,29 @@
           <mat-icon style="transform: scale(2)">arrow_drop_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
-            <mat-icon>edit</mat-icon>
-            <span>Edit Trip</span>
+          <button mat-menu-item (click)="openCancel()">
+            <mat-icon color="accent">cancel</mat-icon>Cancel Trip
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item (click)="openReschedule()">
             <mat-icon color="primary">calendar_today</mat-icon>
             <span>Schedule Trip</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>file_copy</mat-icon>
-            <span>Duplicate Trip</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon color="accent">delete</mat-icon>Delete Trip
+          <button
+            mat-menu-item
+            [routerLink]="['../message']"
+            routerLinkActive="router-link-active"
+          >
+            <mat-icon>message</mat-icon>
+            <span>Message guide</span>
           </button>
         </mat-menu>
       </div>
     </span>
   </div>
 </div>
+<ng-template #cancel let-data>
+  <app-cancel-trip></app-cancel-trip>
+</ng-template>
+<ng-template #reschedule let-data>
+  <app-reschedule-trip></app-reschedule-trip>
+</ng-template>

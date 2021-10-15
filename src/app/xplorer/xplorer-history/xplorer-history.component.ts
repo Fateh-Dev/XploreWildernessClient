@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  TemplateRef,
+  ViewChild,
+} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import {
   MatSnackBar,
@@ -14,6 +20,9 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./xplorer-history.component.scss'],
 })
 export class XplorerHistoryComponent implements AfterViewInit {
+  @ViewChild('review', { static: true, read: TemplateRef })
+  public templateReview: TemplateRef<any>;
+  ReviewDialogRef: any;
   displayedColumns: string[] = [
     'id',
     'title',
@@ -39,9 +48,18 @@ export class XplorerHistoryComponent implements AfterViewInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  constructor(private snackbar: MatSnackBar) {}
+  constructor(private snackbar: MatSnackBar, public dialog: MatDialog) {}
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
+  openReview() {
+    this.ReviewDialogRef = this.dialog.open(this.templateReview, {
+      data: {},
+      panelClass: 'pad-none',
+      minWidth: '678px',
+      maxWidth: '678px',
+      maxHeight: '512px',
+    });
+  }
   ngOnInit(): void {
     // this.snackbar.open(
     //   'Two line text string. One to two lines is preferable on mobile and tablet.',

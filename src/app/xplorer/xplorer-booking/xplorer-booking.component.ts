@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { filter } from 'rxjs/operators';
 
 @Component({

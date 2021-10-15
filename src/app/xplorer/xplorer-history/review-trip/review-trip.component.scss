@@ -1,0 +1,20 @@
+::ng-deep .mat-dialog-container {
+  padding: 0px !important;
+}
+.pad-30 {
+  padding: 20px;
+}
+.active {
+  background-color: #43893f;
+  color: white;
+  margin: 0px;
+}
+mat-icon:hover {
+  cursor: pointer;
+}
+.rated {
+  color: #43893f;
+}
+.mat-standard-chip {
+  height: auto !important;
+}

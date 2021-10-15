@@ -28,11 +28,13 @@
     >
       <mat-form-field fxFlex fxFlexFill appearance="outline"
         ><mat-label>select your activity</mat-label>
-        <input
-          matInput
-          type="text"
-          formControlName="activity"
-        /> </mat-form-field
+        <mat-select formControlName="activity">
+          <mat-option
+            *ngFor="let item of service.activityList"
+            [value]="item"
+            >{{ item }}</mat-option
+          >
+        </mat-select></mat-form-field
       ><mat-form-field fxFlex fxFlexFill appearance="outline"
         ><mat-label>How would you rate yourself - DD</mat-label>
         <input matInput type="text" formControlName="rate" />
@@ -56,7 +58,11 @@
   >
     <mat-form-field fxFlex fxFlexFill appearance="outline"
       ><mat-label>Add your favourite Parks, Regions, or Countries</mat-label>
-      <input matInput type="text" />
+      <mat-select>
+        <mat-option *ngFor="let item of service.regionList" [value]="item">{{
+          item
+        }}</mat-option>
+      </mat-select>
     </mat-form-field>
   </div>
   <div
@@ -66,12 +72,12 @@
     fxLayoutAlign="center stretch"
   >
     <mat-chip-list aria-label="Fish selection">
-      <mat-chip
+      <mat-chip color="primary" selected
         >Banff National Park<button matChipRemove>
           <mat-icon>cancel</mat-icon>
         </button></mat-chip
       >
-      <mat-chip
+      <mat-chip color="primary" selected
         >California, USA<button matChipRemove>
           <mat-icon>cancel</mat-icon>
         </button></mat-chip
@@ -82,7 +88,7 @@
           <mat-icon>cancel</mat-icon>
         </button></mat-chip
       >
-      <mat-chip color="accent" selected
+      <mat-chip color="primary" selected
         >California, USA<button matChipRemove>
           <mat-icon>cancel</mat-icon>
         </button></mat-chip
@@ -106,7 +112,7 @@
     <button
       mat-flat-button
       color="primary"
-      style="border-radius: 20px"
+      style="border-radius: 20px; background-color: #2699fb"
       (click)="addPreference()"
       mat-dialog-close
     >

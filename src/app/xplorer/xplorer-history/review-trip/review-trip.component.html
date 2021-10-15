@@ -1,0 +1,99 @@
+<mat-toolbar
+  fxLayout="row"
+  class="size-height-48 mat-elevation-z1"
+  color="primary"
+  style="background-color: #43893f; height: 40px !important"
+  fxLayoutAlign="space-around center"
+>
+  <span fxFlex style="font-size: 16px">Leave a Review</span>
+  <span fxFlex> </span>
+</mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="space-between start" style="padding: 15px">
+  <div fxFlex="15">
+    <img
+      src="assets/thumbnail.png"
+      width="80"
+      height="80"
+      style="border-radius: 10px"
+    />
+  </div>
+  <div fxFlex="85" fxLayout="column" fxLayoutAlign="space-between start">
+    <div fxFlex style="font-size: 16px; font-weight: 500">
+      Best Mountain Biking Trip in the Canadian Rockies
+    </div>
+    <div fxFlex style="font-size: 12px">California, USA</div>
+    <div fxFlex style="padding-top: 8px">
+      <mat-chip-list class="example-chip">
+        <mat-chip class="active mat-standard-chip" style="font-size: 10px">
+          Trip Date: 17-Sep-2021
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<div fxLayout="row" fxLayoutAlign="space-between center" style="padding: 15px">
+  <div
+    fxFlex
+    fxLayout="column"
+    fxLayoutAlign="space-between start"
+    fxLayoutGap="10px"
+    fxFlexFill
+  >
+    <div fxFlex>
+      <mat-icon
+        [ngClass]="rate >= 1 ? 'rated' : 'material-icons-outlined'"
+        (click)="rate = 1"
+        >circle</mat-icon
+      ><mat-icon
+        [ngClass]="rate >= 2 ? 'rated' : 'material-icons-outlined'"
+        (click)="rate = 2"
+        >circle</mat-icon
+      ><mat-icon
+        [ngClass]="rate >= 3 ? 'rated' : 'material-icons-outlined'"
+        (click)="rate = 3"
+        >circle</mat-icon
+      ><mat-icon
+        [ngClass]="rate >= 4 ? 'rated' : 'material-icons-outlined'"
+        (click)="rate = 4"
+        >circle</mat-icon
+      >
+      <mat-icon
+        [ngClass]="rate >= 5 ? 'rated' : 'material-icons-outlined'"
+        (click)="rate = 5"
+        >circle</mat-icon
+      >
+    </div>
+    <div fxFlex>
+      Tell us a bit about what you liked or disliked about the trip
+    </div>
+    <mat-form-field
+      class="example-full-width"
+      appearance="outline"
+      fxFlex
+      fxFlexFill
+    >
+      <textarea matInput placeholder="" rows="6"></textarea>
+    </mat-form-field>
+  </div>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between center" style="padding: 15px">
+  <span fxFlex fxFlexFill></span>
+  <button
+    mat-flat-button
+    color="warn"
+    style="margin: 5px; border-radius: 20px"
+    mat-dialog-close
+  >
+    Cancel
+  </button>
+  <button
+    mat-flat-button
+    color="primary"
+    style="background-color: #2699fb; margin: 5px; border-radius: 20px"
+    mat-dialog-close
+  >
+    Submit
+  </button>
+</div>

@@ -9,18 +9,18 @@ import { AppService } from 'src/app/app.service';
 export class AddTripHomeComponent implements OnInit {
   public links = [
     [
-      { name: 'Activities', href: 'activities', icon: 'account_circle' },
-      { name: 'Lodging', href: 'lodging', icon: 'settings' },
-      { name: 'Difficulty', href: 'difficulty', icon: 'credit_card' },
-      { name: 'Safety', href: 'safety', icon: 'check_circle' },
+      { name: 'Activities', href: 'activities', icon: 'info' },
+      { name: 'Lodging', href: 'lodging', icon: 'hotel' },
+      { name: 'Difficulty', href: 'difficulty', icon: 'info' },
+      { name: 'Safety', href: 'safety', icon: 'info' },
     ],
     [
-      { name: 'Pick-up', href: 'pickup', icon: 'bookmark_border' },
-      { name: 'Drop-off', href: 'dropoff', icon: 'settings_outline' },
+      { name: 'Pick-up', href: 'pickup', icon: 'room' },
+      { name: 'Drop-off', href: 'dropoff', icon: 'room' },
     ],
-    [{ name: 'Images', href: 'images', icon: 'interests' }],
+    [{ name: 'Images', href: 'images', icon: 'crop_original' }],
 
-    [{ name: 'Itinerary', href: 'itinerary', icon: 'lock' }],
+    [{ name: 'Itinerary', href: 'itinerary', icon: 'alt_route' }],
   ];
 
   constructor(private service: AppService) {}
