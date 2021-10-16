@@ -47,7 +47,7 @@
                     class="example-full-width"
                     appearance="outline"
                   >
-                    <mat-label>Select an activity</mat-label>
+                    <mat-label>Select an Activity</mat-label>
                     <input
                       fxFlexFill
                       type="text"
@@ -82,6 +82,7 @@
                       border-radius: 10px;
                       border: 2px solid #2698fb62 !important;
                     "
+                    onerror="this.src='assets/thumbnail.png'"
                 /></span>
               </div>
               <div fxLayout="row" fxFlex fxFlexFill style="padding: 30px 0px">
@@ -109,7 +110,7 @@
                   <td>
                     How many
                     <b style="font-size: 16px">{{ activityPicture }}</b> trips
-                    have you led in the past?
+                    have you led in the past ?
                   </td>
                   <td
                     style="width: 80px; padding-bottom: 0px; padding-right: 0px"
@@ -125,7 +126,7 @@
                 </tr>
                 <tr>
                   <td style="text-align: left">
-                    How many months or years of experience do you have
+                    How many months or years of experience do you have ?
                   </td>
                   <td
                     style="width: 80px; padding-bottom: 0px; padding-right: 0px"
@@ -156,7 +157,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>How many xplorers did you lead during a trip?</td>
+                  <td>How many xplorers did you lead during a trip ?</td>
                   <td
                     style="width: 80px; padding-bottom: 0px; padding-right: 0px"
                   >
@@ -301,27 +302,48 @@
                   fxFlexFill
                   fxLayoutAlign="start start"
                 >
-                  <mat-form-field appearance="outline"
-                    ><mat-label>mselect</mat-label>
-                    <mat-select (selectionChange)="addChip($event.value)">
+                  <mat-form-field
+                    fxFlexFill
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Select a region</mat-label>
+                    <input
+                      fxFlexFill
+                      type="text"
+                      placeholder="Pick one"
+                      aria-label="Number"
+                      matInput
+                      #regionInput
+                      [formControl]="regionControl"
+                      [matAutocomplete]="autoRegion"
+                    />
+                    <mat-autocomplete
+                      autoActiveFirstOption
+                      #autoRegion="matAutocomplete"
+                      (optionSelected)="addChip($event)"
+                    >
                       <mat-option
-                        *ngFor="let food of ['region 1', 'region 1']"
-                        [value]="food"
+                        *ngFor="let option of filteredRegions | async"
+                        [value]="option"
                       >
-                        {{ food }}
+                        {{ option }}
                       </mat-option>
-                    </mat-select>
+                    </mat-autocomplete>
                   </mat-form-field>
                   <mat-chip-list
                     class="mat-chip-list-stacked"
                     aria-label="Color selection"
                   >
                     <mat-chip
-                      *ngFor="let chip of parcs"
+                      *ngFor="let chip of parcs; let i = index"
                       selected
                       [color]="chip.color"
                     >
-                      {{ chip }}
+                      {{ chip
+                      }}<button matChipRemove (click)="removeRegion(i)">
+                        <mat-icon>cancel</mat-icon>
+                      </button>
                     </mat-chip>
                   </mat-chip-list>
                 </div>
@@ -329,37 +351,103 @@
                   fxLayout="column"
                   fxFlex
                   fxFlexFill
-                  fxLayoutAlign="start center"
+                  fxLayoutAlign="start start"
                 >
-                  <mat-form-field appearance="outline"
-                    ><mat-label>select</mat-label>
-                    <mat-select>
+                  <mat-form-field
+                    fxFlexFill
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Select a region</mat-label>
+                    <input
+                      fxFlexFill
+                      type="text"
+                      placeholder="Pick one"
+                      aria-label="Number"
+                      matInput
+                      #regionInput2
+                      [formControl]="regionControl2"
+                      [matAutocomplete]="autoRegion2"
+                    />
+                    <mat-autocomplete
+                      autoActiveFirstOption
+                      #autoRegion2="matAutocomplete"
+                      (optionSelected)="addChip2($event)"
+                    >
                       <mat-option
-                        *ngFor="let food of ['region 1', 'region 1']"
-                        [value]="food"
+                        *ngFor="let option of filteredRegions2 | async"
+                        [value]="option"
                       >
-                        {{ food }}
+                        {{ option }}
                       </mat-option>
-                    </mat-select>
+                    </mat-autocomplete>
                   </mat-form-field>
+                  <mat-chip-list
+                    class="mat-chip-list-stacked"
+                    aria-label="Color selection"
+                  >
+                    <mat-chip
+                      *ngFor="let chip of parcs2; let i = index"
+                      selected
+                      [color]="chip.color"
+                    >
+                      {{ chip
+                      }}<button matChipRemove (click)="removeRegion2(i)">
+                        <mat-icon>cancel</mat-icon>
+                      </button>
+                    </mat-chip>
+                  </mat-chip-list>
                 </div>
                 <div
                   fxLayout="column"
                   fxFlex
                   fxFlexFill
-                  fxLayoutAlign="center center"
+                  fxLayoutAlign="start start"
                 >
-                  <mat-form-field appearance="outline"
-                    ><mat-label>select</mat-label>
-                    <mat-select>
+                  <mat-form-field
+                    fxFlexFill
+                    class="example-full-width"
+                    appearance="outline"
+                  >
+                    <mat-label>Select a region</mat-label>
+                    <input
+                      fxFlexFill
+                      type="text"
+                      placeholder="Pick one"
+                      aria-label="Number"
+                      #regionInput3
+                      matInput
+                      [formControl]="regionControl3"
+                      [matAutocomplete]="autoRegion3"
+                    />
+                    <mat-autocomplete
+                      autoActiveFirstOption
+                      #autoRegion3="matAutocomplete"
+                      (optionSelected)="addChip3($event)"
+                    >
                       <mat-option
-                        *ngFor="let food of ['region 1', 'region 1']"
-                        [value]="food"
+                        *ngFor="let option of filteredRegions3 | async"
+                        [value]="option"
                       >
-                        {{ food }}
+                        {{ option }}
                       </mat-option>
-                    </mat-select>
+                    </mat-autocomplete>
                   </mat-form-field>
+                  <mat-chip-list
+                    class="mat-chip-list-stacked"
+                    aria-label="Color selection"
+                  >
+                    <mat-chip
+                      *ngFor="let chip of parcs3; let i = index"
+                      selected
+                      [color]="chip.color"
+                    >
+                      {{ chip
+                      }}<button matChipRemove (click)="removeRegion3(i)">
+                        <mat-icon>cancel</mat-icon>
+                      </button>
+                    </mat-chip>
+                  </mat-chip-list>
                 </div>
               </div>
               <div fxLayout="row" fxFlex fxFlexFill>
@@ -415,7 +503,7 @@
                   <textarea
                     matInput
                     rows="6"
-                    placeholder="Tell us more about your ACTIVITY guiding experience. What do you find most challenging about guiding trips?"
+                    placeholder="Tell us more about your activity guiding experience. What do you find most challenging about guiding trips ?"
                   ></textarea>
                 </mat-form-field>
               </div>

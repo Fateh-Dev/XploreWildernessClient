@@ -6,7 +6,6 @@
   cursor: pointer;
   background-color: #2699fb;
   vertical-align: middle;
-  // border-radius: 50% !important;
   display: flex;
   line-height: 75px;
   font-size: 60px;
@@ -14,7 +13,6 @@
   justify-content: center;
   cursor: pointer;
 }
-
 .roundImage:active {
   opacity: 0.6;
 }
@@ -37,13 +35,7 @@
 .roundImageCenter:active {
   opacity: 0.6;
 }
-// ::ng-deep footer {
-//   hr {
-//     width: 350px !important;
-//   }
-// }
 td {
-  // border: 1px solid black;
   padding: 10px;
   padding-bottom: 1.34375em;
   text-align: left;

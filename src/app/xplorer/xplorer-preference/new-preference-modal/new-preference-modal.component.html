@@ -26,15 +26,31 @@
       fxLayout="column"
       fxLayoutAlign="space-around center"
     >
-      <mat-form-field fxFlex fxFlexFill appearance="outline"
-        ><mat-label>select your activity</mat-label>
-        <mat-select formControlName="activity">
+      <mat-form-field
+        fxFlex
+        fxFlexFill
+        class="example-full-width"
+        appearance="outline"
+      >
+        <mat-label>Select an Activity</mat-label>
+        <input
+          fxFlexFill
+          type="text"
+          placeholder="Pick one"
+          aria-label="Number"
+          matInput
+          [ngModel]="activityPicture"
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option
-            *ngFor="let item of service.activityList"
-            [value]="item"
-            >{{ item }}</mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
           >
-        </mat-select></mat-form-field
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete> </mat-form-field
       ><mat-form-field fxFlex fxFlexFill appearance="outline"
         ><mat-label>How would you rate yourself - DD</mat-label>
         <input matInput type="text" formControlName="rate" />
@@ -42,11 +58,12 @@
     </div>
     <div fxFlex="25" style="padding: 5px">
       <img
-        src="assets/thumbnail.png"
+        [src]="'assets/activities/' + activityPicture + '.png'"
         width="130"
         height="125"
-        style="border-radius: 10px"
+        style="border-radius: 10px; border: 1px solid rgb(233, 233, 233)"
         draggable="false"
+        onerror="this.src='assets/thumbnail.png'"
       />
     </div>
   </div>

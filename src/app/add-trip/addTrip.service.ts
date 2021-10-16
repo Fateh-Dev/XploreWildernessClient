@@ -17,11 +17,9 @@ export class AddTripService {
     'climbing',
   ];
   regionList: string[] = [
-    'Cross-country Skiing',
-    'cycling',
-    'hiking',
-    'fishing',
-    'climbing',
+    'Banff National Park',
+    'California, USA',
+    'Banff National Park',
   ];
   public submitForm: FormGroup;
   public activityControl = new FormControl([]);
