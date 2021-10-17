@@ -20,6 +20,88 @@
       Add Contact
     </button>
   </div>
+  <div
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+    fxFlexFill
+    style="padding: 30px"
+    [formGroup]="formData"
+  >
+    <div
+      fxLayout="row"
+      fxLayoutGap="20px"
+      fxLayoutAlign="space-around center"
+      fxFlexFill
+    >
+      <div fxFlex fxFlexFill>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Firstname</mat-label>
+          <input matInput autocomplete="off" required formControlName="name" />
+          <mat-icon matSuffix class="material-icons-outlined">person</mat-icon>
+        </mat-form-field>
+      </div>
+      <div fxFlex fxFlexFill>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Lastname</mat-label>
+          <input matInput autocomplete="off" required />
+          <mat-icon matSuffix class="material-icons-outlined">person</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayoutGap="20px"
+      fxLayoutAlign="space-around center"
+      fxFlexFill
+    >
+      <div fxFlex fxFlexFill>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Email</mat-label>
+          <input matInput autocomplete="off" required formControlName="email" />
+          <mat-icon matSuffix class="material-icons-outlined">mail</mat-icon>
+        </mat-form-field>
+      </div>
+      <div fxFlex fxFlexFill>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Phone</mat-label>
+          <input matInput autocomplete="off" required formControlName="phone" />
+          <mat-icon matSuffix class="material-icons-outlined">phone</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayoutGap="20px"
+      fxLayoutAlign="space-around start"
+      fxFlexFill
+    >
+      <div fxFlex="50">
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Relationship</mat-label>
+          <mat-select>
+            <mat-option value="1">father</mat-option>
+            <mat-option value="2">brother</mat-option>
+            <mat-option value="3">mother</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="50" style="flex: 1 1 auto"></div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around center">
+      <button mat-flat-button color="warn" style="border-radius: 20px">
+        cancel
+      </button>
+      <button
+        mat-flat-button
+        color="primary"
+        style="border-radius: 20px; background-color: #2699fb"
+        (click)="addContact()"
+        [disabled]="formData.valid"
+      >
+        Save
+      </button>
+    </div>
+  </div>
 
   <table mat-table [dataSource]="dataSource" matSort fxFlexFill fxFlex>
     <ng-container matColumnDef="name">

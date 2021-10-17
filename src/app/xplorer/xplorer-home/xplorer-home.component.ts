@@ -1,3 +1,4 @@
+import { XplorerService } from './../Xplorer.service';
 import { AppService } from './../../app.service';
 import { Component, OnInit } from '@angular/core';
 import {
@@ -57,7 +58,10 @@ export class XplorerHomeComponent implements OnInit {
     [{ name: 'Deactivate', href: 'deactivate', icon: 'lock' }],
   ];
 
-  constructor(private service: AppService) {}
+  constructor(
+    private service: AppService,
+    public serviceXplorer: XplorerService
+  ) {}
 
   ngOnInit(): void {}
 }

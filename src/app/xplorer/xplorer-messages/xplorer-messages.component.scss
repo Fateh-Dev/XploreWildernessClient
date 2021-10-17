@@ -18,3 +18,20 @@
   background-color: rgb(231, 231, 231);
   cursor: pointer;
 }
+.messageIn {
+  background-color: #625d5d1a;
+  padding: 10px;
+  max-width: 70%;
+  font-size: 12px;
+  margin: 5px 15px;
+  border-radius: 10px;
+}
+.messageOut {
+  background-color: #2699fb80;
+  padding: 10px;
+  font-size: 12px;
+  max-width: 70%;
+  width: fit-content;
+  margin: 5px 15px;
+  border-radius: 10px;
+}

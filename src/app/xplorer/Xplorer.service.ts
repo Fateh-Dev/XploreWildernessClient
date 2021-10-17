@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class XplorerService {
+  collapsed = false;
+
   activityList: string[] = [
     'Cross-country Skiing',
     'cycling',

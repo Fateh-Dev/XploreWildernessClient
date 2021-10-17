@@ -7,18 +7,169 @@
     fxLayoutGap="16px"
   >
     <mat-card
+      fxFlex="5"
+      style="padding: 0px; border-radius: 0px"
+      fxLayout="column"
+      fxHide
+      [fxShow]="serviceXplorer.collapsed"
+      fxHide.lt-md
+      fxFlexFill
+      ><div
+        [fxHide]="!serviceXplorer.collapsed"
+        style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
+      ></div>
+
+      <span fxFlex style="margin-top: 65px">
+        <mat-list>
+          <mat-list-item
+            style="align-items: center"
+            *ngFor="let link of links[0]"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = false"
+          >
+            <mat-icon
+              style="color: rgb(0, 0, 71)"
+              class="text-muted"
+              class="material-icons-outlined"
+              >{{ link.icon }}</mat-icon
+            >
+          </mat-list-item>
+        </mat-list></span
+      ><span class="divider"></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 0px">
+          <mat-list-item
+            *ngFor="let link of links[1]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = false"
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+          </mat-list-item>
+        </mat-list></span
+      ><span class="divider"></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 0px">
+          <mat-list-item
+            *ngFor="let link of links[2]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = false"
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+          </mat-list-item>
+        </mat-list></span
+      ><span class="divider"></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 0px">
+          <mat-list-item
+            *ngFor="let link of links[3]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = false"
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+          </mat-list-item>
+        </mat-list></span
+      ><span class="divider"></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 0px">
+          <mat-list-item
+            *ngFor="let link of links[4]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = true"
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+          </mat-list-item>
+        </mat-list></span
+      ><span class="divider"></span>
+      <span fxFlex>
+        <mat-list style="padding: 5px 0px">
+          <mat-list-item
+            *ngFor="let link of links[5]"
+            class="menuItem"
+            [routerLink]="link.href"
+            routerLinkActive="activeItem"
+            [routerLinkActiveOptions]="{ exact: true }"
+            matLine
+            [matTooltip]="link.name"
+            (click)="serviceXplorer.collapsed = false"
+          >
+            <span fxFlex
+              ><mat-icon
+                style="color: rgb(0, 0, 71)"
+                class="text-muted"
+                class="material-icons-outlined"
+                >{{ link.icon }}</mat-icon
+              ></span
+            >
+          </mat-list-item>
+        </mat-list></span
+      >
+    </mat-card>
+    <mat-card
       fxFlex="20"
       style="padding: 0px; border-radius: 0px"
       fxLayout="column"
       fxShow
+      [fxHide]="serviceXplorer.collapsed"
       fxHide.lt-md
       fxFlexFill
       ><div
-        [fxHide]="!isMessage"
+        [fxHide]="!serviceXplorer.collapsed"
         style="flex: 1 1 auto; background-color: #6bad37; height: 20px"
       ></div>
       <div
-        [fxHide]="isMessage"
+        [fxHide]="serviceXplorer.collapsed"
         fxLayout="row"
         fxLayoutAlign="stretch stretch"
         style="padding: 8px"
@@ -36,7 +187,7 @@
           height: 80px;
         "
         fxLayout="column"
-        [fxHide]="isMessage"
+        [fxHide]="serviceXplorer.collapsed"
         fxLayoutAlign="center center"
         fxLayoutGap="20px"
         ><span
@@ -67,7 +218,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = false"
+            (click)="serviceXplorer.collapsed = false"
           >
             <span fxFlex
               ><mat-icon
@@ -81,7 +232,7 @@
               class="mx-2"
               style="padding-left: 8px"
               fxFlex="80"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               >{{ link.name }}</span
             >
           </mat-list-item>
@@ -96,7 +247,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = false"
+            (click)="serviceXplorer.collapsed = false"
           >
             <span fxFlex
               ><mat-icon
@@ -109,7 +260,7 @@
             <span
               class="mx-2"
               style="padding-left: 8px"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               fxFlex="80"
               >{{ link.name }}</span
             >
@@ -125,7 +276,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = false"
+            (click)="serviceXplorer.collapsed = false"
           >
             <span fxFlex
               ><mat-icon
@@ -138,7 +289,7 @@
             <span
               class="mx-2"
               style="padding-left: 8px"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               fxFlex="80"
               >{{ link.name }}</span
             >
@@ -154,7 +305,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = false"
+            (click)="serviceXplorer.collapsed = false"
           >
             <span fxFlex
               ><mat-icon
@@ -167,7 +318,7 @@
             <span
               class="mx-2"
               style="padding-left: 8px"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               fxFlex="80"
               >{{ link.name }}</span
             >
@@ -183,6 +334,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
+            (click)="serviceXplorer.collapsed = true"
           >
             <span fxFlex
               ><mat-icon
@@ -195,7 +347,7 @@
             <span
               class="mx-2"
               style="padding-left: 8px"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               fxFlex="80"
               >{{ link.name }}</span
             >
@@ -211,7 +363,7 @@
             routerLinkActive="activeItem"
             [routerLinkActiveOptions]="{ exact: true }"
             matLine
-            (click)="isMessage = false"
+            (click)="serviceXplorer.collapsed = false"
           >
             <span fxFlex
               ><mat-icon
@@ -224,7 +376,7 @@
             <span
               class="mx-2"
               style="padding-left: 8px"
-              [fxHide]="isMessage"
+              [fxHide]="serviceXplorer.collapsed"
               fxFlex="80"
               >{{ link.name }}</span
             >
